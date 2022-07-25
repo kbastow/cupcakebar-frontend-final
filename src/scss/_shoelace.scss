@@ -1,0 +1,117 @@
+// Shoelace
+
+// sl-dialog
+sl-dialog::part(title) {
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+sl-input::part(base) {
+  background: var(--sl-color-primary-50);
+  border-radius: 20px;
+  border: 3px solid var(--brand-color);
+  max-width: 45%;
+  min-width: 45%;
+  position: center;
+  margin-bottom: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+sl-select::part(suffix) {
+  background: var(--sl-color-primary-100);
+  border-radius: 15px;
+}
+
+sl-textarea::part(base) {
+  background: var(--sl-color-primary-100);
+  border-radius: 15px;
+  margin-bottom: 1em;
+}
+
+sl-button::part(base) {
+  border-radius: 20px;
+  width: 10em;
+  border: 3px solid var(--brand-color);
+  background: var(--sl-color-primary-50);
+  color: var(--brand-color);
+}
+
+sl-button::part(base):hover {
+  background-color: #e16a2f;
+  color: white;
+}
+
+.shop-now-btn::part(base) {
+  background: var(--brand-color);
+  color: var(--page-body-bg);
+  width: 12em;
+  height: 4em;
+  border-radius: 50px;
+  padding: 5px;
+  margin-top: 0px;
+}
+
+.shop-now-btn::part(base):hover {
+  background-color: white;
+  color: #e16a2f;
+}
+
+.product-btn::part(base) {
+  background: var(--brand-color);
+  color: var(--page-body-bg);
+  width: 12em;
+  height: 4em;
+  border-radius: 50px;
+  padding: 5px;
+  margin-top: 0px;
+}
+
+.filter-btn::part(base) {
+  background-color: #fff;
+  width: 100px;
+  margin-right: 1.1vw;
+  font-size: 12px;
+}
+
+.clear-btn::part(base) {
+  border: none;
+  width: 100px;
+  margin-left: 2vw;
+  font-size: 12px;
+}
+
+sl-card {
+  --border-radius: 15em;
+}
+
+.new-prod-submit-btn::part(base) {
+  background: #fff;
+}
+
+.new-prod-input::part(base) {
+  background: #fff;
+  width: 35vw;
+  margin: 0;
+}
+
+.new-prod-text::part(base) {
+  background: #fff;
+  border: 3px solid var(--brand-color);
+  width: 35vw;
+}
+
+.new-prod-input::part(form-control) {
+  width: 40vw;
+}
+
+// RESPONSIVE - MOBILE -------------------
+@media all and (max-width: 768px) {
+  sl-dialog::part(panel) {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    max-width: none;
+  }
+}

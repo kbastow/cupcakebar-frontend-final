@@ -1,2 +1,1 @@
-# cupcakebar-frontend-final
- Cupcake Bar - A3
+# cupcakebar-frontend
