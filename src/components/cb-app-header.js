@@ -208,7 +208,7 @@ customElements.define(
         </header>
 
         <sl-drawer class="app-side-menu" placement="left">
-          <img class="app-side-menu-logo" src="/images/ss3.svg" />
+          <img class="app-side-menu-logo">
           <nav class="app-side-menu-items">
             <a href="/" @click="${this.menuClick}">Home</a>
             <a href="/shop" @click="${anchorRoute}">Shop</a>
