@@ -33,8 +33,8 @@ class ProductView {
         <div class="productInfo calign">
 
           ${this.product == null ? html` 
-          <!-- Loding -->
-          <img src="../../images/loading...(2).gif" />
+          <!-- Loading -->
+          <img src="../../images/loading-animation.gif"/>
            ` : html`
                 ${this.products.map(product => html`
                     <img src="${product.image}" alt="${product.productName}" />
