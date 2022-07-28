@@ -285,7 +285,7 @@ a:hover {
   padding: 0;
 }
 
-.profile, .editProfile {
+.profile, .editProfile, .add-product {
   margin-top: 1vw;
   margin-bottom: 2vw;
   padding-bottom: var(--app-header-height);
@@ -393,70 +393,6 @@ a:hover {
   color: var(--brand-color);
 }
 
-/*.guide-step {
-  padding: 1em;
-  margin: 1.5em auto;
-  max-width: 600px;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.workers-grid {
-  display: inline-block;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  //flex-wrap: wrap;
-
-  .worker-card {
-    width: calc(33.3% - 1em);
-    margin: 0.5em;
-  }
-}
-
-.filter-by {
-  margin-right: 10px;
-}
-
-.products-grid {
-  display: flex;
-  flex-wrap: wrap;
-
-  .product-card {
-    width: calc(33.3% - 1em);
-    margin: 0.5em;
-
-  }
-}
-
-/*.job-desc-title {
-  color: var(--heading-color);
-}
-
-.worker-dialog {
-  --width: 50%;
-}
-
-.worker-dialog::part(body) {
-  margin-top: -4em;
-}
-
-.worker-dialog::part(panel) {
-  background: var(--sl-color-primary-50);
-  border: 3px solid #fff;
-  border-radius: 15px;
-  color: white;
-}
-
-.worker-bio {
-  width: auto;
-}
-
-.dialog-worker-name {
-  color: #fff;
-}*/
 .shop-dialog {
   --width: 30%;
 }
@@ -474,6 +410,10 @@ a:hover {
   background: var(--sl-color-primary-50);
   border: 3px solid #fff;
   border-radius: 15px;
+}
+
+input {
+  margin-top: 1em;
 }
 
 .about-us p {
@@ -599,26 +539,30 @@ sl-card {
   --border-radius: 15em;
 }
 
-.new-prod-submit-btn::part(base) {
-  background: #fff;
+.new-prod-submit-btn {
+  margin-top: 0;
 }
 
-.new-prod-input::part(base) {
-  background: #fff;
-  width: 35vw;
+/*.new-prod-input::part(base) {
+  background: var(--sl-color-primary-50);
+  max-width: 35vw;
   margin: 0;
-}
-
+}*/
 .new-prod-text::part(base) {
-  background: #fff;
+  background: var(--sl-color-primary-50);
   border: 3px solid var(--brand-color);
-  width: 35vw;
+  max-width: 45%;
+  min-width: 45%;
+  margin-top: 1em;
 }
 
-.new-prod-input::part(form-control) {
-  width: 40vw;
+sl-radio {
+  margin-bottom: 1em;
 }
 
+/*.new-prod-input::part(form-control) {
+  max-width: 40vw;
+}*/
 @media all and (max-width: 768px) {
   sl-dialog::part(panel) {
     width: 100%;
