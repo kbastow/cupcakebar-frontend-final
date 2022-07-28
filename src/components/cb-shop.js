@@ -79,29 +79,60 @@ customElements.define(
 
         .name {
           text-transform: uppercase;
+          margin: 0;
+        }
+
+        .price {
+          margin: 0;
         }
 
         .product-card {
           text-align: center;
+          min-width: 30%;
+          margin-left: 1.5vw;
+          margin-right: 1.5vw;
+        }
+
+        .product-card::part(base) {
+          border: none;
+          box-shadow: none;
         }
 
         .heart::part(base) {
           color: var(--brand-color);
         }
 
+        .img-container{
+          max-width: 100%;
+          margin-bottom: 0;
+        }
+
+        .shop-image {
+          min-width: 100%;
+          margin: 0;
+        }
+
+       .heart {
+          top: -6vh;
+          left: 11vw;
+          margin: 0;
+        }
+
+
       </style>
         <sl-card class="product-card">
           <div class="img-container">
-          <img slot="image" src="${App.apiBase}/images/${this.image}" />
+          <img class="shop-image" slot="image" src="${App.apiBase}/images/${this.image}" />
           <sl-icon-button 
             class="heart"
             name="heart-fill"
             label="Add to Favourites"
+            style="font-size: 1.5rem";
             @click=${this.addFavHandler.bind(this)}
           ></sl-icon-button>
           </div>
           <h3 class="name">${this.productName}</h3>
-          <p>Box of a dozen - $${this.price}</p>
+          <p class="price">Box of a dozen - $${this.price}</p>
           <p>${this.description}</p>
           <sl-button class="shop-btn" @click=${() => gotoRoute(`/product?productId=${this.id}`)}>SHOP NOW!</sl-button>
         </sl-card>

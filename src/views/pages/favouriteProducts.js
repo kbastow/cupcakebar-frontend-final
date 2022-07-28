@@ -37,6 +37,7 @@ class FavouriteProductsView {
       ></cb-app-header>
       <div class="page-content">
        <div class="products-grid">
+        <h1>Your favourite cupcakes!</h1>
           ${
             this.favProducts == null
               ? html` <sl-spinner></sl-spinner> `
