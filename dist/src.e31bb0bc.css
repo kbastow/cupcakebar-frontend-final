@@ -393,7 +393,7 @@ a:hover {
   color: var(--brand-color);
 }
 
-.shop-dialog {
+/*.shop-dialog {
   --width: 30%;
 }
 
@@ -410,8 +410,7 @@ a:hover {
   background: var(--sl-color-primary-50);
   border: 3px solid #fff;
   border-radius: 15px;
-}
-
+}*/
 input {
   margin-top: 1em;
 }
@@ -533,10 +532,6 @@ sl-button::part(base):hover {
   width: 100px;
   margin-left: 2vw;
   font-size: 12px;
-}
-
-sl-card {
-  --border-radius: 15em;
 }
 
 .new-prod-submit-btn {
