@@ -408,11 +408,39 @@ input {
   margin-top: 1em;
 }
 
+.about-us-container {
+  float: right;
+  width: 44vw;
+  text-align: left;
+  margin: 2vw;
+  //margin-left: 50vw;
+}
+
+.brandmark-container {
+  float: left;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 4vw;
+}
+
+.about-img {
+  opacity: 40%;
+  width: 45vw;
+}
+
+.about-logo {
+ position: absolute;
+ left: 12vw;
+ top: 10vw;
+ width: 20vw;
+ margin: 1vw;
+ 
+}
+
 // about us ---------------------------
 .about-us {
   p {
-    text-align: center;
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 

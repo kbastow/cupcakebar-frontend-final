@@ -18,8 +18,40 @@ class AboutUsView {
     const template = html`
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="about-us">
-      <div class="page-content">        
-        <h1>About Us</h1>
+      <div class="page-content">
+        <div class="brandmark-container">
+        <img class="about-img" src="/images/feature-img.png">
+        <img class="about-logo" src="/images/blurb-img.png">
+        </div>
+        <div class="about-us-container">
+        <h1>The Cupcake Bar</h1>
+        <p class="about-txt">The Cupcake Bar is a small cupcake store in the city of Melbourne. We are passionate about providing 
+          all customers with the tastiest of baked goods and pride ourselves on our own specially crafted recipes.
+          We stock a range of classic flavours and are always coming up with new and improved flavours to 
+          surprise our customers. 
+        </p>
+        <br>
+        <br>
+        <br>
+        <h1>Contact Us</h1>
+        <p class="about-txt">Cupcake Bar, 14 Degraves St,
+        <br>
+        Melbourne VIC 3000
+        <br>
+        <br>
+        hello@cupcakebar.com
+        <br>
+        <br>
+        0418 293 920
+        <br>
+        <br>
+        Find us on socials
+        <br>
+        @cupcakebar
+        </p>
+
+        </div>        
+        <!--<h1>The Cupcake Bar</h1>
         <br>
         <br>
         <br>
@@ -27,8 +59,8 @@ class AboutUsView {
         <p>Looking to learn more about Cupcake Bar?
         <br><b> More details coming soon!! </b></p>
         
-      </div>    
-      </div>  
+      </div> -->   
+      </div> 
       <cb-app-footer></cb-app-footer>
     `
     render(template, App.rootEl)
