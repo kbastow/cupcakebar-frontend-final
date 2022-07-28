@@ -86,25 +86,31 @@ sl-card {
   --border-radius: 15em;
 }
 
-.new-prod-submit-btn::part(base) {
-  background: #fff;
+.new-prod-submit-btn {
+  margin-top: 0;
 }
 
-.new-prod-input::part(base) {
-  background: #fff;
-  width: 35vw;
+/*.new-prod-input::part(base) {
+  background: var(--sl-color-primary-50);
+  max-width: 35vw;
   margin: 0;
-}
+}*/
 
 .new-prod-text::part(base) {
-  background: #fff;
+  background: var(--sl-color-primary-50);
   border: 3px solid var(--brand-color);
-  width: 35vw;
+  max-width: 45%;
+  min-width: 45%;
+  margin-top: 1em;
 }
 
-.new-prod-input::part(form-control) {
-  width: 40vw;
+sl-radio {
+  margin-bottom: 1em;
 }
+
+/*.new-prod-input::part(form-control) {
+  max-width: 40vw;
+}*/
 
 // RESPONSIVE - MOBILE -------------------
 @media all and (max-width: 768px) {

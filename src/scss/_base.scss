@@ -276,7 +276,7 @@ a:hover{
   margin-bottom: 10vw;
 }
 
-.profile, .editProfile {
+.profile, .editProfile, .add-product {
   margin-top: 1vw;
   margin-bottom: 2vw;
   padding-bottom: var(--app-header-height);
@@ -385,72 +385,6 @@ a:hover{
   color: var(--brand-color);
 }
 
-// guide page ---------------
-/*.guide-step {
-  padding: 1em;
-  margin: 1.5em auto;
-  max-width: 600px;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.workers-grid {
-  display: inline-block;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  //flex-wrap: wrap;
-
-  .worker-card {
-    width: calc(33.3% - 1em);
-    margin: 0.5em;
-  }
-}
-
-.filter-by {
-  margin-right: 10px;
-}
-
-.products-grid {
-  display: flex;
-  flex-wrap: wrap;
-
-  .product-card {
-    width: calc(33.3% - 1em);
-    margin: 0.5em;
-
-  }
-}
-
-/*.job-desc-title {
-  color: var(--heading-color);
-}
-
-.worker-dialog {
-  --width: 50%;
-}
-
-.worker-dialog::part(body) {
-  margin-top: -4em;
-}
-
-.worker-dialog::part(panel) {
-  background: var(--sl-color-primary-50);
-  border: 3px solid #fff;
-  border-radius: 15px;
-  color: white;
-}
-
-.worker-bio {
-  width: auto;
-}
-
-.dialog-worker-name {
-  color: #fff;
-}*/
-
 .shop-dialog {
   --width: 30%;
 }
@@ -468,6 +402,10 @@ a:hover{
   background: var(--sl-color-primary-50);
   border: 3px solid #fff;
   border-radius: 15px;
+}
+
+input {
+  margin-top: 1em;
 }
 
 // about us ---------------------------

@@ -46,6 +46,8 @@ class newProductView {
        <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="page-content">        
         <sl-form class="page-form" @sl-submit=${this.newProductSubmitHandler}>
+        <div class="add-product">
+          <h1>Add Product</h1>
           <input type="hidden" name="user" value="${Auth.currentUser._id}" />
           <div class="input-group">
             <sl-input class="new-prod-input" label="Name" type="text" placeholder="Product Name" required></sl-input>
@@ -62,7 +64,7 @@ class newProductView {
             <sl-textarea class="new-prod-text" label="Ingredients" rows="4" placeholder="Product Ingredients"></sl-textarea>
           </div>
           <div class="input-group" style="margin-bottom: 2em;">
-            <label>Image</label><br>
+            <label>Product Image</label><br>
             <input type="file" name="image" />              
           </div>
           <div class="input-group" style="margin-bottom: 2em;">
@@ -88,6 +90,7 @@ class newProductView {
             </sl-radio-group><br> 
           </div>
           <sl-button type="primary" class="new-prod-submit-btn" submit>Add Product</sl-button>
+          </div>
         </sl-form>   
         
       </div>
