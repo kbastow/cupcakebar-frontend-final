@@ -43,6 +43,8 @@ a:hover{
   color: white;
 }
 
+// homepage -------
+
 .feature-box {
   display: flex;
   background: var(--body-bg);
@@ -276,26 +278,6 @@ a:hover{
   margin-bottom: 10vw;
 }
 
-.profile, .editProfile, .add-product {
-  margin-top: 1vw;
-  margin-bottom: 2vw;
-  padding-bottom: var(--app-header-height);
-}
-
-.bio {
-  display: flex;
-  border: 4px solid #fff;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: #fff;
-  align-items: right;
-}
-
 .page-centered {
   display: flex;
   align-items: center;
@@ -306,6 +288,14 @@ a:hover{
   font-family: var(--body-font-family);
 }
 
+// page forms ------------
+.profile, .editProfile, .add-product {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  padding-bottom: var(--app-header-height);
+}
+
+// profile ------------
 .prof-border {
   margin-top: 20px;
   max-width: 800px;
@@ -325,19 +315,6 @@ a:hover{
 
 .prof-txt-secondary {
   color: #fff;
-}
-
-.form-box {
-  margin-top: 20px;
-  max-width: 500px;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border: 4px solid var(--sl-color-primary-100);
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  height: auto;
 }
 
 // sign in + sign up pages ----------
@@ -385,27 +362,15 @@ a:hover{
   color: var(--brand-color);
 }
 
-/*.shop-dialog {
-  --width: 30%;
-}
-
-.shop-dialog::part(body) {
-  margin-top: -4em;
-  color: #fff;
-}
-
-.shop-dialog::part(close-button):hover {
-  color: var(--brand-color);
-}
-
-.shop-dialog::part(panel) {
-  background: var(--sl-color-primary-50);
-  border: 3px solid #fff;
-  border-radius: 15px;
-}*/
-
 input {
   margin-top: 1em;
+}
+
+// about us ---------------------------
+.about-us {
+  p {
+    font-size: 20px;
+  }
 }
 
 .about-us-container {
@@ -429,19 +394,12 @@ input {
 }
 
 .about-logo {
- position: absolute;
- left: 12vw;
- top: 10vw;
- width: 20vw;
- margin: 1vw;
- 
-}
+  position: absolute;
+  left: 15vw;
+  top: 12vw;
+  width: 20vw;
+  margin: 1vw;
 
-// about us ---------------------------
-.about-us {
-  p {
-    font-size: 20px;
-  }
 }
 
 // shop -------------------------------
@@ -480,4 +438,6 @@ input {
   .signinup-logo {
     min-width: 50%;
   }
+
+
 }

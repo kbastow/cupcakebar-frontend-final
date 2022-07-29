@@ -80,6 +80,7 @@ customElements.define(
         .name {
           text-transform: uppercase;
           margin: 0;
+          padding: 0;
         }
 
         .price {
@@ -89,8 +90,8 @@ customElements.define(
         .product-card {
           text-align: center;
           min-width: 30%;
-          margin-left: 1.5vw;
-          margin-right: 1.5vw;
+          margin: 1.5vw;
+          /*margin-right: 1.8vw;*/
         }
 
         .product-card::part(base) {
@@ -103,19 +104,23 @@ customElements.define(
         }
 
         .img-container{
-          max-width: 100%;
+          max-width: auto;
           margin-bottom: 0;
+          padding: 0;
+          align-items: center;
         }
 
         .shop-image {
-          min-width: 100%;
+          width: 100%;
           margin: 0;
+          padding: 0;
         }
 
        .heart {
-          top: -6vh;
-          left: 11vw;
+          bottom: 7vh;
+          left: 40%;
           margin: 0;
+          padding: 0;
         }
 
 
