@@ -62,11 +62,11 @@ class EditProfileView {
             <div class="input-group">
               <sl-input label="Email" type="text" name="email" value="${this.user.email}" placeholder="Email Address"></sl-input>
             </div> 
-            <div class="input-group">
+            <!-- <div class="input-group">
 
               <sl-input label="New Password" type="text" name="password" placeholder="Password" toggle-password></sl-input>
 
-            </div>           
+            </div>            -->
             <div class="input-group">
               <label>Avatar</label><br>          
               ${(this.user.avatar) ? html`
