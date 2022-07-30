@@ -43,10 +43,6 @@ class ProductView {
                     <p id="description">"${product.description}"</p>
                     <p id="ingredientsHeading">Ingredients</p>
                     <p id="ingredients">"${product.ingredients}"</p>
-                    <!-- <p>"${product.glutenFree}"</p>
-                    <p>"${product.nutFree}"</p>
-                    <p>"${product.dairyFree}"</p>
-                    <p>"${product.vegan}"</p> -->
                     <button id="addCart">ADD TO CART!</button>
                   `
                 )}

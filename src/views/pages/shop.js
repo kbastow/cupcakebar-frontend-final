@@ -1,96 +1,89 @@
-import App from "../../App";
-import { html, render } from "lit-html";
-import { gotoRoute, anchorRoute } from "../../Router";
-import Auth from "../../Auth";
-import Utils from "../../Utils";
-import ProductAPI from "./../../ProductAPI";
-import Toast from "../../Toast";
+import App from "../../App"
+import { html, render } from "lit-html"
+import { gotoRoute, anchorRoute } from "../../Router"
+import Auth from "../../Auth"
+import Utils from "../../Utils"
+import ProductAPI from "./../../ProductAPI"
+import Toast from "../../Toast"
 
 class ShopView {
   async init() {
-    document.title = "Shop";
-    this.products = null;
-    this.render();
-    Utils.pageIntroAnim();
+    document.title = "Shop"
+    this.products = null
+    this.render()
+    Utils.pageIntroAnim()
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
     timeline.from('.products-grid', { opacity: 0},1)
     .from('p',{ opacity: 0, y: '-50%', ease: 'bounce'}, 1)
-    
-    await this.getProducts();
-    
+    await this.getProducts()
   }
 
   async filterProducts(field, match) {
     // validate
-    if (!field || !match) return;
+    if (!field || !match) return
 
-    // get fresh copy of the products
-    this.products = await ProductAPI.getProducts();
+    // get fresh copy of prodcuts
+    this.products = await ProductAPI.getProducts()
 
-    let filteredProducts;
+    let filteredProducts
 
     // gluten free
     if (field == "glutenFree") {
-      filteredProducts = this.products.filter(
-        (product) => product.glutenFree == match
-      );
+      filteredProducts = this.products.filter(product => product.glutenFree == match)
     }
 
     // nut free
     if (field == "nutFree") {
-      filteredProducts = this.products.filter(
-        (product) => product.nutFree == match
-      );
+      filteredProducts = this.products.filter(product => product.nutFree == match)    
     }
 
     // dairy free
     if (field == "dairyFree") {
-      this.filteredProducts = this.products.filter(
-        (product) => product.dairyFree == match
-      );
+      this.filteredProducts = this.products.filter(product => product.dairyFree == match)
     }
 
     // vegan
     if (field == "vegan") {
-      this.filteredProducts = this.products.filter(
-        (product) => product.vegan == match
-      );
+      this.filteredProducts = this.products.filter(product => product.vegan == match)
     }
 
     // render
-    this.products = filteredProducts;
-    this.render();
+    this.products = filteredProducts
+    this.render()
   }
 
   clearFilterBtns() {
-    const filterBtns = document.querySelectorAll(".filter-btn");
-    filterBtns.forEach((btn) => btn.removeAttribute("type"));
+    const filterBtns = document.querySelectorAll(".filter-btn")
+    filterBtns.forEach((btn) => btn.removeAttribute("type"))
   }
 
   handleFilterBtn(e) {
     // clear all active filter buttons (type = primary)
-    this.clearFilterBtns();
+    this.clearFilterBtns()
 
-    e.target.setAttribute("type", "primary");
+    e.target.setAttribute("type", "primary")
     // extract file and match from the button
-    const field = e.target.getAttribute("data-field");
-    const match = e.target.getAttribute("data-match");
+    const field = e.target.getAttribute("data-field")
+    const match = e.target.getAttribute("data-match")
+
+    console.log("field ", field)
+    console.log("match ", match)
 
     // filter products
-    this.filterProducts(field, match);
+    this.filterProducts(field, match)
   }
 
   clearFilters() {
-    this.getProducts();
-    this.clearFilterBtns();
+    this.getProducts()
+    this.clearFilterBtns()
   }
 
   async getProducts() {
     try {
-      this.products = await ProductAPI.getProducts();
-      this.render();
+      this.products = await ProductAPI.getProducts()
+      this.render()
     } catch (err) {
-      Toast.show(err, "error");
+      Toast.show(err, "error")
     }
   }
 
@@ -108,28 +101,22 @@ class ShopView {
       </style>
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="page-content shop">        
-         <div class="filter-menu">
-            <div>
-              Filters
-            </div>
+        <div class="filter-menu">
+
           <div>
-              <sl-button class="filter-btn" data-field="glutenFree" data-match="gluten-free" @click=${this.handleFilterBtn.bind(
-                this
-              )}>GLUTEN FREE</sl-button>
-              <sl-button class="filter-btn" data-field="nutFree" data-match="nut-free" @click=${this.handleFilterBtn.bind(
-                this
-              )}>NUT FREE</sl-button>
-              <sl-button class="filter-btn" data-field="dairyFree" data-match="dairy-free" @click=${this.handleFilterBtn.bind(
-                this
-              )}>DAIRY FREE</sl-button>
-              <sl-button class="filter-btn"5px; data-field="vegan" data-match="vegan" @click=${this.handleFilterBtn.bind(
-                this
-              )}>VEGAN</sl-button>
+              Filter
           </div>
-             <sl-button class="clear-btn" @click=${this.clearFilters.bind(
-               this
-             )}>CLEAR</sl-button>
-        </div>
+          <div>
+                <sl-button class="filter-btn" data-field="glutenFree" data-match="true" @click=${this.handleFilterBtn.bind(this)}>GLUTEN FREE</sl-button>
+                <sl-button class="filter-btn" data-field="nutFree" data-match="true" @click=${this.handleFilterBtn.bind(this)}>NUT FREE</sl-button>
+                <sl-button class="filter-btn" data-field="dairyFree" data-match="true" @click=${this.handleFilterBtn.bind(this)}>DAIRY FREE</sl-button>
+                <sl-button class="filter-btn"5px; data-field="vegan" data-match="true" @click=${this.handleFilterBtn.bind(this)}>VEGAN</sl-button>
+          </div>
+          <div>
+             <sl-button class="clear-btn" @click=${this.clearFilters.bind(this)}>CLEAR</sl-button>
+          </div>
+        </div>  
+     
         
         <div class="products-grid">
           ${
@@ -144,6 +131,10 @@ class ShopView {
                         productName="${product.productName}"
                         price="${product.price}"
                         image="${product.image}"
+                        glutenFree="${product.glutenFree}"
+                        nutFree="${product.nutFree}"
+                        dairyFree="${product.dairyFree}"
+                        vegan="${product.vegan}"
                       >
                       </cb-shop>
                     `
