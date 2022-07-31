@@ -68,6 +68,37 @@ sl-button::part(base):hover {
   margin-top: 0px;
 }
 
+.add-cart-btn::part(base) {
+  background-color: white;
+  color: #e16a2f;
+  width: 12em;
+  height: 4em;
+  border-radius: 50px;
+  padding: 5px;
+  margin-top: 0px;
+}
+
+.add-cart-btn::part(base):hover {
+  background-color:#e16a2f;
+  color: white;
+}
+
+.back-btn::part(base) {
+  background-color: white;
+  color: #e16a2f;
+  width: 12em;
+  height: 4em;
+  border-radius: 50px;
+  padding: 5px;
+  margin-top: 0px;
+}
+
+.back-btn::part(base):hover {
+  background-color:#f5dbdf;
+  color: white;
+}
+
+
 .filter-btn::part(base) {
   background-color: #fff;
   width: 100px;
