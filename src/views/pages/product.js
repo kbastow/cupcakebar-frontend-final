@@ -48,10 +48,12 @@ class ProductView {
                     <p id="description">${this.product.description}</p>
                     <p id="ingredientsHeading"><b>Ingredients</b></p>
                     <p id="ingredients">${this.product.ingredients}</p>
+                   
                     <!-- <p>${this.product.glutenFree}</p>
                     <p>${this.product.nutFree}</p>
                     <p>${this.product.dairyFree}</p>
                     <p>${this.product.vegan}</p> -->
+                    <br>
                     <br>
                     <sl-button class="add-cart-btn" type="primary" @click=${() => gotoRoute('/cart')}>ADD TO CART!</sl-button>
                     <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>
