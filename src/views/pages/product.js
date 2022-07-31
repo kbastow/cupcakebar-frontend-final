@@ -18,7 +18,7 @@ class ProductView {
   async getProduct() {
     try {
       const productId = Utils.getParams().productId;
-      this.products = await ProductAPI.getProduct(productId);
+      this.product = await ProductAPI.getProduct(productId);
       this.render();
     } catch (err) {
       Toast.show(err, "error");
@@ -36,20 +36,17 @@ class ProductView {
           <!-- Loading -->
           <img src="../../images/loading-animation.gif"/>
            ` : html`
-                ${this.products.map(product => html`
-                    <img src="${product.image}" alt="${product.productName}" />
-                    <h1>${product.productName}</h1>
-                    <p id="price">Box of a dozen - "${product.price}"</p>
-                    <p id="description">"${product.description}"</p>
+                    <img src="${App.apiBase}/images/${this.product.image}" alt="${this.product.productName}" />
+                    <h1>${this.product.productName}</h1>
+                    <p id="price">Box of a dozen - "${this.product.price}"</p>
+                    <p id="description">"${this.product.description}"</p>
                     <p id="ingredientsHeading">Ingredients</p>
-                    <p id="ingredients">"${product.ingredients}"</p>
-                    <!-- <p>"${product.glutenFree}"</p>
-                    <p>"${product.nutFree}"</p>
-                    <p>"${product.dairyFree}"</p>
-                    <p>"${product.vegan}"</p> -->
+                    <p id="ingredients">"${this.product.ingredients}"</p>
+                    <!-- <p>"${this.product.glutenFree}"</p>
+                    <p>"${this.product.nutFree}"</p>
+                    <p>"${this.product.dairyFree}"</p>
+                    <p>"${this.product.vegan}"</p> -->
                     <button id="addCart">ADD TO CART!</button>
-                  `
-                )}
               `}
         </div>
       </div>
