@@ -4,6 +4,7 @@ import { gotoRoute, anchorRoute } from "../../Router";
 import Auth from "../../Auth";
 import Utils from "../../Utils";
 import ProductAPI from "../../ProductAPI";
+import UserAPI from "../../UserAPI";
 import Toast from "../../Toast";
 
 class ProductView {
@@ -20,6 +21,15 @@ class ProductView {
       const productId = Utils.getParams().productId;
       this.product = await ProductAPI.getProduct(productId);
       this.render();
+    } catch (err) {
+      Toast.show(err, "error");
+    }
+  }
+
+  async addToCartHandler() {
+    try {
+      await UserAPI.addToCart(this.id);
+      Toast.show("Product added to cart");
     } catch (err) {
       Toast.show(err, "error");
     }
@@ -48,14 +58,9 @@ class ProductView {
                     <p id="description">${this.product.description}</p>
                     <p id="ingredientsHeading"><b>Ingredients</b></p>
                     <p id="ingredients">${this.product.ingredients}</p>
-                   
-                    <!-- <p>${this.product.glutenFree}</p>
-                    <p>${this.product.nutFree}</p>
-                    <p>${this.product.dairyFree}</p>
-                    <p>${this.product.vegan}</p> -->
                     <br>
                     <br>
-                    <sl-button class="add-cart-btn" type="primary" @click=${() => gotoRoute('/cart')}>ADD TO CART!</sl-button>
+                    <sl-button class="add-cart-btn" type="primary" @click=${this.addToCartHandler.bind(this)}>ADD TO CART!</sl-button>
                     <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>
                     </div>
               `}
