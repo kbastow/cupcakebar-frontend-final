@@ -14,7 +14,6 @@ class ShopView {
     Utils.pageIntroAnim();
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
     timeline.from('.products-grid', { opacity: 0},1)
-    .from('p',{ opacity: 0, y: '-50%', ease: 'bounce'}, 1)
     
     await this.getProducts();
     
