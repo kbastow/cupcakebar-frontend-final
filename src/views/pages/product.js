@@ -36,17 +36,28 @@ class ProductView {
           <!-- Loading -->
           <img src="../../images/loading-animation.gif"/>
            ` : html`
-                    <img src="${App.apiBase}/images/${this.product.image}" alt="${this.product.productName}" />
+           
+           <div class="product-image">
+                    <img class="product-img" src="${App.apiBase}/images/${this.product.image}" alt="${this.product.productName}" />
+            </div>
+
+            <div class="about-product">
                     <h1>${this.product.productName}</h1>
-                    <p id="price">Box of a dozen - "${this.product.price}"</p>
-                    <p id="description">"${this.product.description}"</p>
-                    <p id="ingredientsHeading">Ingredients</p>
-                    <p id="ingredients">"${this.product.ingredients}"</p>
-                    <!-- <p>"${this.product.glutenFree}"</p>
-                    <p>"${this.product.nutFree}"</p>
-                    <p>"${this.product.dairyFree}"</p>
-                    <p>"${this.product.vegan}"</p> -->
-                    <button id="addCart">ADD TO CART!</button>
+                    <h2 id="price">Box of a dozen - $${this.product.price}</h2>
+                    <br>
+                    <p id="description">${this.product.description}</p>
+                    <p id="ingredientsHeading"><b>Ingredients</b></p>
+                    <p id="ingredients">${this.product.ingredients}</p>
+                   
+                    <!-- <p>${this.product.glutenFree}</p>
+                    <p>${this.product.nutFree}</p>
+                    <p>${this.product.dairyFree}</p>
+                    <p>${this.product.vegan}</p> -->
+                    <br>
+                    <br>
+                    <sl-button class="add-cart-btn" type="primary" @click=${() => gotoRoute('/cart')}>ADD TO CART!</sl-button>
+                    <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>
+                    </div>
               `}
         </div>
       </div>
