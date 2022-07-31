@@ -4,6 +4,7 @@ import { gotoRoute, anchorRoute } from "../../Router";
 import Auth from "../../Auth";
 import Utils from "../../Utils";
 import ProductAPI from "../../ProductAPI";
+import UserAPI from "../../UserAPI";
 import Toast from "../../Toast";
 
 class ProductView {
@@ -20,6 +21,15 @@ class ProductView {
       const productId = Utils.getParams().productId;
       this.product = await ProductAPI.getProduct(productId);
       this.render();
+    } catch (err) {
+      Toast.show(err, "error");
+    }
+  }
+
+  async addToCartHandler() {
+    try {
+      await UserAPI.addToCart(this.id);
+      Toast.show("Product added to cart");
     } catch (err) {
       Toast.show(err, "error");
     }
@@ -46,7 +56,7 @@ class ProductView {
                     <p>"${this.product.nutFree}"</p>
                     <p>"${this.product.dairyFree}"</p>
                     <p>"${this.product.vegan}"</p> -->
-                    <button id="addCart">ADD TO CART!</button>
+                    <button id="addCart" @click=${this.addToCartHandler.bind(this)}>ADD TO CART!</button>
               `}
         </div>
       </div>

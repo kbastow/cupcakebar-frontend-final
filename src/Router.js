@@ -11,6 +11,7 @@ import favouriteProductsView from './views/pages/favouriteProducts'
 import newProductView from './views/pages/newProduct'
 import cartView from './views/pages/cart'
 import productView from './views/pages/product'
+import ordersView from './views/pages/orders'
 
 // define routes
 const routes = {
@@ -26,6 +27,7 @@ const routes = {
 	'/signup': signupView,
 	'/profile': profileView,
 	'/editProfile': editProfileView,
+	'/orders': ordersView,
 }
 
 class Router {
