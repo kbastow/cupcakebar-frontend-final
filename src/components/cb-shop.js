@@ -104,24 +104,25 @@ customElements.define(
         }
 
         .img-container{
+          position: relative;
           margin: 0 auto;
-          max-width: 20vw;
+          max-width: 300px;
           margin-bottom: 0;
           padding: 0;
           align-items: center;
         }
 
         .shop-image {
-          width: 100%;
+          max-width: 100%;
           margin: 0 auto;
           padding: 10;
         }
 
        .heart {
-          bottom: 4vw;
-          left: 7.5vw;
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
           margin: 0 auto;
-          padding: 10;
         }
 
 
