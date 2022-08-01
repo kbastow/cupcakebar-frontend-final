@@ -95,12 +95,15 @@ class CartView {
         <div class="cart">
         <h1>My cart</h1>
         <sl-form class="form-order" @sl-submit=${this.newOrderHandler}>
-          ${
-            this.userCart == null
-              ? html` <sl-spinner></sl-spinner> `
-              : html`
-                  ${this.userCart.map(
-                    (product) => html`
+          
+        ${
+          this.userCart == null ? html` 
+          <sl-spinner></sl-spinner> 
+          `: html`
+          ${this.userCart.length == 0 ?
+            html`<h2> Your cart is empty!</h2>`
+              : this.userCart.map(product => html`
+
                       <cb-shop
                         class="product-card"
                         id="${product._id}"
@@ -110,7 +113,7 @@ class CartView {
                       >
                       </cb-shop>
                     `
-                  )}
+                 )}
                 `}
                 <sl-button
               type="primary"
