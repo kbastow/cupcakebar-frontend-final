@@ -139,7 +139,7 @@ sl-radio {
   max-width: 40vw;
 }*/
 
-// RESPONSIVE - MOBILE -------------------
+// RESPONSIVE - TABLET -------------------
 @media all and (max-width: 768px) {
   sl-dialog::part(panel) {
     width: 100%;
@@ -147,4 +147,30 @@ sl-radio {
     max-height: none;
     max-width: none;
   }
+
+
+.add-cart-btn::part(base),
+.back-btn::part(base) {
+  width: 11em;
+  height: 5em;
+font-size: 10px;
+padding-top: 2px;
+
+}
+}
+
+// RESPONSIVE - MOBILE --------------------
+@media all and (max-width: 375px) {
+
+
+.add-cart-btn::part(base),
+.back-btn::part(base) {
+  width: 10em;
+  height: 3em;
+font-size: 8px;
+padding-bottom: 5em;
+
+
+}
+
 }
