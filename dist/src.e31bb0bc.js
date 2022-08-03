@@ -12609,6 +12609,35 @@ class UserAPI {
     return data;
   }
 
+  async addToCart(productId) {
+    // validate
+    if (!productId) return; // fetch the json data
+
+    const response = await fetch("".concat(_App.default.apiBase, "/user/addToCart"), {
+      method: "PUT",
+      headers: {
+        "Authorization": "Bearer ".concat(localStorage.accessToken),
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify({
+        productId: productId
+      })
+    }); // if response not ok
+
+    if (!response.ok) {
+      // console log error
+      const err = await response.json();
+      if (err) console.log(err); // throw error (exit this function)      
+
+      throw new Error('Problem adding product to cart');
+    } // convert response payload into json - store as data
+
+
+    const data = await response.json(); // return data
+
+    return data;
+  }
+
 }
 
 var _default = new UserAPI();
@@ -12959,7 +12988,7 @@ class ShopView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n     <style>\n        .filter-menu {\n          display: flex;\n          align-items: center;\n        }\n\n        .filter-menu >div{\n          margin-right: 1em;\n        }\n      </style>\n      <cb-app-header user=\"", "\"></cb-app-header>\n      <div class=\"page-content shop calign\">        \n         <div class=\"filter-menu\">\n            <div>\n              Filters\n            </div>\n          <div>\n              <sl-button class=\"filter-btn\" data-field=\"glutenFree\" data-match=\"gluten-free\" @click=", ">GLUTEN FREE</sl-button>\n              <sl-button class=\"filter-btn\" data-field=\"nutFree\" data-match=\"nut-free\" @click=", ">NUT FREE</sl-button>\n              <sl-button class=\"filter-btn\" data-field=\"dairyFree\" data-match=\"dairy-free\" @click=", ">DAIRY FREE</sl-button>\n              <sl-button class=\"filter-btn\"5px; data-field=\"vegan\" data-match=\"vegan\" @click=", ">VEGAN</sl-button>\n          </div>\n             <sl-button class=\"clear-btn\" @click=", ">CLEAR</sl-button>\n        </div>\n        \n        <div class=\"products-grid\">\n          ", "\n\n        </div>\n        <p>Larger collection of tasty treats in the works...\n        <br><b>Stay tuned!</b></p>\n        <br>\n      </div>\n      \n\n      </div>\n      <cb-app-footer></cb-app-footer>\n    "])), JSON.stringify(_Auth.default.currentUser), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.products == null ? (0, _litHtml.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([" <sl-spinner></sl-spinner> "]))) : (0, _litHtml.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n                  ", "\n                "])), this.products.map(product => (0, _litHtml.html)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n                      <cb-shop\n                        class=\"product-card\"\n                        id=\"", "\"\n                        productName=\"", "\"\n                        price=\"", "\"\n                        image=\"", "\"\n                      >\n                      </cb-shop>\n                    "])), product._id, product.productName, product.price, product.image))));
+    const template = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n     <style>\n        .filter-menu {\n          display: flex;\n          align-items: center;\n        }\n\n        .filter-menu >div{\n          margin-right: 1em;\n        }\n      </style>\n      <cb-app-header user=\"", "\"></cb-app-header>\n      <div class=\"page-content shop calign\">        \n         <div class=\"filter-menu\">\n            <div>\n              Filters\n            </div>\n          <div>\n              <sl-button class=\"filter-btn\" data-field=\"glutenFree\" data-match=\"gluten-free\" @click=", ">GLUTEN FREE</sl-button>\n              <sl-button class=\"filter-btn\" data-field=\"nutFree\" data-match=\"nut-free\" @click=", ">NUT FREE</sl-button>\n              <sl-button class=\"filter-btn\" data-field=\"dairyFree\" data-match=\"dairy-free\" @click=", ">DAIRY FREE</sl-button>\n              <sl-button class=\"filter-btn\"5px; data-field=\"vegan\" data-match=\"vegan\" @click=", ">VEGAN</sl-button>\n          </div>\n             <sl-button class=\"clear-btn\" @click=", ">CLEAR</sl-button>\n        </div>\n        \n        <div class=\"products-grid\">\n          ", "\n\n        </div>\n      </div>\n      \n\n      </div>\n      <cb-app-footer></cb-app-footer>\n    "])), JSON.stringify(_Auth.default.currentUser), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.products == null ? (0, _litHtml.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([" <sl-spinner></sl-spinner> "]))) : (0, _litHtml.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n                  ", "\n                "])), this.products.map(product => (0, _litHtml.html)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n                      <cb-shop\n                        class=\"product-card\"\n                        id=\"", "\"\n                        productName=\"", "\"\n                        price=\"", "\"\n                        image=\"", "\"\n                      >\n                      </cb-shop>\n                    "])), product._id, product.productName, product.price, product.image))));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13127,7 +13156,7 @@ class newProductView {
 var _default = new newProductView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../ProductAPI":"ProductAPI.js","../../Toast":"Toast.js"}],"views/pages/cart.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../ProductAPI":"ProductAPI.js","../../Toast":"Toast.js"}],"OrderAPI.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13135,17 +13164,95 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _App = _interopRequireDefault(require("../../App"));
+var _App = _interopRequireDefault(require("./App"));
+
+var _Auth = _interopRequireDefault(require("./Auth"));
+
+var _Toast = _interopRequireDefault(require("./Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class OrderAPI {
+  async newOrder(formData) {
+    // send fetch request
+    const response = await fetch("".concat(_App.default.apiBase, "/order"), {
+      method: 'POST',
+      headers: {
+        "Authorization": "Bearer ".concat(localStorage.accessToken)
+      },
+      body: formData
+    }); // if response not ok
+
+    if (!response.ok) {
+      let message = 'Problem adding order';
+
+      if (response.status == 400) {
+        const err = await response.json();
+        message = err.message;
+      } // throw error (exit this function)      
+
+
+      throw new Error(message);
+    } // convert response payload into json - store as data
+
+
+    const data = await response.json(); // return data
+
+    return data;
+  }
+
+  async getOrders() {
+    // fetch the json data
+    const response = await fetch("".concat(_App.default.apiBase, "/order"), {
+      headers: {
+        "Authorization": "Bearer ".concat(localStorage.accessToken)
+      }
+    }); // if response not ok
+
+    if (!response.ok) {
+      // console log error
+      const err = await response.json();
+      if (err) console.log(err); // throw error (exit this function)      
+
+      throw new Error('Problem getting orders');
+    } // convert response payload into json - store as data
+
+
+    const data = await response.json(); // return data
+
+    return data;
+  }
+
+}
+
+var _default = new OrderAPI();
+
+exports.default = _default;
+},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/cart.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("./../../App"));
 
 var _litHtml = require("lit-html");
 
-var _Router = require("../../Router");
+var _Router = require("./../../Router");
 
-var _Auth = _interopRequireDefault(require("../../Auth"));
+var _Auth = _interopRequireDefault(require("./../../Auth"));
 
-var _Utils = _interopRequireDefault(require("../../Utils"));
+var _Utils = _interopRequireDefault(require("./../../Utils"));
 
-var _templateObject;
+var _OrderAPI = _interopRequireDefault(require("../../OrderAPI"));
+
+var _UserAPI = _interopRequireDefault(require("../../UserAPI"));
+
+var _Toast = _interopRequireDefault(require("./../../Toast"));
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13154,27 +13261,62 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 class CartView {
   init() {
     document.title = 'Cart';
+    this.userCart = null;
     this.render();
 
     _Utils.default.pageIntroAnim();
 
-    const timeline = gsap.timeline({
-      defaults: {
-        duration: 1
-      }
+    this.getCart();
+  }
+
+  async getCart() {
+    try {
+      const currentUser = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
+      this.userCart = currentUser.userCart;
+      console.log(this.userCart);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, "error");
+    }
+  }
+
+  async newOrderHandler(e) {
+    e.preventDefault();
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.setAttribute('loading', '');
+    const formData = e.detail.formData;
+
+    try {
+      await _OrderAPI.default.newOrder(formData);
+
+      _Toast.default.show('Order completed');
+
+      submitBtn.removeAttribute('loading');
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+
+      submitBtn.removeAttribute('loading');
+    } // create sl-dialog for completed order
+
+
+    const dialogEl = document.createElement('sl-dialog'); // add class name
+
+    dialogEl.className = 'order-dialog'; // sl-dialog content
+
+    const dialogContent = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    <style>\n    .wrap {\n        display: flex;\n        flex-wrap: wrap;\n    }\n   \n    .content {\n        margin-left: 2em;\n        margin-right: 2em;\n        text-align: left;\n        padding-bottom: 1em;\n    }\n\n    </style>\n    \n    <div class=\"wrap\">\n      <div class=\"content\">\n        <h1>Thank you!</h1>\n        <p>You're order has been recieved.</p>\n        <sl-button type=\"primary\" class=\"anim-in\" @click=", ">Return Home</sl-button>         \n      </div>\n    </div>\n    "])), () => (0, _Router.gotoRoute)('/'));
+    (0, _litHtml.render)(dialogContent, dialogEl); // append to document.body
+
+    document.body.append(dialogEl); // show sl-dialog
+
+    dialogEl.show(); // on close, delete dialogEl
+
+    dialogEl.addEventListener('sl-after-hide', () => {
+      dialogEl.remove();
     });
-    timeline.from('h1', {
-      opacity: 0
-    }, .2).from('p', {
-      opacity: 0,
-      y: '-50%',
-      ease: 'bounce',
-      stagger: .5
-    }, 1);
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    <cb-app-header user=\"", "\"></cb-app-header>\n    <div class=\"cart\">\n      <div class=\"page-content\">        \n        <h1>My Cart</h1>\n        <br>\n        <br>\n        <br>\n        <br>\n        <p> For cupcake purchases on the go!\n        <br><b>Coming soon...</b></p>\n        \n      </div> \n      </div>\n      <cb-app-footer></cb-app-footer>     \n    "])), JSON.stringify(_Auth.default.currentUser));
+    const template = (0, _litHtml.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\n  <cb-app-header user=\"", "\"></cb-app-header>\n    <div class=\"cart\"> \n     <div class=\"page-content\">\n      <div class=\"products-grid\">\n        \n        <h1>My cart</h1>\n<<<<<<< Updated upstream\n        <sl-form class=\"form-order\" @sl-submit=", ">\n          ", "\n                <sl-button\n              type=\"primary\"\n              class=\"submit-btn\"\n              submit\n              style=\"width: 100%;\"\n              >Confirm Order\n            </sl-button>\n          </sl-form>        \n=======\n            <sl-form class=\"form-order\" @sl-submit=", "> \n              ", "\n            </sl-form>\n          </div>        \n>>>>>>> Stashed changes\n        </div>  \n      </div>\n      <cb-app-footer></cb-app-footer>      \n    "])), JSON.stringify(_Auth.default.currentUser), this.newOrderHandler, this.userCart == null ? (0, _litHtml.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral([" <sl-spinner></sl-spinner> "]))) : (0, _litHtml.html)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n                  ", "\n                "])), this.userCart.map(product => (0, _litHtml.html)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n                      <cb-shop\n                        class=\"product-card\"\n                        id=\"", "\"\n                        productName=\"", "\"\n                        price=\"", "\"\n                        image=\"", "\"\n                      >\n                      </cb-shop>\n                    "])), product._id, product.productName, product.price, product.image))), this.newOrderHandler, this.userCart == null ? (0, _litHtml.html)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral([" \n                <sl-spinner></sl-spinner> \n                "]))) : (0, _litHtml.html)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n                ", "\n                      "])), this.userCart.length == 0 ? (0, _litHtml.html)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["<h2> Your cart is empty!</h2>\n                  <sl-button class=\"back-btn\" type=\"primary\" @click=", ">BACK TO SHOP</sl-button>"])), () => (0, _Router.gotoRoute)('/shop')) : this.userCart.map(product => (0, _litHtml.html)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n\n                            <cb-shop\n                              class=\"product-card\"\n                              id=\"", "\"\n                              productName=\"", "\"\n                              price=\"", "\"\n                              image=\"", "\"\n                            >\n                            </cb-shop>\n                            <sl-button type=\"primary\" class=\"submit-btn\" submit style=\"width: 100%;\">Confirm Order\n                            </sl-button>\n                          "])), product._id, product.productName, product.price, product.image))));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13183,7 +13325,7 @@ class CartView {
 var _default = new CartView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/product.js":[function(require,module,exports) {
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","../../OrderAPI":"OrderAPI.js","../../UserAPI":"UserAPI.js","./../../Toast":"Toast.js"}],"views/pages/product.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13202,6 +13344,8 @@ var _Auth = _interopRequireDefault(require("../../Auth"));
 var _Utils = _interopRequireDefault(require("../../Utils"));
 
 var _ProductAPI = _interopRequireDefault(require("../../ProductAPI"));
+
+var _UserAPI = _interopRequireDefault(require("../../UserAPI"));
 
 var _Toast = _interopRequireDefault(require("../../Toast"));
 
@@ -13233,8 +13377,18 @@ class ProductView {
     }
   }
 
+  async addToCartHandler() {
+    try {
+      await _UserAPI.default.addToCart(this.id);
+
+      _Toast.default.show("Product added to cart");
+    } catch (err) {
+      _Toast.default.show(err, "error");
+    }
+  }
+
   render() {
-    const template = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <cb-app-header user=\"", "\"></cb-app-header>\n\n      <div class=\"page-content\">\n        <div class=\"productInfo calign\">\n\n          ", "\n        </div>\n      </div>\n      <cb-app-footer></cb-app-footer>\n    "])), JSON.stringify(_Auth.default.currentUser), this.product == null ? (0, _litHtml.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([" \n          <!-- Loading -->\n          <img src=\"../../images/loading-animation.gif\"/>\n           "]))) : (0, _litHtml.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n                    <img src=\"", "/images/", "\" alt=\"", "\" />\n                    <h1>", "</h1>\n                    <p id=\"price\">Box of a dozen - \"", "\"</p>\n                    <p id=\"description\">\"", "\"</p>\n                    <p id=\"ingredientsHeading\">Ingredients</p>\n                    <p id=\"ingredients\">\"", "\"</p>\n                    <!-- <p>\"", "\"</p>\n                    <p>\"", "\"</p>\n                    <p>\"", "\"</p>\n                    <p>\"", "\"</p> -->\n                    <button id=\"addCart\">ADD TO CART!</button>\n              "])), _App.default.apiBase, this.product.image, this.product.productName, this.product.productName, this.product.price, this.product.description, this.product.ingredients, this.product.glutenFree, this.product.nutFree, this.product.dairyFree, this.product.vegan));
+    const template = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <cb-app-header user=\"", "\"></cb-app-header>\n\n      <div class=\"page-content\">\n        <div class=\"productInfo calign\">\n\n          ", "\n        </div>\n      </div>\n      <cb-app-footer></cb-app-footer>\n    "])), JSON.stringify(_Auth.default.currentUser), this.product == null ? (0, _litHtml.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([" \n          <!-- Loading -->\n          <img src=\"../../images/loading-animation.gif\"/>\n           "]))) : (0, _litHtml.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n           \n           <div class=\"product-image\">\n                    <img class=\"product-img\" src=\"", "/images/", "\" alt=\"", "\" />\n            </div>\n\n            <div class=\"about-product\">\n                    <h1>", "</h1>\n                    <h2 id=\"price\">Box of a dozen - $", "</h2>\n                    <br>\n                    <p id=\"description\">", "</p>\n                    <p id=\"ingredientsHeading\"><b>Ingredients</b></p>\n                    <p id=\"ingredients\">", "</p>\n                    <br>\n                    <br>\n                    <sl-button class=\"add-cart-btn\" type=\"primary\" @click=", ">ADD TO CART!</sl-button>\n                    <sl-button class=\"back-btn\" type=\"primary\" @click=", ">BACK TO SHOP</sl-button>\n                    </div>\n              "])), _App.default.apiBase, this.product.image, this.product.productName, this.product.productName, this.product.price, this.product.description, this.product.ingredients, this.addToCartHandler.bind(this), () => (0, _Router.gotoRoute)('/shop')));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13243,7 +13397,64 @@ class ProductView {
 var _default = new ProductView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../ProductAPI":"ProductAPI.js","../../Toast":"Toast.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../ProductAPI":"ProductAPI.js","../../UserAPI":"UserAPI.js","../../Toast":"Toast.js"}],"views/pages/orders.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("./../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Auth = _interopRequireDefault(require("./../../Auth"));
+
+var _Utils = _interopRequireDefault(require("./../../Utils"));
+
+var _OrderAPI = _interopRequireDefault(require("./../../OrderAPI"));
+
+var _Toast = _interopRequireDefault(require("./../../Toast"));
+
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class OrdersView {
+  async init() {
+    document.title = 'Orders';
+    this.userOrders = null;
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+
+    this.getUserOrders();
+  }
+
+  async getUserOrders() {
+    try {
+      this.userOrders = await _OrderAPI.default.getUserOrders();
+      console.log(this.userOrders);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <cb-app-header user=\"", "\"></cb-app-header>\n      <div class=\"orders page-content calign\">\n        <h1>Customer Orders</h1>\n        <div class=\"orders-grid\">\n          ", "\n        </div>\n      </div>\n      <cb-app-footer></cb-app-footer>         \n    "])), JSON.stringify(_Auth.default.currentUser), this.userOrders == null ? (0, _litHtml.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            <sl-spinner></sl-spinner>\n          "]))) : (0, _litHtml.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n            ", "\n          "])), this.userOrders.map(order => (0, _litHtml.html)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n            <table\n                id=\"", "\"\n                user=\"", "\"\n                orderSummary=\"", "\"\n                orderStatus=\"", "\"\n                createdAt=\"", "\"\n            ></table>\n            "])), order._id, order.user_id, order.orderSummary, order.orderStatus, order.createdAt))));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new OrdersView();
+
+exports.default = _default;
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../OrderAPI":"OrderAPI.js","./../../Toast":"Toast.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13277,6 +13488,8 @@ var _cart = _interopRequireDefault(require("./views/pages/cart"));
 
 var _product = _interopRequireDefault(require("./views/pages/product"));
 
+var _orders = _interopRequireDefault(require("./views/pages/orders"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import views
@@ -13293,7 +13506,8 @@ const routes = {
   '/signin': _signin.default,
   '/signup': _signup.default,
   '/profile': _profile.default,
-  '/editProfile': _editProfile.default
+  '/editProfile': _editProfile.default,
+  '/orders': _orders.default
 };
 
 class Router {
@@ -13347,7 +13561,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/aboutUs":"views/pages/aboutUs.js","./views/pages/shop":"views/pages/shop.js","./views/pages/favouriteProducts":"views/pages/favouriteProducts.js","./views/pages/newProduct":"views/pages/newProduct.js","./views/pages/cart":"views/pages/cart.js","./views/pages/product":"views/pages/product.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/aboutUs":"views/pages/aboutUs.js","./views/pages/shop":"views/pages/shop.js","./views/pages/favouriteProducts":"views/pages/favouriteProducts.js","./views/pages/newProduct":"views/pages/newProduct.js","./views/pages/cart":"views/pages/cart.js","./views/pages/product":"views/pages/product.js","./views/pages/orders":"views/pages/orders.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17267,7 +17481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55162" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56590" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
