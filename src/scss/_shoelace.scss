@@ -174,12 +174,12 @@ padding-top: 2px;
 
 
 // EDIT PROFILE -----------------------
-sl-form::part(base){
-  width: 60em;
-}
+
 
 
 }
+
+
 
 // RESPONSIVE - MOBILE --------------------
 @media all and (max-width: 375px) {
@@ -220,9 +220,7 @@ padding-bottom: 5em;
 
 
 // EDIT PROFILE -----------------------
-sl-form::part(base){
-    width: 40em;
-  }
+
 
 
 
