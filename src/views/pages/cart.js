@@ -91,38 +91,36 @@ class CartView {
     const template = html`
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
-      <div class="page-content calign">
-        <div class="cart">
+  <div class="cart"> 
+     <div class="page-content">
+      <div class="products-grid">
         <h1>My cart</h1>
-        <sl-form class="form-order" @sl-submit=${this.newOrderHandler}>
-          
-        ${
-          this.userCart == null ? html` 
-          <sl-spinner></sl-spinner> 
-          `: html`
-          ${this.userCart.length == 0 ?
-            html`<h2> Your cart is empty!</h2>`
-              : this.userCart.map(product => html`
-
-                      <cb-shop
-                        class="product-card"
-                        id="${product._id}"
-                        productName="${product.productName}"
-                        price="${product.price}"
-                        image="${product.image}"
-                      >
-                      </cb-shop>
-                    `
-                 )}
-                `}
-                <sl-button
-              type="primary"
-              class="submit-btn"
-              submit
-              style="width: 100%;"
-              >Confirm Order
-            </sl-button>
-          </sl-form>        
+        <sl-form class="form-order" @sl-submit=${this.newOrderHandler}> 
+              ${
+                this.userCart == null ? html` 
+                <sl-spinner></sl-spinner> 
+                `: html`
+                ${this.userCart.length == 0 ?
+                  html`<h2> Your cart is empty!</h2>
+                  <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>`
+                    
+                    : this.userCart.map(
+                      (product) => html`
+                            <cb-shop
+                              class="product-card"
+                              id="${product._id}"
+                              productName="${product.productName}"
+                              price="${product.price}"
+                              image="${product.image}"
+                            >
+                            </cb-shop>
+                            <sl-button type="primary" class="submit-btn" submit style="width: 100%;">Confirm Order
+                            </sl-button>
+                          `
+                      )}
+                      `}
+            </sl-form>
+          </div>       
         </div>  
       </div>
       <cb-app-footer></cb-app-footer>      
