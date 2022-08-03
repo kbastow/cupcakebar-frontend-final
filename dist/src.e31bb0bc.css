@@ -504,6 +504,9 @@ input {
   .product-image img {
     width: 30vw;
   }
+  .favourites h1 {
+    font-size: 25px;
+  }
 }
 @media all and (max-width: 375px) {
   .about-product {
@@ -684,6 +687,9 @@ sl-radio {
     font-size: 10px;
     padding-top: 2px;
   }
+  sl-form::part(base) {
+    width: 60em;
+  }
 }
 @media all and (max-width: 375px) {
   .filter-btn::part(base) {
@@ -703,6 +709,9 @@ sl-radio {
     height: 2em;
     font-size: 8px;
     padding-bottom: 5em;
+  }
+  sl-form::part(base) {
+    width: 40em;
   }
 }
 #toasts {
