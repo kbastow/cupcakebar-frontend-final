@@ -30,7 +30,7 @@ class OrderAPI {
     return data
   }
   
-  async getOrders(){
+  async getUserOrders(){
     
     // fetch the json data
     const response = await fetch(`${App.apiBase}/order`, {
