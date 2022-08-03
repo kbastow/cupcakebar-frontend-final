@@ -329,7 +329,7 @@ a:hover{
 }
 
 .signinup-logo {
-  max-width: 12vw;
+  width: 30em;
   margin: 1.2vw 0;
   margin-left: auto;
   margin-right: auto;
@@ -514,8 +514,8 @@ input {
     max-width: none;
   }
 
-  .signinup-logo {
-    min-width: 50%;
+  .signinup-logo{
+      width: 25em;
   }
 
 
@@ -577,7 +577,9 @@ input {
 @media all and (max-width: 375px) {
 
 // SIGN IN/ UP ----------------------
-
+.signinup-logo{
+    max-width: 15em;
+}
 
 // HOME ------------------------------
 
