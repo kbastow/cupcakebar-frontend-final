@@ -155,7 +155,6 @@ sl-radio {
 // SHOP ------------------------------
 
 
-
 // PRODUCT PAGE ----------------------
 .add-cart-btn::part(base),
 .back-btn::part(base) {
@@ -187,8 +186,18 @@ padding-top: 2px;
 
 
 // SHOP ------------------------------
+.filter-btn::part(base) {
+  width: 80px;
+  margin-right: 1.1vw;
+  margin-bottom: 1vw;
+  font-size: 10px;
+}
 
-
+.clear-btn::part(base) {
+  width: 80px;
+  margin-left: 2vw;
+  font-size: 12px;
+}
 
 // PRODUCT PAGE ----------------------
 .add-cart-btn::part(base),
