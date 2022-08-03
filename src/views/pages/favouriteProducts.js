@@ -35,6 +35,7 @@ class FavouriteProductsView {
       <cb-app-header
         user="${JSON.stringify(Auth.currentUser)}"
       ></cb-app-header>
+      <div class="favourites">
       <div class="page-content">
        <div class="products-grid">
         <h1>Your favourite cupcakes!</h1>
@@ -57,6 +58,7 @@ class FavouriteProductsView {
                 `}
 
         </div>
+      </div>
       </div>
       <cb-app-footer></cb-app-footer>
     `;
