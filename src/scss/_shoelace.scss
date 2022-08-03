@@ -174,7 +174,9 @@ padding-top: 2px;
 
 
 // EDIT PROFILE -----------------------
-
+sl-form::part(base){
+  width: 50em;
+}
 
 
 }
@@ -218,6 +220,12 @@ padding-bottom: 5em;
 
 
 // EDIT PROFILE -----------------------
+sl-form::part(base){
+    width: 40em;
+  }
+
+
+
 
 }
 
