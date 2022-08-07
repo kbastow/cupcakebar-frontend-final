@@ -504,9 +504,43 @@ input {
 
 
 }
+// RESPONSIVE - TABLET -------------------
+@media all and (max-width:820px) {
+// PRODUCT PAGE ----------------------
+.about-product {
+  float: none;
+  margin-left: 10em;
+  
+  
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    padding: 2px;
+    #description {
+      width: 50vw;
+    }
+  }
+}
+
+.product-image {
+  float: none;
+  margin-right: 4em;
+  img {
+    width: 30vw;
+  }  
+}
+
+}
 
 // RESPONSIVE - TABLET -------------------
-@media all and (max-width: 820px), (min-width:768px) {
+@media all and (max-width:768px) {
 
 // SIGN IN/ UP ----------------------
   .signinup-box {
