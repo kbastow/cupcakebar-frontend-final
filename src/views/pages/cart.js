@@ -98,7 +98,8 @@ class CartView {
         <sl-form class="form-order" @sl-submit=${this.newOrderHandler}> 
               ${
                 this.userCart == null ? html` 
-                <sl-spinner></sl-spinner> 
+                <div class="loading">
+                <img src="../../images/loading-animation.gif"/> </div>
                 `: html`
                 ${this.userCart.length == 0 ?
                   html`<h2> Your cart is empty!</h2>
