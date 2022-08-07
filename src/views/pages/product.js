@@ -44,7 +44,8 @@ class ProductView {
 
           ${this.product == null ? html` 
           <!-- Loading -->
-          <img src="../../images/loading-animation.gif"/>
+          <div class="loading">
+          <img src="../../images/loading-animation.gif"/> </div>
            ` : html`
            
            <div class="product-image">
