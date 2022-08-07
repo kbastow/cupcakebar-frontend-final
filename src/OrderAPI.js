@@ -4,12 +4,12 @@ import Toast from './Toast'
 
 class OrderAPI {
   
-  async newOrder(productId){
+  async newOrder(formData){
     // send fetch request
     const response = await fetch(`${App.apiBase}/order`, {
       method: 'POST',
       headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json'},
-      body: JSON.stringify({productId: productId})
+      body: formData
     })
 
     // if response not ok
