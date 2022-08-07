@@ -1,23 +1,25 @@
 import App from './../../App'
 import {html, render } from 'lit-html'
+import { gotoRoute, anchorRoute } from "../../Router";
 import Auth from './../../Auth'
 import Utils from './../../Utils'
 import OrderAPI from './../../OrderAPI'
 import Toast from './../../Toast'
 
 class OrdersView {
-  async init(){
+    init(){
     document.title = 'Orders'  
-    this.userOrders = null  
+    this.orders = null  
     this.render()    
     Utils.pageIntroAnim()
-    this.getUserOrders() 
+    this.getOrders()
   }
 
-  async getUserOrders(){
+  async getOrders(){
     try{
-      this.userOrders = await OrderAPI.getUserOrders()
-      console.log(this.userOrders)
+      const productId = Utils.getParams().productId;
+      this.orders = await OrderAPI.getOrders(productId)
+      console.log(this.orders)
       this.render()
     }catch(err){
       Toast.show(err, 'error')
@@ -27,13 +29,23 @@ class OrdersView {
   render(){
     const template = html`
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
-      <div class="orders page-content calign">
-        <h1>Customer Orders</h1>
+      
+      <div class="orders page-content calign">     
         <div class="orders-grid">
+<<<<<<< Updated upstream
           ${this.userOrders == null ? html`
             <sl-spinner></sl-spinner>
+=======
+         <h1>Customer Orders</h1>
+          ${
+            this.orders == null 
+            ? html`
+          <div class="loading">
+          <img src="../../images/loading-animation.gif"/> </div>
+>>>>>>> Stashed changes
           ` : html`
-            ${this.userOrders.map(order => html`
+            ${this.orders.map(
+              (order) => html`
             <table
                 id="${order._id}"
                 user="${order.user_id}"

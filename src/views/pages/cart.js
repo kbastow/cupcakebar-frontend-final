@@ -29,7 +29,7 @@ class CartView {
 
   async newOrderHandler(e){
     e.preventDefault()
-    const submitBtn = document.querySelector('.submit-btn')
+    const submitBtn = document.querySelector('.new-order-submit-btn')
     submitBtn.setAttribute('loading', '')    
     const formData = e.detail.formData
 
@@ -91,6 +91,7 @@ class CartView {
     const template = html`
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
+<<<<<<< Updated upstream
     <div class="cart"> 
      <div class="page-content">
       <div class="products-grid">
@@ -125,6 +126,13 @@ class CartView {
           </sl-form>        
 =======
             <sl-form class="form-order" @sl-submit=${this.newOrderHandler}> 
+=======
+    <div class="page-content">
+      <sl-form class="form-order" @sl-submit=${this.newOrderHandler}>
+        <div class="cart"> 
+          <div class="products-grid">
+            <h1>My cart</h1>
+>>>>>>> Stashed changes
               ${
                 this.userCart == null ? html` 
                 <sl-spinner></sl-spinner> 
@@ -144,6 +152,7 @@ class CartView {
                               image="${product.image}"
                             >
                             </cb-shop>
+<<<<<<< Updated upstream
                             <sl-button type="primary" class="submit-btn" submit style="width: 100%;">Confirm Order
                             </sl-button>
                           `
@@ -152,9 +161,18 @@ class CartView {
             </sl-form>
           </div>        
 >>>>>>> Stashed changes
+=======
+                      
+                      `
+                    )}
+                `}
+              <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>
+          </div>       
+>>>>>>> Stashed changes
         </div>  
-      </div>
-      <cb-app-footer></cb-app-footer>      
+      </sl-form>
+    </div>
+    <cb-app-footer></cb-app-footer>      
     `
     render(template, App.rootEl)
   }
