@@ -112,16 +112,16 @@ class ShopView {
               Filters
             </div>
           <div>
-              <sl-button class="filter-btn" data-field="glutenFree" data-match="gluten-free" @click=${this.handleFilterBtn.bind(
+              <sl-button class="filter-btn" data-field="glutenFree" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>GLUTEN FREE</sl-button>
-              <sl-button class="filter-btn" data-field="nutFree" data-match="nut-free" @click=${this.handleFilterBtn.bind(
+              <sl-button class="filter-btn" data-field="nutFree" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>NUT FREE</sl-button>
-              <sl-button class="filter-btn" data-field="dairyFree" data-match="dairy-free" @click=${this.handleFilterBtn.bind(
+              <sl-button class="filter-btn" data-field="dairyFree" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>DAIRY FREE</sl-button>
-              <sl-button class="filter-btn"5px; data-field="vegan" data-match="vegan" @click=${this.handleFilterBtn.bind(
+              <sl-button class="filter-btn"5px; data-field="vegan" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>VEGAN</sl-button>
           </div>
