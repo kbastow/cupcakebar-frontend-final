@@ -223,9 +223,9 @@ customElements.define(
               ? html` <a href="/cart" @click="${anchorRoute}">CART</a> `
               : html`<a href="/orders" @click="${anchorRoute}">ORDERS</a>`}
             <a href="/aboutUs" @click="${anchorRoute}">CONTACT</a>
-            <a href="/profile" @click="${anchorRoute}">My Profile</a>
-            <a href="/editProfile" @click="${anchorRoute}">Edit Profile</a>
-            <a href="#" @click="${() => Auth.signOut()}">Sign Out</a>
+            <a href="/profile" @click="${anchorRoute}">MY PROFILE</a>
+            <a href="/editProfile" @click="${anchorRoute}">EDIT PROFILE</a>
+            <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>
           </nav>
         </sl-drawer>
       `;
