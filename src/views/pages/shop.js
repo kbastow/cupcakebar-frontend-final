@@ -31,28 +31,28 @@ class ShopView {
     // gluten free
     if (field == "glutenFree") {
       filteredProducts = this.products.filter(
-        (product) => product.glutenFree == match
+        (product) => product.glutenFree == true
       );
     }
 
     // nut free
     if (field == "nutFree") {
       filteredProducts = this.products.filter(
-        (product) => product.nutFree == match
+        (product) => product.nutFree == true
       );
     }
 
     // dairy free
     if (field == "dairyFree") {
       this.filteredProducts = this.products.filter(
-        (product) => product.dairyFree == match
+        (product) => product.dairyFree == true
       );
     }
 
     // vegan
     if (field == "vegan") {
       this.filteredProducts = this.products.filter(
-        (product) => product.vegan == match
+        (product) => product.vegan == true
       );
     }
 
