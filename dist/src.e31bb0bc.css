@@ -44,6 +44,11 @@ body {
   flex-direction: column;
 }
 
+.loading img {
+  width: 30vw;
+  margin: 4vw;
+}
+
 .background {
   background-size: 2px;
 }
@@ -333,7 +338,7 @@ a:hover {
 }
 
 .signinup-logo {
-  max-width: 12vw;
+  width: 30em;
   margin: 1.2vw 0;
   margin-left: auto;
   margin-right: auto;
@@ -435,6 +440,9 @@ input {
   width: 30vw;
 }
 
+.cart {
+  align-content: center;
+}
 .cart p {
   text-align: center;
   font-size: 30px;
@@ -474,13 +482,39 @@ input {
     width: 70vw;
   }
 }
-@media all and (max-width: 820px), (min-width: 768px) {
+@media all and (max-width: 820px) {
+  .about-product {
+    float: none;
+    margin-left: 10em;
+  }
+  .about-product h1 {
+    font-size: 30px;
+  }
+  .about-product h2 {
+    font-size: 20px;
+  }
+  .about-product p {
+    font-size: 20px;
+    padding: 2px;
+  }
+  .about-product p #description {
+    width: 50vw;
+  }
+  .product-image {
+    float: none;
+    margin-right: 4em;
+  }
+  .product-image img {
+    width: 30vw;
+  }
+}
+@media all and (max-width: 768px) {
   .signinup-box {
     width: 90%;
     max-width: none;
   }
   .signinup-logo {
-    min-width: 50%;
+    width: 25em;
   }
   .about-product {
     float: left;
@@ -509,8 +543,12 @@ input {
   }
 }
 @media all and (max-width: 375px) {
+  .signinup-logo {
+    max-width: 15em;
+  }
   .about-product {
-    float: left;
+    float: none;
+    margin-left: 20vw;
   }
   .about-product h1 {
     font-size: 15px;
@@ -522,7 +560,7 @@ input {
     font-size: 10px;
   }
   .product-image {
-    float: left;
+    float: none;
   }
   .product-image img {
     width: 60vw;
@@ -687,9 +725,6 @@ sl-radio {
     font-size: 10px;
     padding-top: 2px;
   }
-  sl-form::part(base) {
-    width: 60em;
-  }
 }
 @media all and (max-width: 375px) {
   .filter-btn::part(base) {
@@ -709,9 +744,6 @@ sl-radio {
     height: 2em;
     font-size: 8px;
     padding-bottom: 5em;
-  }
-  sl-form::part(base) {
-    width: 40em;
   }
 }
 #toasts {
