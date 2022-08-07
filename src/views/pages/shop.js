@@ -44,14 +44,14 @@ class ShopView {
 
     // dairy free
     if (field == "dairyFree") {
-      this.filteredProducts = this.products.filter(
+      filteredProducts = this.products.filter(
         (product) => product.dairyFree == true
       );
     }
 
     // vegan
     if (field == "vegan") {
-      this.filteredProducts = this.products.filter(
+      filteredProducts = this.products.filter(
         (product) => product.vegan == true
       );
     }
