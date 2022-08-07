@@ -14,8 +14,8 @@ class ShopView {
     Utils.pageIntroAnim();
     await this.getProducts();
     
-    const timeline = gsap.timeline({ defaults: { duration: 1 } })
-    timeline.from('.products-grid', { opacity: 0},1)
+    const timeline = gsap.timeline({ defaults: { duration: 2 } })
+    timeline.from('.product-card', { opacity: 0, stagger: .5},'+=0.8')
     
   }
 
