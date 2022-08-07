@@ -29,7 +29,7 @@ class CartView {
 
   async newOrderHandler(e){
     e.preventDefault()
-    const submitBtn = document.querySelector('.submit-btn')
+    const submitBtn = document.querySelector('.new-order-submit-btn')
     submitBtn.setAttribute('loading', '')    
     const formData = e.detail.formData
 
@@ -91,11 +91,11 @@ class CartView {
     const template = html`
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
-  <div class="cart"> 
-     <div class="page-content">
-      <div class="products-grid">
-        <h1>My cart</h1>
-        <sl-form class="form-order" @sl-submit=${this.newOrderHandler}> 
+  <div class="page-content">
+      <sl-form class="form-order" @sl-submit=${this.newOrderHandler}>
+        <div class="cart"> 
+          <div class="products-grid">
+            <h1>My cart</h1>
               ${
                 this.userCart == null ? html` 
                 <div class="loading">
@@ -115,16 +115,15 @@ class CartView {
                               image="${product.image}"
                             >
                             </cb-shop>
-                            <sl-button type="primary" class="submit-btn" submit style="width: 100%;">Confirm Order
-                            </sl-button>
-                          `
-                      )}
-                      `}
-            </sl-form>
-          </div>       
-        </div>  
+                            `
+                    )}
+              `}
+              <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>
+            </div>
+          </div>     
+        </sl-form>
       </div>
-      <cb-app-footer></cb-app-footer>      
+    <cb-app-footer></cb-app-footer>       
     `
     render(template, App.rootEl)
   }
