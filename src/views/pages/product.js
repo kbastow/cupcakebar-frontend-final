@@ -14,6 +14,11 @@ class ProductView {
     this.render();
     Utils.pageIntroAnim();
     await this.getProduct();
+
+    const timeline = gsap.timeline({ defaults: { duration: 1 } })
+    timeline.from('.product-image', { opacity: 0, scale: 2},1)
+            .from('.about-product', { opacity: 0, x: '50%'},'+=0.2')
+    
   }
 
   async getProduct() {
