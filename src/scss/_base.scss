@@ -623,7 +623,9 @@ input {
 
 // PRODUCT PAGE ----------------------
   .about-product {
-    float: left;
+    float: none;
+    margin-left: 20vw;
+    
     
     
     h1 {
@@ -640,7 +642,7 @@ input {
 
   }
   .product-image {
-    float: left;
+    float: none;
     img {
       width: 60vw;
       padding-right: 5vw;
