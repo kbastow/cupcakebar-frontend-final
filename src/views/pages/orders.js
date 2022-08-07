@@ -16,8 +16,8 @@ class OrdersView {
 
   async getOrders(){
     try{
-      const productId = Utils.getParams().productId;
-      this.orders = await OrderAPI.getOrders(productId)
+      const orderId = Utils.getParams().orderId;
+      this.orders = await OrderAPI.getOrders(orderId)
       console.log(this.orders)
       this.render()
     }catch(err){

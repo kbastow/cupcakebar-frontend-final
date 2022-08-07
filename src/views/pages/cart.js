@@ -92,10 +92,11 @@ class CartView {
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
   <div class="page-content">
-      <sl-form class="form-order" @sl-submit=${this.newOrderHandler}>
+      <sl-form class="page-form" @sl-submit=${this.newOrderHandler}>
         <div class="cart"> 
           <div class="products-grid">
             <h1>My cart</h1>
+            <input type="hidden" name="user" value="${Auth.currentUser._id}" />
               ${
                 this.userCart == null ? html` 
                 <div class="loading">
