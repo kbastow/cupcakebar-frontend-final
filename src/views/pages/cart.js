@@ -34,7 +34,7 @@ class CartView {
     const formData = e.detail.formData
 
     try{
-      await OrderAPI.newOrder(formData)
+      await OrderAPI.newOrder(productId)
       Toast.show('Order completed')
       submitBtn.removeAttribute('loading')
 
