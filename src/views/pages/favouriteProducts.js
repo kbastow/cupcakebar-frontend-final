@@ -41,7 +41,9 @@ class FavouriteProductsView {
         <h1>Your favourite cupcakes!</h1>
           ${
             this.favProducts == null
-              ? html` <sl-spinner></sl-spinner> `
+              ? html` 
+              <div class="loading">
+              <img src="../../images/loading-animation.gif"/> </div> `
               : html`
                   ${this.favProducts.map(
                     (product) => html`
