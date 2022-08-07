@@ -20,6 +20,13 @@ body {
   flex-direction: column;
 }
 
+.loading {
+img {
+  width: 30vw;
+  margin: 4vw;
+}
+}
+
 .background {
   background-size: 2px;
 }
@@ -451,6 +458,8 @@ input {
     text-align: center;
     font-size: 30px;
   }
+
+  align-content: center;
 }
 
 // -------------------------------------
