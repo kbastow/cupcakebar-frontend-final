@@ -12,10 +12,10 @@ class ShopView {
     this.products = null;
     this.render();
     Utils.pageIntroAnim();
+    await this.getProducts();
+    
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
     timeline.from('.products-grid', { opacity: 0},1)
-    
-    await this.getProducts();
     
   }
 
