@@ -70,18 +70,18 @@ class newProductView {
           <div class="input-group" style="margin-bottom: 2em;">
             <label>Gluten Free</label><br>
             <sl-radio-group label="Gluten" no-fieldset>
-              <sl-radio name="gluten-free" value="gluten-free">Yes</sl-radio>
-              <sl-radio name="gluten-free" value="nut-free">No</sl-radio>
+              <sl-radio name="glutenFree" value="true">Yes</sl-radio>
+              <sl-radio name="glutenFree" value="false">No</sl-radio>
             </sl-radio-group><br>  
             <label>Nut Free</label><br>
             <sl-radio-group label="Nut" no-fieldset>
-              <sl-radio name="nut-free" value="true">Yes</sl-radio>
-              <sl-radio name="nut-free" value="false">No</sl-radio>
+              <sl-radio name="nutFree" value="true">Yes</sl-radio>
+              <sl-radio name="nutFree" value="false">No</sl-radio>
             </sl-radio-group><br>
             <label>Dairy Free</label><br>
             <sl-radio-group label="Dairy" no-fieldset>
-              <sl-radio name="dairy-free" value="true">Yes</sl-radio>
-              <sl-radio name="dairy-free" value="false">No</sl-radio>
+              <sl-radio name="dairyFree" value="true">Yes</sl-radio>
+              <sl-radio name="dairyFree" value="false">No</sl-radio>
             </sl-radio-group> <br> 
             <label>Vegan</label><br>
             <sl-radio-group label="Vegan" no-fieldset>

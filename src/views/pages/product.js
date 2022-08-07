@@ -28,7 +28,7 @@ class ProductView {
 
   async addToCartHandler() {
     try {
-      await UserAPI.addToCart(this.id);
+      await UserAPI.addToCart(this.product._id);
       Toast.show("Product added to cart");
     } catch (err) {
       Toast.show(err, "error");
