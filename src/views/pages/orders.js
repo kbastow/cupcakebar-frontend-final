@@ -31,7 +31,8 @@ class OrdersView {
         <h1>Customer Orders</h1>
         <div class="orders-grid">
           ${this.userOrders == null ? html`
-            <sl-spinner></sl-spinner>
+          <div class="loading">
+          <img src="../../images/loading-animation.gif"/> </div>
           ` : html`
             ${this.userOrders.map(order => html`
             <table
