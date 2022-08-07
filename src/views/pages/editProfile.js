@@ -48,7 +48,8 @@ class EditProfileView {
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="page-content">        
         ${(this.user == null) ? html`
-          <sl-spinner></sl-spinner>
+        <div class="loading">
+        <img src="../../images/loading-animation.gif"/> </div>
         `:html`
           <sl-form class="page-form" @sl-submit=${this.updateProfileSubmitHandler.bind(this)}>
           <div class="editProfile">
