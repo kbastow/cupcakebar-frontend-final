@@ -133,7 +133,9 @@ class ShopView {
         <div class="products-grid">
           ${
             this.products == null
-              ? html` <sl-spinner></sl-spinner> `
+              ? html` 
+              <div class="loading">
+              <img src="../../images/loading-animation.gif"/> </div> `
               : html`
                   ${this.products.map(
                     (product) => html`
