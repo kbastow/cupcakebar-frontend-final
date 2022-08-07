@@ -12,11 +12,12 @@ class FavouriteProductsView {
     document.title = 'Favourite Cupcakes'
     this.favProducts = null;
     this.render()
-    Utils.pageIntroAnim()
-    //const timeline = gsap.timeline({ defaults: { duration: 1 } })
-    //timeline.from('h1', { opacity: 0 }, .2)
-    //  .from('p', { opacity: 0, y: '-50%', ease: 'bounce', stagger: .5 }, 1)
     this.getFavProducts()
+    Utils.pageIntroAnim()
+    const timeline = gsap.timeline({ defaults: { duration: 1 } })
+    timeline.from('h1', { opacity:0, y:'-50%', ease: 'bounce' },1)
+            .from('.products-grid', { opacity: 0, x:'-20%'},'+=0.5')
+    
   }
 
    async getFavProducts() {
@@ -37,8 +38,8 @@ class FavouriteProductsView {
       ></cb-app-header>
       <div class="favourites">
       <div class="page-content">
+      <h1>Your favourite cupcakes!</h1>
        <div class="products-grid">
-        <h1>Your favourite cupcakes!</h1>
           ${
             this.favProducts == null
               ? html` 
@@ -67,27 +68,6 @@ class FavouriteProductsView {
     render(template, App.rootEl);
   }
 }
-
-  /*render() {
-    const template = html`
-      <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
-      <div class="favourites">
-      <div class="page-content">        
-        <h1>Your favourite cupcakes!</h1>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>Save your favourite tasty cupcakes for later!
-        <br><b>New feature coming soon... </b></p>
-        
-      </div>     
-      </div> 
-      <cb-app-footer></cb-app-footer>
-    `
-    render(template, App.rootEl)
-  }
-}*/
 
 
 export default new FavouriteProductsView()
