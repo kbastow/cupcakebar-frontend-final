@@ -50,18 +50,18 @@ class newProductView {
           <h1>Add Product</h1>
           <input type="hidden" name="user" value="${Auth.currentUser._id}" />
           <div class="input-group">
-            <sl-input class="new-prod-input" label="Name" type="text" placeholder="Product Name" required></sl-input>
+            <sl-input class="new-prod-input" label="Name" type="text" name="productName" placeholder="Product Name" required></sl-input>
           </div>
           <div class="input-group">              
-            <sl-input class="new-prod-input" label="Price" type="text" placeholder="Product Price" required>
+            <sl-input class="new-prod-input" label="Price" type="text" name="price" placeholder="Product Price" required>
               <span slot="prefix">Box of a dozen - $</span>
             </sl-input>
           </div>
           <div class="input-group">
-            <sl-textarea class="new-prod-text" label="Description" rows="4" placeholder="Product Description"></sl-textarea>
+            <sl-textarea class="new-prod-text" label="Description" rows="4" name="description" placeholder="Product Description"></sl-textarea>
           </div>
           <div class="input-group">
-            <sl-textarea class="new-prod-text" label="Ingredients" rows="4" placeholder="Product Ingredients"></sl-textarea>
+            <sl-textarea class="new-prod-text" label="Ingredients" rows="4" name="ingredients" placeholder="Product Ingredients"></sl-textarea>
           </div>
           <div class="input-group" style="margin-bottom: 2em;">
             <label>Product Image</label><br>
