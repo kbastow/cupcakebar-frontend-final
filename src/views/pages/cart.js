@@ -10,17 +10,21 @@ import Toast from './../../Toast'
 class CartView {
   init(){
     document.title = 'Cart'
-    this.userCart = null    
-    this.render()    
+    this.cart = null    
+    this.render()  
+    this.getCart()  
     Utils.pageIntroAnim()
-    this.getCart()
+    const timeline = gsap.timeline({ defaults: { duration: 1 } })
+    timeline.from('h1', { opacity:0, y:'-50%', ease: 'bounce' },1)
+            .from('.products-grid', { opacity: 0, x:'-20%'},'+=0.5')
+    
   }
 
   async getCart() {
     try {
       const currentUser = await UserAPI.getUser(Auth.currentUser._id);
-      this.userCart = currentUser.userCart;
-      console.log(this.userCart);
+      this.cart = currentUser.userCart;
+      console.log(this.cart);
       this.render();
     } catch (err) {
       Toast.show(err, "error");
@@ -96,17 +100,16 @@ class CartView {
         <div class="cart"> 
           <div class="products-grid">
             <h1>My cart</h1>
-            <input type="hidden" name="user" value="${Auth.currentUser._id}" />
               ${
-                this.userCart == null ? html` 
+                this.cart == null ? html` 
                 <div class="loading">
                 <img src="../../images/loading-animation.gif"/> </div>
                 `: html`
-                ${this.userCart.length == 0 ?
+                ${this.cart.length == 0 ?
                   html`<h2> Your cart is empty!</h2>
                   <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>`
                     
-                    : this.userCart.map(
+                    : this.cart.map(
                       (product) => html`
                             <cb-shop
                               class="product-card"
