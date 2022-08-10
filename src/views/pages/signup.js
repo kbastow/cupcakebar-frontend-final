@@ -31,7 +31,7 @@ class SignUpView {
         background: var(--body-bg);
       }
     </style>
-      <div class="page-content page-centered">
+      <div class="sign-in page-centered">
         <div class="signinup-box">
           <img class="signinup-logo" src="/images/brandmark.png" />
           <h3>Sign Up</h3>
