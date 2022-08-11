@@ -326,43 +326,9 @@ a:hover{
 
 // sign in + sign up pages ----------
 
-.sign-in {
-  max-height: 100vh;
-  position: relative;
-    top: var(--app-header-height);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow-y: scroll;
-    padding: 1em;
-}
 
-.signinup-box,
-.signup-box {
-  width: 60vw;
-  text-align: center;
-}
 
-.signinup-box {
-  margin-bottom: none !important;
-}
 
-.signinup-logo {
-  width: 20em;
-  margin-top: 1em;
-}
-
-.sign-up-level {
-  max-width: 45%;
-  min-width: 45%;
-  margin: 1vw auto;
-}
-
-.home-logo {
-  width: 12vw;
-  margin-top: 1.5vw 0;
-  height: auto;
-}
 
 .social-media-box{
   margin-bottom: var(--app-header-height);
