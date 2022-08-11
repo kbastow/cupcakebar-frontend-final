@@ -349,10 +349,7 @@ a:hover{
 
 .signinup-logo {
   width: 20em;
-  margin: 1.2vw 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vw;
+  margin-top: 1em;
 }
 
 .sign-up-level {
@@ -527,6 +524,17 @@ input {
 }
 // RESPONSIVE - TABLET -------------------
 @media all and (max-width:820px) {
+
+
+
+
+// SIGN IN/UP -----------------------
+.signinup-logo {
+  width: 25em;
+  margin-top: 45%;
+}
+
+
 // PRODUCT PAGE ----------------------
 .about-product {
   float: none;
@@ -564,14 +572,15 @@ input {
 @media all and (max-width:768px) {
 
 // SIGN IN/ UP ----------------------
-  .signinup-box {
-    width: 90%;
-    max-width: none;
-  }
+.signinup-box {
+  width: 90%;
+  max-width: none;
+}
 
-  .signinup-logo{
-      width: 25em;
-  }
+.signinup-logo{
+    width: 25em;
+    margin-top: 25%;
+}
 
 
 // HOME ------------------------------
@@ -633,7 +642,8 @@ input {
 
 // SIGN IN/ UP ----------------------
 .signinup-logo{
-    max-width: 15em;
+  max-width: 15em;
+  margin-top: 20%;
 }
 
 // HOME ------------------------------
