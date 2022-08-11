@@ -17,7 +17,6 @@ class CartView {
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
     timeline.from('h1', { opacity:0, y:'-50%', ease: 'bounce' },1)
             .from('.products-grid', { opacity: 0, x:'-20%'},'+=0.5')
-    
   }
 
   async getCart() {
@@ -34,8 +33,19 @@ class CartView {
   async newOrderHandler(e){
     e.preventDefault()
     const submitBtn = document.querySelector('.new-order-submit-btn')
-    submitBtn.setAttribute('loading', '')    
-    const formData = e.detail.formData
+    submitBtn.setAttribute('loading', '')
+    const currentUser = await UserAPI.getUser(Auth.currentUser._id);
+    const cart = currentUser.userCart;
+    const orderTotal = cart.reduce((accumulator, object) => {
+      return accumulator + object.price;
+    }, 0);
+    const formData = {
+      id: currentUser._id,
+      products: cart,
+      total: orderTotal,
+      status: false,
+    }
+    console.log(formData)
 
     try{
       await OrderAPI.newOrder(formData)
