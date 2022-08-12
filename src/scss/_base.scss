@@ -325,7 +325,6 @@ a:hover{
 }
 
 // sign in + sign up pages ----------
-
 .sign-in {
   max-height: 100vh;
   position: relative;
@@ -349,7 +348,10 @@ a:hover{
 
 .signinup-logo {
   width: 20em;
-  margin-top: 1em;
+  margin: 1.2vw 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vw;
 }
 
 .sign-up-level {
@@ -363,6 +365,10 @@ a:hover{
   margin-top: 1.5vw 0;
   height: auto;
 }
+
+
+
+
 
 .social-media-box{
   margin-bottom: var(--app-header-height);
@@ -445,7 +451,7 @@ input {
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
