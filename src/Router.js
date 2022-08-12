@@ -1,4 +1,5 @@
 // import views
+import Auth from './Auth'
 import homeView from './views/pages/home'
 import fourOFourView from './views/pages/404'
 import signinView from './views/pages/signin'
@@ -30,9 +31,30 @@ const routes = {
 	'/orders': ordersView,
 }
 
+const publicRoutes = {
+	'/': homeView,	
+	'/aboutUs': aboutUsView,
+	'/shop': shopView,
+	'/product': productView,
+	'/404': fourOFourView,
+	'/signin': signinView,
+	'/signup': signupView,
+}
+
+const privateRoutes = {
+	'/favouriteProducts': favouriteProductsView,
+	'/newProduct': newProductView,
+	'/cart': cartView,
+	'/profile': profileView,
+	'/editProfile': editProfileView,
+	'/orders': ordersView,
+}
+
 class Router {
 	constructor(){
 		this.routes = routes
+		this.privateRoutes = privateRoutes
+		this.publicRoutes = publicRoutes
 	}
 	
 	init(){
@@ -48,14 +70,16 @@ class Router {
 	route(fullPathname){
 		// extract path without params
 		const pathname = fullPathname.split('?')[0]
-		const route = this.routes[pathname]
-		
-		if(route){
-			// if route exists, run init() of the view
-			this.routes[window.location.pathname].init()
-		}else{			
+		if (this.privateRoutes[pathname] != null) {
+			// Authentication check    
+			Auth.check(() => {
+				this.privateRoutes[pathname].init()
+			}) 
+		} else if (this.publicRoutes[pathname] != null) {
+			this.publicRoutes[pathname].init()
+		} else {			
 			// show 404 view instead
-			this.routes['404'].init()			
+			this.publicRoutes['404'].init()			
 		}
 	}
 
