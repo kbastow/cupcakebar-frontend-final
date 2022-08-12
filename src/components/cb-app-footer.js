@@ -124,10 +124,69 @@ customElements.define(
             color: white;
           }
 
-          /* RESPONSIVE - MOBILE ------------------- */
+          /* RESPONSIVE - TABLET ------------------- */
           @media all and (max-width: 768px) {
 
+            .app-footer-nav a {
+              display: flex;
+              padding: .4vw;
+              margin: 0 2vw;
+              font-size: 1.5vw;
+              width: max-content;
+              text-decoration: none;
+              color: var(--brand-color);
+              align-items: center;
+              
+            }
+
+            .footer-disclaimer {
+              text-align: center;
+              font-size: 1vw;
+              padding-bottom: 1vw;
+            }
+
+            .acknowledge-txt-box {
+              text-align: center;
+              font-size: 10px;
+              padding-bottom: 1vw;
+              margin-left: 10vw;
+              margin-right: 10vw;
+            }
+
           }
+
+          /* RESPONSIVE - MOBILE ------------------- */
+          @media all and (max-width: 375px) {
+
+            .app-footer-nav a {
+              display: flex;
+              padding: .2vw;
+              margin: 0 1.5vw;
+              font-size: 1.8vw;
+              width: max-content;
+              text-decoration: none;
+              color: var(--brand-color);
+              align-items: center;
+              
+            }
+
+            .footer-disclaimer {
+              text-align: center;
+              font-size: 1.2vw;
+              padding-bottom: 1vw;
+            }
+
+            .acknowledge-txt-box {
+              text-align: center;
+              font-size: 5px;
+              padding-bottom: 1vw;
+              margin-left: 10vw;
+              margin-right: 10vw;
+            }
+
+          }
+
+
         </style>
         <footer class="footer-container">
             <div class="app-footer">

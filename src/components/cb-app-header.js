@@ -94,7 +94,7 @@ customElements.define(
           }*/
 
           img {
-            width: 18vw;
+            width: 15vw;
             padding: 0 1.5vw;
             margin: 0 2vw;
           }
