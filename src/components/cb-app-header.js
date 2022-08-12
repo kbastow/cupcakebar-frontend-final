@@ -174,12 +174,14 @@ customElements.define(
               .app-logo-mob-2 {
                 display: block;
                 margin: 0 auto;
-                width: 200px;
+                width: 240px;
+                
               }
   
               .app-side-menu-items a {
                 display: block;
                 padding: 0.6 em;
+                margin-left: 1em;
                 text-decoration: none;
                 font-size: 1.5em;
                 color: #e16a2f;
@@ -204,14 +206,14 @@ customElements.define(
             .app-logo-mob-2 {
               display: block;
               margin: 0 auto;
-              width: 150px;
+              width: 180px;
             }
 
             .app-side-menu-items a {
               display: block;
               padding: 0.4 em;
               text-decoration: none;
-              font-size: 1.3em;
+              font-size: 1.2em;
               color: #e16a2f;
             }
 
