@@ -125,6 +125,37 @@ customElements.define(
           }
 
           /* RESPONSIVE - TABLET ------------------- */
+          @media all and (max-width: 820px) {
+
+            .app-footer-nav a {
+              display: flex;
+              padding: .3vw;
+              margin: 0 2vw;
+              font-size: 1.7vw;
+              width: max-content;
+              text-decoration: none;
+              color: var(--brand-color);
+              align-items: center;
+              
+            }
+
+            .footer-disclaimer {
+              text-align: center;
+              font-size: 1.2vw;
+              padding-bottom: 1vw;
+            }
+
+            .acknowledge-txt-box {
+              text-align: center;
+              font-size: 11px;
+              padding-bottom: 1vw;
+              margin-left: 10vw;
+              margin-right: 10vw;
+            }
+
+          }
+
+          /* RESPONSIVE - TABLET ------------------- */
           @media all and (max-width: 768px) {
 
             .app-footer-nav a {
