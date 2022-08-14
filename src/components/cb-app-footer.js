@@ -223,12 +223,12 @@ customElements.define(
             <div class="app-footer">
 
             <div class="app-footer-logo">
-                <a href="/" @click="${gotoRoute}"><img class="app-logo-footer" src="/images/brandmark.png" /></a>
+                <a href="/" @click="${anchorRoute}"><img class="app-logo-footer" src="/images/brandmark.png" /></a>
             </div>
             <nav class="app-footer-nav">
-                <a href="/aboutUs" @click="${gotoRoute}">Visit us instore</a>
-                <a href="/shop" @click="${gotoRoute}">Order online</a>
-                <a href="/aboutUs" @click="${gotoRoute}">Contact us</a>
+                <a href="/aboutUs" @click="${anchorRoute}">Visit us instore</a>
+                <a href="/shop" @click="${anchorRoute}">Order online</a>
+                <a href="/aboutUs" @click="${anchorRoute}">Contact us</a>
             </nav>
             <nav class="app-footer-socials">
                 <a href="https://www.facebook.com/" target="_blank"><img class="app-social-icon" src="/images/facebook.png" /></a>
