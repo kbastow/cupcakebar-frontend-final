@@ -31,7 +31,7 @@ class SignInView {
         background: var(--body-bg);
       }
     </style>
-      <div class="page-content page-centered" >
+      <div class="sign-in page-centered" >
         <div class="signinup-box">
           <a href="/" title="Cupcake Bar - Home" @click=${anchorRoute}><img class="signinup-logo" src="/images/brandmark.png" /></a>
           <sl-form

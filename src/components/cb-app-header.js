@@ -94,7 +94,7 @@ customElements.define(
           }*/
 
           img {
-            width: 18vw;
+            width: 15vw;
             padding: 0 1.5vw;
             margin: 0 2vw;
           }
@@ -132,7 +132,7 @@ customElements.define(
           }
 
           .app-side-menu-logo {
-            width: 180px;
+            width: 300px;
             margin-bottom: 1em;
             position: absolute;
             top: 2em;
@@ -145,6 +145,7 @@ customElements.define(
 
           .app-logo-mob {
             display: none;
+            width: 150px;
           }
 
           /* active nav links */
@@ -154,7 +155,7 @@ customElements.define(
             text-decoration: underline;
           }
 
-          /* RESPONSIVE - MOBILE ------------------- */
+          /* RESPONSIVE - TABLET ------------------- */
           @media all and (max-width: 768px) {
             .app-top-nav {
               display: none;
@@ -167,8 +168,61 @@ customElements.define(
             .app-logo-mob {
               display: block;
               margin: 0 auto;
+              width: 150px;
+            }
+            
+              .app-logo-mob-2 {
+                display: block;
+                margin: 0 auto;
+                width: 240px;
+                
+              }
+  
+              .app-side-menu-items a {
+                display: block;
+                padding: 0.6 em;
+                margin-left: 1em;
+                text-decoration: none;
+                font-size: 1.5em;
+                color: #e16a2f;
+              }
+          }
+
+          /* RESPONSIVE - MOBILE ------------------- */
+          @media all and (max-width: 375px) {
+            .app-top-nav {
+              display: none;
+            }
+
+            sl-icon-button {
+              display: block;
+            }
+            
+            .app-logo-mob {
+              display: block;
+              margin: 0 auto;
+              width: 70px;
+            }
+            .app-logo-mob-2 {
+              display: block;
+              margin: 0 auto;
+              width: 180px;
+            }
+
+            .app-side-menu-items a {
+              display: block;
+              padding: 0.4 em;
+              text-decoration: none;
+              font-size: 1.2em;
+              color: #e16a2f;
+            }
+
+         
+      
+           
             }
           }
+
         </style>
 
         <header class="app-header">

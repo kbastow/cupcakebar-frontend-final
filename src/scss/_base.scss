@@ -253,6 +253,10 @@ a:hover{
 }
 
 // page --------------------
+
+.app-logo-mob {
+  width: 200px;
+}
 .page-content {
   position: relative;
   top: var(--app-header-height);
@@ -325,6 +329,17 @@ a:hover{
 }
 
 // sign in + sign up pages ----------
+.sign-in {
+  max-height: 100vh;
+  position: relative;
+    top: var(--app-header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    padding: 1em;
+}
+
 .signinup-box,
 .signup-box {
   width: 60vw;
@@ -336,7 +351,7 @@ a:hover{
 }
 
 .signinup-logo {
-  width: 30em;
+  width: 20em;
   margin: 1.2vw 0;
   margin-left: auto;
   margin-right: auto;
@@ -354,6 +369,10 @@ a:hover{
   margin-top: 1.5vw 0;
   height: auto;
 }
+
+
+
+
 
 .social-media-box{
   margin-bottom: var(--app-header-height);
@@ -436,7 +455,7 @@ input {
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -515,6 +534,17 @@ input {
 }
 // RESPONSIVE - TABLET -------------------
 @media all and (max-width:820px) {
+
+
+
+
+// SIGN IN/UP -----------------------
+.signinup-logo {
+  width: 25em;
+  margin-top: 45%;
+}
+
+
 // PRODUCT PAGE ----------------------
 .about-product {
   float: none;
@@ -552,14 +582,15 @@ input {
 @media all and (max-width:768px) {
 
 // SIGN IN/ UP ----------------------
-  .signinup-box {
-    width: 90%;
-    max-width: none;
-  }
+.signinup-box {
+  width: 90%;
+  max-width: none;
+}
 
-  .signinup-logo{
-      width: 25em;
-  }
+.signinup-logo{
+    width: 25em;
+    margin-top: 25%;
+}
 
 
 // HOME ------------------------------
@@ -621,7 +652,8 @@ input {
 
 // SIGN IN/ UP ----------------------
 .signinup-logo{
-    max-width: 15em;
+  max-width: 15em;
+  margin-top: 20%;
 }
 
 // HOME ------------------------------
