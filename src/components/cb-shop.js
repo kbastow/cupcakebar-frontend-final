@@ -61,6 +61,15 @@ customElements.define(
       }
     }
 
+    async deleteFavHandler() {
+      try {
+    await UserAPI.deleteSavedProducts(this.id)
+    Toast.show('Product deleted from favourites')
+  }catch(err){
+    Toast.show(err, 'error')
+  }
+    }
+
     render() {
       return html`
       <style>
@@ -136,6 +145,13 @@ customElements.define(
             label="Add to Favourites"
             style="font-size: 1.5rem";
             @click=${this.addFavHandler.bind(this)}
+          ></sl-icon-button>
+            <sl-icon-button 
+            class="delete"
+            name="x"
+            label="Delete Favourite"
+            style="font-size: 1.5rem";
+            @click=${this.deleteFavHandler.bind(this)}
           ></sl-icon-button>
           </div>
           <h3 class="name">${this.productName}</h3>

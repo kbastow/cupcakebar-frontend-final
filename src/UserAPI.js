@@ -102,6 +102,14 @@ class UserAPI {
     return data
   }
 
+  async deleteSavedProducts(productId) {
+    const response = await fetch(`${App.apiBase}/user/addSavedProducts/${productId}`, {
+      method: "DELETE",
+      headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json' },
+      //body: JSON.stringify({productId: productId})
+    })
+  }
+
   async addToCart(productId){
     // validate
     if(!productId) return

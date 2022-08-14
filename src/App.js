@@ -7,7 +7,8 @@ class App {
   constructor(){
     this.name = "Cupcake Bar"
     this.version = "1.0.0"
-    this.apiBase = 'https://cupcake-bar-final.herokuapp.com'
+    //this.apiBase = 'https://cupcake-bar-final.herokuapp.com'
+    this.apiBase = 'http://localhost:5500'
     this.rootEl = document.getElementById("root")
     this.version = "1.0.0"
   }
