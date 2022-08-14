@@ -183,8 +183,8 @@ customElements.define(
             <img class="app-logo-mob" src="/images/brandmark.png" />
           </div>
           <nav class="app-top-nav">
-            <a href="/" @click="${anchorRoute}">HOME</a>
-            <a href="/shop" @click="${anchorRoute}">SHOP</a>
+            <a href="/" @click="${gotoRoute}">HOME</a>
+            <a href="/shop" @click="${gotoRoute}">SHOP</a>
              ${this.user.accessLevel == 2
               ? html` <a href="/favouriteProducts" @click="${anchorRoute}">FAVOURITES</a> `
               : html`<a href="/newProduct" @click="${anchorRoute}">ADD PRODUCT</a>`}
@@ -192,14 +192,14 @@ customElements.define(
             ${this.user.accessLevel == 2
               ? html` <a href="/cart" @click="${anchorRoute}">CART</a> `
               : html`<a href="/orders" @click="${anchorRoute}">ORDERS</a>`}
-            <a href="/aboutUs" @click="${anchorRoute}">CONTACT</a>
+            <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
             <sl-dropdown>
               <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">ACCOUNT</a>
               <sl-menu>
-                <sl-menu-item @click="${() => gotoRoute("/profile")}"
+                <sl-menu-item @click="${() => anchorRoute("/profile")}"
                   >Profile</sl-menu-item
                 >
-                <sl-menu-item @click="${() => gotoRoute("/editProfile")}"
+                <sl-menu-item @click="${() => anchorRoute("/editProfile")}"
                   >Edit Profile</sl-menu-item
                 >
                 <sl-menu-item @click="${() => Auth.signOut()}"
@@ -214,15 +214,15 @@ customElements.define(
           <img class="app-side-menu-logo">
           <nav class="app-side-menu-items">
           <img class="app-logo-mob" src="/images/brandmark.png" />
-          <a href="/" @click="${anchorRoute}">HOME</a>
-            <a href="/shop" @click="${anchorRoute}">SHOP</a>
+          <a href="/" @click="${gotoRoute}">HOME</a>
+            <a href="/shop" @click="${gotoRoute}">SHOP</a>
              ${this.user.accessLevel == 2
               ? html` <a href="/favouriteProducts" @click="${anchorRoute}">FAVOURITES</a> `
               : html`<a href="/newProduct" @click="${anchorRoute}">ADD PRODUCT</a>`}
             ${this.user.accessLevel == 2
               ? html` <a href="/cart" @click="${anchorRoute}">CART</a> `
               : html`<a href="/orders" @click="${anchorRoute}">ORDERS</a>`}
-            <a href="/aboutUs" @click="${anchorRoute}">CONTACT</a>
+            <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
             <a href="/profile" @click="${anchorRoute}">MY PROFILE</a>
             <a href="/editProfile" @click="${anchorRoute}">EDIT PROFILE</a>
             <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>
