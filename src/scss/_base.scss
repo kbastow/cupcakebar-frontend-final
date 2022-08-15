@@ -473,13 +473,52 @@ input {
 
 // cart -------------------------------
 .cart {
-  p {
-    text-align: center;
-    font-size: 30px;
-  }
-
-  align-content: center;
+  position: relative;
+  margin-top: 5vw;
+  padding-bottom: 10vw;
 }
+
+.product-column {
+ display: block;
+}
+
+.order-summary-column {
+  position: absolute;
+  margin-top: 1vw;
+  right: 0;
+  top: 0;
+  padding: 2vw 0;
+}
+
+h1 {
+  padding-left: 3.5vw;
+}
+
+@media all and (max-width: 425px) {
+  .product-column {
+    display: block;
+
+    .cart-product {
+      width: 30%;
+    }
+   }
+   
+  .order-summary-column {
+     position: relative;
+     margin-top: 1vw;
+
+     h2 {
+      font-size: 5vw;
+     }
+
+     p {
+      font-size: 4vw;
+     }
+
+   }
+
+}
+
 
 // -------------------------------------
 

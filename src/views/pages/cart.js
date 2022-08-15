@@ -83,7 +83,7 @@ class CartView {
     <div class="wrap">
       <div class="content">
         <h1>Thank you!</h1>
-        <p>You're order has been recieved.</p>
+        <p>You're order has been received.</p>
         <sl-button type="primary" class="anim-in" @click=${() => gotoRoute('/')}>Return Home</sl-button>         
       </div>
     </div>
@@ -103,46 +103,64 @@ class CartView {
   }
 
   render(){
-    const template = html`
+  
+  const template = html`
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
   <div class="page-content">
-      <sl-form class="page-form" @sl-submit=${this.newOrderHandler}>
-        <div class="cart"> 
-          <div class="products-grid">
-            <h1>My cart</h1>
+    <sl-form class="page-form" @sl-submit=${this.newOrderHandler}>
+      
+      <div class="cart">   
+
+        <h1>YOUR CART</h1>
+    
               ${
                 this.cart == null ? html` 
                 <div class="loading">
-                <img src="../../images/loading-animation.gif"/> </div>
+                  <img src="../../images/loading-animation.gif"/> 
+                </div>
+
                 `: html`
-                ${this.cart.length == 0 ?
-                  html`<h2> Your cart is empty!</h2>
-                  <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>`
-                    
-                    : this.cart.map(
+                ${this.cart.length == 0 
+                ? html`<h2> Your cart is empty!</h2>
+                <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>`
+
+                : this.cart.map(
                       (product) => html`
-                            <cb-shop
-                              class="product-card"
-                              id="${product._id}"
-                              productName="${product.productName}"
-                              price="${product.price}"
-                              image="${product.image}"
-                            >
-                            </cb-shop>
+                        
+                        <div class="product-column">
+                              <cb-shop 
+                                class="cart-product"
+                                id="${product._id}"
+                                productName="${product.productName}"
+                                price="${product.price}"
+                                image="${product.image}"
+                                >
+                              <sl-icon-button name="x-circle" label="remove" style="font-size: 0.6rem;">X<sl-icon-button>
+                              </cb-shop>
+                             
+                          </div>                       
                             `
                     )}
+                          <div class="order-summary-column">
+                            <h2>ORDER SUMMARY</h2>
+                              <div class="summary-box">
+                                <p>Grand Total: ${this.total}</p>
+                                
+                                <div class="orderSummary" id="summaryBox"></div>
+                                <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>
+                              </div>
+                          </div>
               `}
-              <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>
-            </div>
-          </div>     
-        </sl-form>
-      </div>
-    <cb-app-footer></cb-app-footer>       
-    `
-    render(template, App.rootEl)
+      </div>      
+    </sl-form>
+  </div>
+  <cb-app-footer></cb-app-footer>       
+  `
+  
+  render(template, App.rootEl)
+  
   }
 }
-
 
 export default new CartView()
