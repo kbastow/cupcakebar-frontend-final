@@ -8,8 +8,8 @@ class OrderAPI {
     // send fetch request
     const response = await fetch(`${App.apiBase}/order`, {
       method: 'POST',
-      headers: { "Authorization": `Bearer ${localStorage.accessToken}`},
-      body: formData
+      headers: { "Authorization": `Bearer ${localStorage.accessToken}`, 'Content-Type': 'application/json'},
+      body: JSON.stringify(formData)
     })
 
     // if response not ok
