@@ -221,7 +221,6 @@ customElements.define(
       
            
             }
-          }
 
         </style>
 

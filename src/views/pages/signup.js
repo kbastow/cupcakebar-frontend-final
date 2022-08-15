@@ -33,7 +33,7 @@ class SignUpView {
     </style>
       <div class="sign-in page-centered">
         <div class="signinup-box">
-          <img class="signinup-logo" src="/images/brandmark.png" />
+        <a href="/" @click="${anchorRoute}" title="Cupcake Bar - Home"><img class="signinup-logo" src="/images/brandmark.png"/></a>
           <h3>Sign Up</h3>
           <sl-form class="form-signup" @sl-submit=${this.signUpSubmitHandler}>
             <div class="input-group">
