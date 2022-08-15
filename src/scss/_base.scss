@@ -694,7 +694,49 @@ input {
 
 
 // CONTACT US -------------------------
+.about-us {
 
+  padding-bottom: 12vw;
+  p {
+  font-size: 15px;
+  padding-left: 4vw;
+  }
+
+  h1 {
+    padding-left: 4vw;
+  }
+ }
+  
+ .about-us-container {
+  float: none;
+  width: 80vw;
+  text-align: left;
+  margin: 2vw;
+  
+ }
+  
+ .brandmark-container {
+  float: none;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 4vw;
+ }
+  
+ .about-img {
+  opacity: 40%;
+  width: 70%;
+  margin-left: 11vw;
+
+ }
+  
+ .about-logo {
+  position: absolute;
+  left: 27vw;
+  top: 12vw;
+  width: 40vw;
+  margin: 1vw;
+  
+ }
 
 // CART -------------------------------
 
