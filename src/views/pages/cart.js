@@ -17,7 +17,6 @@ class CartView {
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
     timeline.from('h1', { opacity:0, y:'-50%', ease: 'bounce' },1)
             .from('.products-grid', { opacity: 0, x:'-20%'},'+=0.5')
-    
   }
 
   async getCart() {
@@ -145,7 +144,7 @@ class CartView {
                           <div class="order-summary-column">
                             <h2>ORDER SUMMARY</h2>
                               <div class="summary-box">
-                                <p>Grand Total: ${this.total}</p>
+                                <p>Grand Total: </p>
                                 
                                 <div class="orderSummary" id="summaryBox"></div>
                                 <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>

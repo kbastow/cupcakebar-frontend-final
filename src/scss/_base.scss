@@ -476,6 +476,10 @@ input {
   position: relative;
   margin-top: 5vw;
   padding-bottom: 10vw;
+
+  h1 {
+    padding-left: 3.5vw;
+  }
 }
 
 .product-column {
@@ -488,10 +492,6 @@ input {
   right: 0;
   top: 0;
   padding: 2vw 0;
-}
-
-h1 {
-  padding-left: 3.5vw;
 }
 
 @media all and (max-width: 425px) {
