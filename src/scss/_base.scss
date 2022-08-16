@@ -553,15 +553,18 @@ input {
   
   h1 {
     font-size: 30px;
+    text-align: center;
   }
 
   h2 {
     font-size: 20px;
+    text-align: center;
   }
 
   p {
     font-size: 20px;
     padding: 2px;
+    text-align: center;
     #description {
       width: 50vw;
     }
@@ -570,13 +573,19 @@ input {
 
 .product-image {
   float: none;
-  margin-right: 4em;
+  margin-right: 3em;
   img {
-    width: 30vw;
+    width: 40vw;
   }  
 }
 
+.product-btns {
+  margin-left: 12.5vw;
+ }
+
 }
+
+
 
 // RESPONSIVE - TABLET -------------------
 @media all and (max-width:768px) {
