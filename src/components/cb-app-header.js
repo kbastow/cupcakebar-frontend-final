@@ -167,8 +167,9 @@ customElements.define(
 
             .app-logo-mob {
               display: block;
-              margin: 0 auto;
               width: 150px;
+              margin-left: 275px;
+            
             }
             
               .app-logo-mob-2 {
@@ -199,9 +200,8 @@ customElements.define(
             }
             
             .app-logo-mob {
-              display: block;
-              margin: 0 auto;
               width: 70px;
+              margin-left: 110px;
             }
             .app-logo-mob-2 {
               display: block;

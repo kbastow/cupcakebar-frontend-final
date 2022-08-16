@@ -106,7 +106,8 @@ class ShopView {
         }
       </style>
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
-      <div class="page-content shop calign">        
+      <div class="page-content shop calign">  
+      <div class="shop">      
          <div class="filter-menu">
             <div>
               Filters
@@ -155,6 +156,7 @@ class ShopView {
       </div>
       
 
+      </div>
       </div>
       <cb-app-footer></cb-app-footer>
     `;

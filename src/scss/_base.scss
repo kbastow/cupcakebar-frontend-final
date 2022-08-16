@@ -606,13 +606,18 @@ tr.customer-order:hover {
     width: 70vw;
   }
 
+// SHOP --------------------------------
+.shop {
+  margin-bottom: 9vw;
+}
+
+
+
 
 
 }
 // RESPONSIVE - TABLET -------------------
 @media all and (max-width:820px) {
-
-
 
 
 // SIGN IN/UP -----------------------
@@ -630,15 +635,18 @@ tr.customer-order:hover {
   
   h1 {
     font-size: 30px;
+    text-align: center;
   }
 
   h2 {
     font-size: 20px;
+    text-align: center;
   }
 
   p {
     font-size: 20px;
     padding: 2px;
+    text-align: center;
     #description {
       width: 50vw;
     }
@@ -647,13 +655,28 @@ tr.customer-order:hover {
 
 .product-image {
   float: none;
-  margin-right: 4em;
+  margin-right: 3em;
   img {
-    width: 30vw;
+    width: 40vw;
   }  
 }
 
+.product-btns {
+  margin-left: 12.5vw;
+ }
+
+
+
+// SHOP --------------------------------
+.shop {
+  margin-bottom: 10vw;
 }
+
+
+
+}
+
+
 
 // RESPONSIVE - TABLET -------------------
 @media all and (max-width:768px) {
@@ -678,20 +701,23 @@ tr.customer-order:hover {
 
 // PRODUCT PAGE ----------------------
   .about-product {
-    float: left;
+    float: none;
     
     
     h1 {
       font-size: 30px;
+      text-align: center;
     }
 
     h2 {
       font-size: 20px;
+      text-align: center;
     }
 
     p {
       font-size: 20px;
       padding: 2px;
+      text-align: center;
       #description {
         width: 50vw;
       }
@@ -699,11 +725,15 @@ tr.customer-order:hover {
   }
 
   .product-image {
-    float: left;
+    float: none;
     img {
       width: 30vw;
     }  
   }
+
+  .product-btns {
+    margin-left: 12.5vw;
+   }
 
 // FAVOURITES -------------------------
 .favourites{
