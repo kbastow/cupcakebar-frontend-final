@@ -685,11 +685,6 @@ input {
 }
 
 // HOME ------------------------------
-.home-logo {
-  width: 12vw;
-  margin-top: 1.5vw 0;
-  height: auto;
-}
 
 .feature-box {
   display: flex;
@@ -716,15 +711,8 @@ input {
   margin-left: 0;
 }
 
-
-  
-
-  
-
 .image-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
   grid-gap: 8px;
   padding: 0;
   margin: 10px;
@@ -749,25 +737,12 @@ input {
 }
 
 .social-media-box{
-  margin-bottom: var(--app-header-height);
   padding-bottom: 0.2vw;
   h1 {
     font-size: 20px;
   }
 }
 
-.link {
-  text-decoration: none;
-  color: #fff;
-}
-
-.link:hover {
-  color: var(--brand-color);
-}
-
-input {
-  margin-top: 1em;
-}
 
 // SHOP ------------------------------
 
