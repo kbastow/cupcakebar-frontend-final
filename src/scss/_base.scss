@@ -529,13 +529,18 @@ input {
     width: 70vw;
   }
 
+// SHOP --------------------------------
+.shop {
+  margin-bottom: 9vw;
+}
+
+
+
 
 
 }
 // RESPONSIVE - TABLET -------------------
 @media all and (max-width:820px) {
-
-
 
 
 // SIGN IN/UP -----------------------
@@ -582,6 +587,15 @@ input {
 .product-btns {
   margin-left: 12.5vw;
  }
+
+
+
+// SHOP --------------------------------
+.shop {
+  margin-bottom: 10vw;
+}
+
+
 
 }
 
