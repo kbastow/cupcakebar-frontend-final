@@ -601,20 +601,23 @@ input {
 
 // PRODUCT PAGE ----------------------
   .about-product {
-    float: left;
+    float: none;
     
     
     h1 {
       font-size: 30px;
+      text-align: center;
     }
 
     h2 {
       font-size: 20px;
+      text-align: center;
     }
 
     p {
       font-size: 20px;
       padding: 2px;
+      text-align: center;
       #description {
         width: 50vw;
       }
@@ -622,11 +625,15 @@ input {
   }
 
   .product-image {
-    float: left;
+    float: none;
     img {
       width: 30vw;
     }  
   }
+
+  .product-btns {
+    margin-left: 12.5vw;
+   }
 
 // FAVOURITES -------------------------
 .favourites{
