@@ -665,20 +665,23 @@ input {
 // PRODUCT PAGE ----------------------
   .about-product {
     float: none;
-    margin-left: 20vw;
+    margin-left: 18vw;
     
     
     
     h1 {
       font-size: 15px;
+      text-align: center;
     }
 
     h2 {
       font-size: 10px;
+      text-align: center;
     }
 
     p {
       font-size: 10px;
+      text-align: center;
     }
 
   }
@@ -689,6 +692,10 @@ input {
       padding-right: 5vw;
     }
   }
+
+ .product-btns {
+  margin-left: 5vw;
+ }
 
 // FAVOURITES -------------------------
 
