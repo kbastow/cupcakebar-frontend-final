@@ -4,6 +4,8 @@ import App from './App.js'
 import './components/cb-app-header'
 import './components/cb-shop'
 import './components/cb-app-footer'
+import './components/cb-favourites'
+import './components/cb-cart'
 
 
 // styles

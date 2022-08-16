@@ -128,7 +128,7 @@ class CartView {
                       (product) => html`
                         
                         <div class="product-column">
-                              <cb-shop 
+                              <cb-cart 
                                 class="cart-product"
                                 id="${product._id}"
                                 productName="${product.productName}"
@@ -136,7 +136,7 @@ class CartView {
                                 image="${product.image}"
                                 >
                               <sl-icon-button name="x-circle" label="remove" style="font-size: 0.6rem;">X<sl-icon-button>
-                              </cb-shop>
+                              </cb-cart>
                              
                           </div>                       
                             `

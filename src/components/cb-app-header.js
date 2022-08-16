@@ -45,7 +45,7 @@ customElements.define(
     }
 
     menuClick(e) {
-      e.preventDefault();
+      //e.preventDefault();
       const pathname = e.target.closest("a").pathname;
       const appSideMenu = this.shadowRoot.querySelector(".app-side-menu");
       // hide appMenu
