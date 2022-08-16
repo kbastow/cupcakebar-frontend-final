@@ -364,15 +364,13 @@ a:hover{
   margin: 1vw auto;
 }
 
+
+// HOME ------------------------------------------
 .home-logo {
   width: 12vw;
   margin-top: 1.5vw 0;
   height: auto;
 }
-
-
-
-
 
 .social-media-box{
   margin-bottom: var(--app-header-height);
@@ -626,6 +624,43 @@ tr.customer-order:hover {
   margin-top: 45%;
 }
 
+// HOME -------------------------------
+.feature-box {
+  margin: 10px;
+}
+.image-box {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  //align-items: center;
+}
+
+.blurb-img {
+  width: 20%;
+}
+
+.blurb-box {
+  margin: 10px;
+  margin-top: 2em;
+  .blurb-txt-box {
+    font-size: 10px;
+    .blurb-txt{
+      font-size: 15px;
+    }
+  }
+}
+
+.social-media-box{
+  padding-bottom: 0.2vw;
+  h1 {
+    margin-top: 1em;
+    font-size: 30px;
+  }
+}
+
 
 // PRODUCT PAGE ----------------------
 .about-product {
@@ -694,6 +729,41 @@ tr.customer-order:hover {
 
 
 // HOME ------------------------------
+.feature-box {
+  margin: 10px;
+}
+.image-box {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  //align-items: center;
+}
+
+.blurb-img {
+  width: 20%;
+}
+
+.blurb-box {
+  margin: 10px;
+  margin-top: 2em;
+  .blurb-txt-box {
+    font-size: 10px;
+    .blurb-txt{
+      font-size: 15px;
+    }
+  }
+}
+
+.social-media-box{
+  padding-bottom: 0.2vw;
+  h1 {
+    margin-top: 1em;
+    font-size: 30px;
+  }
+}
 
 
 // SHOP ------------------------------
@@ -764,6 +834,63 @@ tr.customer-order:hover {
 }
 
 // HOME ------------------------------
+
+.feature-box {
+  display: flex;
+  margin: 10px;
+  margin-top: 2em;
+  padding: 0;
+}
+
+.feature-txt-box {
+  margin-top: 15%;
+  margin-right: 50px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.feature-txt {
+  max-width: 100%;
+}
+
+.feature-img {
+  width: 50%;
+  height: 50%;
+  margin-right: 50px;
+  margin-left: 0;
+}
+
+.image-box {
+  display: grid;
+  grid-gap: 8px;
+  padding: 0;
+  margin: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  //align-items: center;
+}
+
+.blurb-img {
+  width: 80px;
+}
+
+.blurb-box {
+  margin: 10px;
+  margin-top: 1em;
+  .blurb-txt-box {
+    font-size: 1px;
+    .blurb-txt{
+      font-size: 10px;
+    }
+  }
+}
+
+.social-media-box{
+  padding-bottom: 0.2vw;
+  h1 {
+    font-size: 20px;
+  }
+}
 
 
 // SHOP ------------------------------

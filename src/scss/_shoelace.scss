@@ -185,7 +185,15 @@ padding-top: 2px;
 @media all and (max-width: 375px) {
 
 // HOME ------------------------------
+.shop-now-btn::part(base) {
+  width: 6em;
+  height: 3em;
 
+  font-size: 15px;
+  text-align: center;
+  
+
+}
 
 // SHOP ------------------------------
 .filter-btn::part(base) {
