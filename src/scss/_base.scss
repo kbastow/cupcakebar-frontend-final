@@ -364,15 +364,13 @@ a:hover{
   margin: 1vw auto;
 }
 
+
+// HOME ------------------------------------------
 .home-logo {
   width: 12vw;
   margin-top: 1.5vw 0;
   height: auto;
 }
-
-
-
-
 
 .social-media-box{
   margin-bottom: var(--app-header-height);
@@ -687,7 +685,72 @@ input {
 }
 
 // HOME ------------------------------
+.home-logo {
+  width: 12vw;
+  margin-top: 1.5vw 0;
+  height: auto;
+}
 
+.feature-box {
+  margin-top: 2em;
+  
+  .feature-img {
+    width: 150px;
+  }
+  .feature-txt-box{
+    float: left;
+    width: 100px;
+    margin-left: 0 auto;
+    
+  }
+}
+
+.image-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 8px;
+  padding: 0;
+  margin: 20px;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  //align-items: center;
+}
+
+.blurb-img {
+  width: 80px;
+}
+
+.blurb-box {
+  margin-top: 1em;
+  .blurb-txt-box {
+    font-size: 1px;
+    .blurb-txt{
+      font-size: 10px;
+    }
+  }
+}
+
+.social-media-box{
+  margin-bottom: var(--app-header-height);
+  padding-bottom: 0.2vw;
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:hover {
+  color: var(--brand-color);
+}
+
+input {
+  margin-top: 1em;
+}
 
 // SHOP ------------------------------
 
