@@ -75,58 +75,86 @@ class UserAPI {
     return data;
   }
 
-  async addSavedProducts(productId){
+  async addSavedProducts(productId) {
     // validate
-    if(!productId) return
+    if (!productId) return;
 
     // fetch the json data
     const response = await fetch(`${App.apiBase}/user/addSavedProducts`, {
       method: "PUT",
-      headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json'},
-      body: JSON.stringify({productId: productId})
-    })
+      headers: {
+        Authorization: `Bearer ${localStorage.accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productId: productId }),
+    });
 
     // if response not ok
-    if(!response.ok){ 
+    if (!response.ok) {
       // console log error
-      const err = await response.json()
-      if(err) console.log(err)
-      // throw error (exit this function)      
-      throw new Error('Problem adding product to favourites')
+      const err = await response.json();
+      if (err) console.log(err);
+      // throw error (exit this function)
+      throw new Error("Problem adding product to favourites");
     }
-    
+
     // convert response payload into json - store as data
-    const data = await response.json()
-    
+    const data = await response.json();
+
     // return data
-    return data
+    return data;
   }
 
-  async addToCart(productId){
+  async deleteSavedProducts(productId) {
+    const response = await fetch(`${App.apiBase}/user/deleteSavedProducts`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${localStorage.accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productId: productId }),
+    });
+  }
+
+  async addToCart(productId) {
     // validate
-    if(!productId) return
+    if (!productId) return;
 
     // fetch the json data
     const response = await fetch(`${App.apiBase}/user/addToCart`, {
       method: "PUT",
-      headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json'},
-      body: JSON.stringify({productId: productId})
-    })
+      headers: {
+        Authorization: `Bearer ${localStorage.accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productId: productId }),
+    });
 
     // if response not ok
-    if(!response.ok){ 
+    if (!response.ok) {
       // console log error
-      const err = await response.json()
-      if(err) console.log(err)
-      // throw error (exit this function)      
-      throw new Error('Problem adding product to cart')
+      const err = await response.json();
+      if (err) console.log(err);
+      // throw error (exit this function)
+      throw new Error("Problem adding product to cart");
     }
-    
+
     // convert response payload into json - store as data
-    const data = await response.json()
-    
+    const data = await response.json();
+
     // return data
-    return data
+    return data;
+  }
+
+  async deleteCartProduct(productId) {
+    const response = await fetch(`${App.apiBase}/user/deleteUserCart`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${localStorage.accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productId: productId }),
+    });
   }
 }
 

@@ -7,7 +7,7 @@ import UserAPI from "../UserAPI";
 import Toast from "../Toast";
 
 customElements.define(
-  "cb-shop",
+  "cb-cart",
   class Shop extends LitElement {
     constructor() {
       super();
@@ -52,10 +52,10 @@ customElements.define(
       super.firstUpdated();
     }
 
-    async addFavHandler() {
+    async deleteCartHandler() {
       try {
-        await UserAPI.addSavedProducts(this.id);
-        Toast.show("Product added to favourites");
+        await UserAPI.deleteCartProduct(this.id);
+        Toast.show("Product deleted from Cart");
       } catch (err) {
         Toast.show(err, "error");
       }
@@ -99,8 +99,12 @@ customElements.define(
             box-shadow: none;
           }
 
-          .heart::part(base) {
+          .delete::part(base) {
             color: var(--brand-color);
+          }
+
+          .delete::part(base):hover {
+            background: var(--sl-color-primary-50);
           }
 
           .img-container {
@@ -118,10 +122,10 @@ customElements.define(
             padding: 10;
           }
 
-          .heart {
+          .delete {
             position: absolute;
-            bottom: 5%;
-            right: 5%;
+            top: 5%;
+            left: 5%;
             margin: 0 auto;
           }
         </style>
@@ -133,12 +137,12 @@ customElements.define(
               src="${App.apiBase}/images/${this.image}"
             />
             <sl-icon-button
-              class="heart"
-              name="heart-fill"
-              label="Add to Favourites"
-              style="font-size: 1.5rem"
+              class="delete"
+              name="x"
+              label="Delete from Favourites"
+              style="font-size: 1.9rem"
               ;
-              @click=${this.addFavHandler.bind(this)}
+              @click=${this.deleteCartHandler.bind(this)}
             ></sl-icon-button>
           </div>
           <h3 class="name">${this.productName}</h3>

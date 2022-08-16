@@ -29,8 +29,9 @@ class FavouriteProductsView {
     } catch (err) {
       Toast.show(err, "error");
     }
-  }
-
+     
+   }
+  
   render() {
     const template = html`
       <cb-app-header
@@ -48,18 +49,17 @@ class FavouriteProductsView {
               : html`
                   ${this.favProducts.map(
                     (product) => html`
-                      <cb-shop
+                      <cb-favourites
                         class="product-card"
                         id="${product._id}"
                         productName="${product.productName}"
                         price="${product.price}"
                         image="${product.image}"
                       >
-                      </cb-shop>
+                      </cb-favourites>
                     `
                   )}
                 `}
-
         </div>
       </div>
       </div>
