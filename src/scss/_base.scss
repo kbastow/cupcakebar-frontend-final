@@ -547,6 +547,43 @@ input {
   margin-top: 45%;
 }
 
+// HOME -------------------------------
+.feature-box {
+  margin: 10px;
+}
+.image-box {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  //align-items: center;
+}
+
+.blurb-img {
+  width: 20%;
+}
+
+.blurb-box {
+  margin: 10px;
+  margin-top: 2em;
+  .blurb-txt-box {
+    font-size: 10px;
+    .blurb-txt{
+      font-size: 15px;
+    }
+  }
+}
+
+.social-media-box{
+  padding-bottom: 0.2vw;
+  h1 {
+    margin-top: 1em;
+    font-size: 30px;
+  }
+}
+
 
 // PRODUCT PAGE ----------------------
 .about-product {
@@ -615,6 +652,41 @@ input {
 
 
 // HOME ------------------------------
+.feature-box {
+  margin: 10px;
+}
+.image-box {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  //align-items: center;
+}
+
+.blurb-img {
+  width: 20%;
+}
+
+.blurb-box {
+  margin: 10px;
+  margin-top: 2em;
+  .blurb-txt-box {
+    font-size: 10px;
+    .blurb-txt{
+      font-size: 15px;
+    }
+  }
+}
+
+.social-media-box{
+  padding-bottom: 0.2vw;
+  h1 {
+    margin-top: 1em;
+    font-size: 30px;
+  }
+}
 
 
 // SHOP ------------------------------
