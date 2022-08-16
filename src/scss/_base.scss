@@ -707,6 +707,51 @@ tr.customer-order:hover {
   margin-bottom: 10vw;
 }
 
+// CONTACT US --------------------------
+.about-us {
+  padding-bottom: 12vw;
+  p {
+  font-size: 20px;
+  padding-left: 6vw;
+  text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-left: 5vw;
+  }
+ }
+  
+ .about-us-container {
+  float: none;
+  width: 80vw;
+  margin: 2vw;
+  
+ }
+  
+ .brandmark-container {
+  float: none;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 4vw;
+ }
+  
+ .about-img {
+  opacity: 40%;
+  width: 60%;
+  margin-left: 16vw;
+
+ }
+  
+ .about-logo {
+  position: absolute;
+  left: 32vw;
+  top: 11vw;
+  width: 32vw;
+  margin: 1vw;
+  
+ }
 
 
 }
@@ -813,6 +858,54 @@ tr.customer-order:hover {
 }
 
 // CONTACT US -------------------------
+.about-us {
+
+  padding-bottom: 12vw;
+  p {
+  font-size: 20px;
+  padding-left: 8vw;
+  text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-left: 7vw;
+  }
+ }
+  
+ .about-us-container {
+  float: none;
+  width: 80vw;
+  margin: 2vw;
+  
+ }
+  
+ .brandmark-container {
+  float: none;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 4vw;
+ }
+  
+ .about-img {
+  opacity: 40%;
+  width: 55%;
+  margin-left: 20vw;
+
+ }
+  
+ .about-logo {
+  position: absolute;
+  left: 35vw;
+  top: 10vw;
+  width: 30vw;
+  margin: 1vw;
+  
+ }
+
+
+}
 
 
 // CART -------------------------------
@@ -822,7 +915,7 @@ tr.customer-order:hover {
 
 
 
-}
+
 
 // RESPONSIVE - MOBILE --------------------
 @media all and (max-width: 375px) {
