@@ -65,8 +65,10 @@ class ProductView {
                     <p id="ingredientsHeading"><b>Ingredients</b></p>
                     <p id="ingredients">${this.product.ingredients}</p>
                     <br>
+                    <div class="product-btns">
                     <sl-button class="add-cart-btn" type="primary" @click=${this.addToCartHandler.bind(this)}>ADD TO CART!</sl-button>
                     <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>
+                    </div>
                     </div>
               `}
         </div>

@@ -742,20 +742,23 @@ tr.customer-order:hover {
 // PRODUCT PAGE ----------------------
   .about-product {
     float: none;
-    margin-left: 20vw;
+    margin-left: 18vw;
     
     
     
     h1 {
       font-size: 15px;
+      text-align: center;
     }
 
     h2 {
       font-size: 10px;
+      text-align: center;
     }
 
     p {
       font-size: 10px;
+      text-align: center;
     }
 
   }
@@ -767,6 +770,10 @@ tr.customer-order:hover {
     }
   }
 
+ .product-btns {
+  margin-left: 5vw;
+ }
+
 // FAVOURITES -------------------------
 
 
@@ -777,10 +784,11 @@ tr.customer-order:hover {
   p {
   font-size: 15px;
   padding-left: 4vw;
+  text-align: center;
   }
 
   h1 {
-    padding-left: 4vw;
+    text-align: center;
   }
  }
   
