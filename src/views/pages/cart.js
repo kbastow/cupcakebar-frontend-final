@@ -121,8 +121,8 @@ class CartView {
 
                 `: html`
                 ${this.cart.length == 0 
-                ? html`<h2> Your cart is empty!</h2>
-                <sl-button class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>`
+                ? html`<h4 style="margin:5vw 0; padding-left:4vw;"> Your cart is empty!</h4>
+                <sl-button style="padding-left:4vw;" class="back-btn" type="primary" @click=${() => gotoRoute('/shop')}>BACK TO SHOP</sl-button>`
 
                 : this.cart.map(
                       (product) => html`

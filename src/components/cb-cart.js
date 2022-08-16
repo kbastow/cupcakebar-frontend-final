@@ -64,34 +64,24 @@ customElements.define(
     render() {
       return html`
         <style>
-          .shop-btn::part(base) {
+          .qty-btn::part(base) {
             border-radius: 50px;
             width: 100px;
             border: 3px solid var(--brand-color);
             font-size: 12px;
             color: var(--brand-color);
+            margin-top: 2vw;
           }
 
-          .shop-btn::part(base):hover {
+          .qty-btn::part(base):hover {
             background-color: #e16a2f;
             color: #f5dbdf;
-          }
-
-          .name {
-            text-transform: uppercase;
-            margin: 0;
-            padding: 0;
-          }
-
-          .price {
-            margin: 0;
           }
 
           .product-card {
             text-align: center;
             min-width: 30%;
             margin: 1.5vw;
-            /*margin-right: 1.8vw;*/
           }
 
           .product-card::part(base) {
@@ -108,9 +98,9 @@ customElements.define(
           }
 
           .img-container {
-            position: relative;
+            display: inline-block;
             margin: 0 auto;
-            max-width: 300px;
+            max-width: 200px;
             margin-bottom: 0;
             padding: 0;
             align-items: center;
@@ -119,9 +109,26 @@ customElements.define(
           .shop-image {
             max-width: 100%;
             margin: 0 auto;
-            padding: 10;
           }
 
+          .details-container {
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            margin-left: 1vw;
+            margin-top: 5vw;
+          }
+
+          .name {
+          text-transform: uppercase;
+          margin: 0;
+          padding: 0;
+          }
+
+          .price {
+            margin: 0;
+          }
+        
           .delete {
             position: absolute;
             top: 5%;
@@ -145,14 +152,15 @@ customElements.define(
               @click=${this.deleteCartHandler.bind(this)}
             ></sl-icon-button>
           </div>
-          <h3 class="name">${this.productName}</h3>
-          <p class="price">Box of a dozen - $${this.price}</p>
-          <p>${this.description}</p>
+          <div class="details-container">
+            <h3 class="name">${this.productName}</h3>
+            <p class="price">Box of a dozen - $${this.price}</p>
+          
           <sl-button
-            class="shop-btn"
+            class="qty-btn"
             @click=${() => gotoRoute(`/product?productId=${this.id}`)}
-            >SHOP NOW!</sl-button
-          >
+            > -   1   + </sl-button>
+          </div>
         </sl-card>
       `;
     }
