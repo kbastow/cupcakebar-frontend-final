@@ -242,7 +242,8 @@ customElements.define(
              ${this.user.accessLevel == 2
               ? html` <a href="/favouriteProducts" @click="${anchorRoute}">FAVOURITES</a> `
               : html`<a href="/newProduct" @click="${anchorRoute}">ADD PRODUCT</a>`}
-            <img class="app-logo" src="/images/brandmark.png"/>
+              <a href="/" @click=${anchorRoute}>
+            <img class="app-logo" src="/images/brandmark.png"/></a>
             ${this.user.accessLevel == 2
               ? html` <a href="/cart" @click="${anchorRoute}">CART</a> `
               : html`<a href="/orders" @click="${anchorRoute}">ORDERS</a>`}

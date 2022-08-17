@@ -87,6 +87,13 @@ a:hover{
   margin: 20px;
   margin-top: 3em;
   //align-items: center;
+
+  img:hover {
+    transform:scale(1.2);
+    -ms-transform:scale(0.5); /* IE 9 */
+    -moz-transform:scale(0.5); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+}
 }
 
 .home-img1 {
