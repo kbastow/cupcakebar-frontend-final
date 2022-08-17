@@ -80,11 +80,17 @@ class CartView {
     </style>
     
     <div class="wrap">
+    <img src="/images/cupcake-box.png" />
       <div class="content">
         <h1>Thank you!</h1>
+        <br>
         <p>You're order has been received.</p>
+        <p> Feel free to browse more of our site while we pack your delicious cupcakes!</p>
+        <p> We hope to see you again soon. </p>
+        <br>
         <sl-button type="primary" class="anim-in" @click=${() => gotoRoute('/')}>Return Home</sl-button>         
       </div>
+      
     </div>
     `
     render(dialogContent, dialogEl)
