@@ -233,8 +233,9 @@ customElements.define(
           ></sl-icon-button>
 
           <div class="app-header-main">
-            <img class="app-logo-mob" src="/images/brandmark.png" />
-          </div>
+          <a href="/" @click=${anchorRoute}>
+            <img class="app-logo-mob" src="/images/brandmark.png"/>
+          </div></a>
           <nav class="app-top-nav">
             <a href="/" @click="${anchorRoute}">HOME</a>
             <a href="/shop" @click="${anchorRoute}">SHOP</a>
