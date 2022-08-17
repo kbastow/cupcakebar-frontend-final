@@ -26,11 +26,16 @@ class HomeView {
           </div>
         </div>
         <div class="image-box">
-          <img class="home-img1" src="/images/pink-two.png" />
-          <img class="home-img2" src="/images/mint-two.png" />
-          <img class="home-img3" src="/images/coral-two.png" />
-          <img class="home-img4" src="/images/yellow-two.png" />
+        <a href="/shop" @click=${anchorRoute}>
+          <img class="home-img1" src="/images/pink-two.png"/> </a>
+        <a href="/shop" @click=${anchorRoute}>
+          <img class="home-img2" src="/images/mint-two.png"/> </a>
+        <a href="/shop" @click=${anchorRoute}>
+          <img class="home-img3" src="/images/coral-two.png"/> </a>
+        <a href="/shop" @click=${anchorRoute}>
+          <img class="home-img4" src="/images/yellow-two.png"/> </a>
         </div>
+        
         <div class="blurb-box">
           <img class="blurb-img" src="/images/blurb-img.png" />
           <div class="blurb-txt-box">
