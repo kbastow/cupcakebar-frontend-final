@@ -23,7 +23,8 @@ class FourOFourView {
         <br>
         404 ERROR
         <br>
-         <a href="/" @click="${anchorRoute}">Back to home</a>.</p>
+        <br>
+         <a href="/" @click="${anchorRoute}"><b>Back to home</b></a>.</p>
          </div>
         </div>      
       </div>
