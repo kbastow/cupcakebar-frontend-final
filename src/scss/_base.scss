@@ -918,7 +918,7 @@ tr.customer-order:hover {
 
 
 
-}
+} // END 820 STYLING --------------------------------------------
 
 
 
@@ -1096,6 +1096,34 @@ tr.customer-order:hover {
 
 // EDIT PROFILE -----------------------
 
+
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+ 
+
+  .text {
+    margin-top: 43vw;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 45%;
+    opacity: 50%;
+    margin-top: 22vw;
+    margin-left: -22vw;
+    
+  }
+}
 
 
 
