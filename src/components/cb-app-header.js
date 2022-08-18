@@ -168,7 +168,7 @@ customElements.define(
             .app-logo-mob {
               display: block;
               width: 150px;
-              margin-left: 275px;
+              margin-left: 270px;
             
             }
             
