@@ -1126,10 +1126,7 @@ tr.customer-order:hover {
 }
 
 
-
-
-
-}
+} // END 768 STYLING -----------------------------------------------------
 
 
 
@@ -1313,5 +1310,34 @@ tr.customer-order:hover {
 }
 
 // EDIT PROFILE -----------------------
-  
+
+
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+  margin: 1vw 15vw;
+
+  .text {
+    margin-top: 50vw;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 49%;
+    opacity: 50%;
+    margin-top: 36vw;
+    margin-left: -24vw;
+    
+  }
 }
+  
+} // END 375 STYLING -----------------------------------------------------
