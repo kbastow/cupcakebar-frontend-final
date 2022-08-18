@@ -650,7 +650,37 @@ tr.customer-order:hover {
 
 }
 
-// RESPONSIVE - TABLET -------------------
+
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+ 
+
+  .text {
+    margin-top: 13vw;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 21%;
+    opacity: 50%;
+    margin-top: 10vw;
+    margin-left: -10vw;
+    
+  }
+}
+  
+
+
+
+
+
+// RESPONSIVE - TABLET -------------------------------------------------------
 @media all and (max-width: 768px) {
   .signinup-box {
     width: 90%;
@@ -858,9 +888,37 @@ tr.customer-order:hover {
   }
 }
 
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+ 
 
+  .text {
+    margin-top: 45vw;
 
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 50%;
+    opacity: 50%;
+    margin-top: 18vw;
+    margin-left: -25vw;
+    
+  }
 }
+
+
+
+} // END 820 STYLING --------------------------------------------
 
 
 
@@ -1039,11 +1097,36 @@ tr.customer-order:hover {
 // EDIT PROFILE -----------------------
 
 
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+ 
 
+  .text {
+    margin-top: 43vw;
 
+    h1 {
+      font-size: 60px;
+    }
 
+    p {
+      font-size: 20px;
+    }
+  }
 
+  img {
+    position: absolute;
+    width: 45%;
+    opacity: 50%;
+    margin-top: 22vw;
+    margin-left: -22vw;
+    
+  }
 }
+
+
+} // END 768 STYLING -----------------------------------------------------
 
 
 
@@ -1227,5 +1310,34 @@ tr.customer-order:hover {
 }
 
 // EDIT PROFILE -----------------------
-  
+
+
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+  margin: 1vw 15vw;
+
+  .text {
+    margin-top: 50vw;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 49%;
+    opacity: 50%;
+    margin-top: 36vw;
+    margin-left: -24vw;
+    
+  }
 }
+  
+} // END 375 STYLING -----------------------------------------------------

@@ -14,11 +14,22 @@ class FourOFourView {
   render(){
     const template = html`
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
-      <div class="page-content">        
+      <div class="error">
+      <img src="/images/Cupcake-30.jpg" />  
+      <div class="page-content">  
+         <div class="text"> 
         <h1>Ooops!</h1>
-        <p>This page doesn't exist. Click here to return <a href="/" @click="${anchorRoute}">home</a>.</p>
+        <p>We can't seem to find the page you are looking for
+        <br>
+        404 ERROR
+        <br>
+        <br>
+         <a href="/" @click="${anchorRoute}"><b>Back to home</b></a>.</p>
+         </div>
+        </div>      
+      </div>
         <cb-app-footer></cb-app-footer>
-      </div>      
+      
     `
     render(template, App.rootEl)
   }
