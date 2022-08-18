@@ -52,13 +52,66 @@ a:hover{
 
 // homepage -------
 
-.feature-box {
+.slides {
+  position: absolute;
+  //transform: scale(0.9);
+  opacity: 0.8;
+  //transition: all 0.5s ease-in-out;
+  -webkit-animation: fadeinout 8s linear forwards;
+  animation: fadeinout 8s linear forwards;
+  display: none;
+  background: var(--body-bg);
+  margin: 20px;
+  margin-top: 2em;
+  padding: 0;
+  //height: 80vh;
+}
+
+@-webkit-keyframes fadeinout {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.showing {
+  //z-index: 1;
+  //transform: none;
+  display: flex;
+  //opacity: 1;
+
+}
+
+.slider {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*#feature-box {
   display: flex;
   background: var(--body-bg);
   margin: 20px;
   margin-top: 2em;
   padding: 0;
-}
+  //width: 100%;
+}*/
 
 .feature-txt-box {
   margin-top: 15%;

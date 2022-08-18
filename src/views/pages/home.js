@@ -9,33 +9,85 @@ class HomeView {
     document.title = "Home";
     this.render();
     Utils.pageIntroAnim();
+
+    const first = document.querySelector(".slides");
+    const slide = () => {
+      const before = document.querySelector(".showing");
+      if (before) {
+        before.classList.remove("showing");
+        const next = before.nextElementSibling;
+        if (next) {
+          next.classList.add("showing");
+        } else {
+          first.classList.add("showing");
+        }
+      } else {
+        first.classList.add("showing");
+      }
+    };
+    slide();
+
+    setInterval(slide, 8000);
   }
 
   render() {
     const template = html`
-      <cb-app-header
-        user="${JSON.stringify(Auth.currentUser)}"
-      ></cb-app-header>
+      <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="page-content">
-        <div class="feature-box">
-          <img class="feature-img" src="/images/feature-img.png" />
-          <div class="feature-txt-box">
-            <img class="feature-txt" src="/images/feature-txt.png" />
-            <sl-button class="shop-now-btn" type="primary" @click=${() => gotoRoute('/shop')}>SHOP NOW!
-            </sl-button>
+        <div class="slider">
+          <div class="slides" id="feature-box">
+            <img class="feature-img" src="/images/feature-img.png" />
+            <div class="feature-txt-box">
+              <img class="feature-txt" src="/images/feature-txt.png" />
+              <sl-button
+                class="shop-now-btn"
+                type="primary"
+                @click=${() => gotoRoute("/shop")}
+                >SHOP NOW!
+              </sl-button>
+            </div>
+          </div>
+          <div class="slides" id="feature-box-two">
+            <img class="feature-img" src="/images/coral-two.png" />
+            <div class="feature-txt-box">
+              <img class="feature-txt" src="/images/feature-txt.png" />
+              <sl-button
+                class="shop-now-btn"
+                type="primary"
+                @click=${() => gotoRoute("/shop")}
+                >SHOP NOW!
+              </sl-button>
+            </div>
+          </div>
+          <div class="slides" id="feature-box-three">
+            <img class="feature-img" src="/images/yellow-two.png" />
+            <div class="feature-txt-box">
+              <img class="feature-txt" src="/images/feature-txt.png" />
+              <sl-button
+                class="shop-now-btn"
+                type="primary"
+                @click=${() => gotoRoute("/shop")}
+                >SHOP NOW!
+              </sl-button>
+            </div>
           </div>
         </div>
+
         <div class="image-box">
-        <a href="/shop" @click=${anchorRoute}>
-          <img class="home-img1" src="/images/pink-two.png"/> </a>
-        <a href="/shop" @click=${anchorRoute}>
-          <img class="home-img2" src="/images/mint-two.png"/> </a>
-        <a href="/shop" @click=${anchorRoute}>
-          <img class="home-img3" src="/images/coral-two.png"/> </a>
-        <a href="/shop" @click=${anchorRoute}>
-          <img class="home-img4" src="/images/yellow-two.png"/> </a>
+          <a href="/shop" @click=${anchorRoute}>
+            <img class="home-img1" src="/images/pink-two.png" />
+          </a>
+          <a href="/shop" @click=${anchorRoute}>
+            <img class="home-img2" src="/images/mint-two.png" />
+          </a>
+          <a href="/shop" @click=${anchorRoute}>
+            <img class="home-img3" src="/images/coral-two.png" />
+          </a>
+          <a href="/shop" @click=${anchorRoute}>
+            <img class="home-img4" src="/images/yellow-two.png" />
+          </a>
         </div>
-        
+
         <div class="blurb-box">
           <img class="blurb-img" src="/images/blurb-img.png" />
           <div class="blurb-txt-box">
@@ -50,7 +102,7 @@ class HomeView {
           </div>
         </div>
 
-       <div class="social-media-box calign">
+        <div class="social-media-box calign">
           <h1>Follow us on Instagram</h1>
           <div class="image-box">
             <img class="home-img5" src="/images/feature-img.png" />
@@ -58,7 +110,6 @@ class HomeView {
             <img class="home-img7" src="/images/cupcake-queen.png" />
             <img class="home-img8" src="/images/coral.jpeg" />
           </div>
-       
         </div>
       </div>
       <cb-app-footer></cb-app-footer>
