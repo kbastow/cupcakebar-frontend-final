@@ -888,6 +888,34 @@ tr.customer-order:hover {
   }
 }
 
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+ 
+
+  .text {
+    margin-top: 45vw;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 50%;
+    opacity: 50%;
+    margin-top: 18vw;
+    margin-left: -25vw;
+    
+  }
+}
+
 
 
 }
