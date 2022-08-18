@@ -650,7 +650,37 @@ tr.customer-order:hover {
 
 }
 
-// RESPONSIVE - TABLET -------------------
+
+//404 ------------------------------------
+.error {
+  text-align: center;
+  background-color: white;
+ 
+
+  .text {
+    margin-top: 13vw;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 21%;
+    opacity: 50%;
+    margin-top: 10vw;
+    margin-left: -10vw;
+    
+  }
+}
+  
+
+
+
+
+
+// RESPONSIVE - TABLET -------------------------------------------------------
 @media all and (max-width: 768px) {
   .signinup-box {
     width: 90%;
