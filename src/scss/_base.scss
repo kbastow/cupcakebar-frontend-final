@@ -529,7 +529,7 @@ input {
 }
 
 
-// cart -------------------------------
+// CART -------------------------------
 .cart {
   position: relative;
   margin-top: 5vw;
@@ -542,6 +542,7 @@ input {
 
 .product-column {
  display: block;
+ 
 }
 
 .order-summary-column {
@@ -553,7 +554,7 @@ input {
 }
 
 
-// CART ---------------------------
+// CART POPUP ---------------------------
 .wrap {
 
   img{
@@ -575,7 +576,7 @@ input {
 }
 
 
-// orders ------------------------------
+// ORDERS ------------------------------
 
 .orders-grid {
   margin-top: 2vw;
@@ -791,7 +792,33 @@ tr.customer-order:hover {
   
  }
 
-// CART ---------------------------
+// CART --------------------------
+.cart {
+  position: relative;
+  margin-top: 5vw;
+  padding-bottom: 10vw;
+
+  h1 {
+    padding-left: 3.5vw;
+  }
+
+ 
+}
+
+.product-column {
+ display: block;
+ width: 60%;
+}
+
+.order-summary-column {
+  position: absolute;
+  margin-top: 1vw;
+  right: 0;
+  top: 0;
+  padding: 2vw 0;
+}
+
+// CART POPUP ---------------------------
 .wrap {
 
   img{
@@ -1003,11 +1030,36 @@ tr.customer-order:hover {
   
  }
 
+// CART --------------------------
+.cart {
+  position: relative;
+  margin-top: 5vw;
+  padding-bottom: 10vw;
+
+  h1 {
+    padding-left: 3.5vw;
+    font-size: 30px;
+  }
+
+ 
+}
+
+.product-column {
+ display: block;
+ width: 60%;
+}
+
+.order-summary-column {
+  position: absolute;
+  margin-top: 1vw;
+  right: 0;
+  top: 0;
+  padding: 2vw 0;
+}
 
 
 
-
-// CART -------------------------------
+// CART POPUP -------------------------------
 .wrap {
 
   img{
@@ -1221,8 +1273,35 @@ tr.customer-order:hover {
   margin: 1vw;
   
  }
+ // CART --------------------------
+.cart {
+  position: relative;
+  margin-top: 5vw;
+  padding-bottom: 10vw;
 
-// CART -------------------------------
+  h1 {
+    padding-left: 3.5vw;
+    font-size: 20px;
+  }
+
+ 
+}
+
+.product-column {
+ display: block;
+ width: 70%;
+ font-size: 10px;
+}
+
+.order-summary-column {
+  position: absolute;
+  margin-top: 1vw;
+  right: 0px;
+  top: 0;
+  padding: 2vw 0;
+}
+
+// CART POPUP -------------------------------
 .wrap {
 
   img{
@@ -1243,27 +1322,6 @@ tr.customer-order:hover {
   }
 }
 
-.product-column {
-  display: block;
-
-  .cart-product {
-    width: 30%;
-  }
- }
- 
-.order-summary-column {
-   position: relative;
-   margin-top: 1vw;
-
-   h2 {
-    font-size: 5vw;
-   }
-
-   p {
-    font-size: 4vw;
-   }
-
- }
 
  // orders ------------------------------
 .orders {
