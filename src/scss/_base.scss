@@ -1265,6 +1265,53 @@ tr.customer-order:hover {
 
  }
 
+ // orders ------------------------------
+.orders {
+  h1 {
+    font-size: 25px;
+  }
+}
+
+.orders-grid {
+  margin-top: 2vw;
+  margin-bottom: 30vh;
+
+}
+
+.orders-table {
+  border: 1px solid var(--brand-color);
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 10px;
+
+  
+
+  th, td {
+    padding: 1vw;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--brand-color);
+  }
+
+  th {
+    height: 5vh;
+    text-align: left;
+  }
+
+  td {
+    height: 2vh;
+    max-width: 5vw;
+    text-align: left;
+    word-wrap: break-word;
+  }
+}
+
+tr.customer-order:hover {
+  background-color: var(--body-bg);
+}
+
 // EDIT PROFILE -----------------------
 
 
