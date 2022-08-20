@@ -115,20 +115,21 @@ a:hover{
 
 .feature-txt-box {
   margin-top: 15%;
-  margin-right: 50px;
+  // margin-right: 50px;
   margin-bottom: 0;
   text-align: center;
 }
 
 .feature-txt {
-  max-width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .feature-img {
   width: 50%;
   height: 50%;
-  margin-right: 50px;
-  margin-left: 0;
+  // margin-right: 50px;
+  // margin-left: 0;
 }
 
 .image-box {
@@ -219,7 +220,7 @@ a:hover{
 
 .home-img5 {
   max-width: 100%;
-  height: 100%;
+  margin: 0 auto;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -229,29 +230,27 @@ a:hover{
 
 .home-img6 {
   max-width: 100%;
-  //height: 70%;
+  margin: 0 auto;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  //margin: 1em;
   padding: 0;
 }
 
 .home-img7 {
   max-width: 100%;
-  height: 100%;
+  margin: 0 auto;
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  //margin: 1em;
   padding: 0;
 }
 
 .home-img8 {
   max-width: 100%;
-  //height: 70%;
+  margin: 0 auto;
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 1;
@@ -309,7 +308,6 @@ a:hover{
   left: 0;
   right: 0;
   overflow: hidden;
-  padding-bottom: var(--app-header-height);
 }
 
 // page content --------------------------------------------------------
@@ -322,15 +320,15 @@ a:hover{
   top: var(--app-header-height);
   left: 0;
   right: 0;
-  bottom: 0;
-  overflow-y: scroll;
+  bottom: var(--app-header-height);
+  // overflow-y: scroll;
   padding: 1em;
   &.no-pad {
     padding: 0;
   }
-  padding-bottom: var(--app-header-height);
-  min-height: 100vh;
-  margin-bottom: 10vw;
+  
+  min-height: max-content;
+  margin-bottom: 10vh;
 }
 
 .page-content-post {
@@ -339,14 +337,14 @@ a:hover{
   left: 0;
   right: 0;
   bottom: 0;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   padding: 1em;
   &.no-pad {
     padding: 0;
   }
-  padding-bottom: var(--app-header-height);
-  min-height: 100vh;
-  margin-bottom: 10vw;
+  
+  min-height: max-content;
+  margin-bottom: 10vh;
 }
 
 .page-centered {
@@ -390,13 +388,14 @@ a:hover{
 
 // sign in + sign up pages ------------------------------------------------
 .sign-in {
-  max-height: 100vh;
-  position: relative;
-    top: var(--app-header-height);
+  // max-height: 100vh;
+  // margin-bottom: var(--app-header-height);
+  // position: relative;
+    // top: var(--app-header-height);
     left: 0;
     right: 0;
     bottom: 0;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     padding: 1em;
 }
 
@@ -404,6 +403,7 @@ a:hover{
 .signup-box {
   width: 60vw;
   text-align: center;
+  // min-height: max-content;
 }
 
 .signinup-box {
@@ -433,6 +433,7 @@ a:hover{
 }
 
 .social-media-box{
+  margin-top: 10%;
   margin-bottom: var(--app-header-height);
   padding-bottom: 5vw;
 }
@@ -452,9 +453,7 @@ input {
 
 // about us ---------------------------
 .about-us {
-  p {
-    font-size: 20px;
-  }
+  min-height: 100vh;
 }
 
 .about-us-container {
@@ -488,6 +487,7 @@ input {
 
 // shop -------------------------------
 .shop {
+  margin-bottom: var(--app-header-height);
   p{
     text-align: center;
     font-size: 20px;
@@ -578,9 +578,14 @@ input {
 
 // ORDERS ------------------------------
 
+.orders {
+  min-height: 100vh;
+  margin-bottom: 50vh;
+}
+
 .orders-grid {
   margin-top: 2vw;
-  margin-bottom: 30vh;
+  min-height: max-content;
 }
 
 .orders-table {
@@ -1117,7 +1122,7 @@ tr.customer-order:hover {
 
 
 // RESPONSIVE - MOBILE --------------------
-@media all and (max-width: 375px) {
+@media all and (max-width: 425px) {
 
 // SIGN IN/ UP ----------------------
 .signinup-logo{
@@ -1404,4 +1409,4 @@ tr.customer-order:hover {
   }
 }
   
-} // END 375 STYLING -----------------------------------------------------
+} // END 425 STYLING -----------------------------------------------------

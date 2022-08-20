@@ -158,7 +158,7 @@ customElements.define(
           
           <sl-button
             class="qty-btn"
-            @click=${() => gotoRoute(`/product?productId=${this.id}`)}
+            
             > -   1   + </sl-button>
           </div>
         </sl-card>

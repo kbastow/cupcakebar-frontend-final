@@ -105,10 +105,10 @@ class HomeView {
         <div class="social-media-box calign">
           <h1>Follow us on Instagram</h1>
           <div class="image-box">
-            <img class="home-img5" src="/images/feature-img.png" />
-            <img class="home-img6" src="/images/yellow.jpeg" />
-            <img class="home-img7" src="/images/cupcake-queen.png" />
-            <img class="home-img8" src="/images/coral.jpeg" />
+            <img class="home-img5" src="/images/social-image-1.jpg" />
+            <img class="home-img6" src="/images/social-image-2.jpg" />
+            <img class="home-img7" src="/images/social-image-3.jpg" />
+            <img class="home-img8" src="/images/social-image-4.jpg" />
           </div>
         </div>
       </div>

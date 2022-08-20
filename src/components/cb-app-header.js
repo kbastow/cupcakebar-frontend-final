@@ -190,7 +190,7 @@ customElements.define(
           }
 
           /* RESPONSIVE - MOBILE ------------------- */
-          @media all and (max-width: 375px) {
+          @media all and (max-width: 425px) {
             .app-top-nav {
               display: none;
             }

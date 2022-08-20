@@ -47,19 +47,20 @@ customElements.define(
           }
 
           .footer-container {
-            position: absolute; 
-            left: 0 ; right: 0; bottom: 0;
+            position: relative; 
+            left: 0; right: 0; bottom: 0;
             width: 100%;
             height: max-content;
             background: var(--sl-color-primary-50);
-            margin-top: 10vw;
+            margin-top: 20vh;
+            padding-top: 2vh;
           }
 
           .app-footer {
             background: var(--sl-color-primary-50);
             display: flex;
             width: 100%;
-            height: var(--app-header-height);
+            
             color: var(--app-header-txt-color);
             align-items: center;
           }
@@ -124,8 +125,18 @@ customElements.define(
             color: white;
           }
 
+          .creative-commons {
+            text-align: center;            
+          }
+
+          .creative-commons-icon {
+            width: 2%;
+            padding: 0;
+            margin-bottom: 2vw;
+          }
+
           /* RESPONSIVE - TABLET ------------------- */
-          @media all and (max-width: 820px) {
+          /* @media all and (max-width: 820px) {
 
             .app-footer-nav a {
               display: flex;
@@ -153,7 +164,7 @@ customElements.define(
               margin-right: 10vw;
             }
 
-          }
+          } */
 
           /* RESPONSIVE - TABLET ------------------- */
           @media all and (max-width: 768px) {
@@ -187,7 +198,7 @@ customElements.define(
           }
 
           /* RESPONSIVE - MOBILE ------------------- */
-          @media all and (max-width: 375px) {
+          @media all and (max-width: 425px) {
 
             .app-footer-nav a {
               display: flex;
@@ -240,13 +251,20 @@ customElements.define(
             <div class="acknowledge-txt-box"> 
               <p>
               Cupcake Bar acknowledges that we live and work on lands belonging
-              to the Kulin Nation. We pay our respects to Elders, both past,<br>
+              to the Kulin Nation.<br>We pay our respects to Elders, both past,
               present and emerging of the Kulin Nation and any lands to which we
-              may travel. This always was and always will be Aboriginal land.
+              may travel.<br>This always was and always will be Aboriginal land.
             </p>
             </div>
             <div class="footer-disclaimer">
-                <p>Please note this website has been created for educational purposes<br>only by students of Curtin University.</p>
+                <p>This website has been created as part of the Curtin University DigEx Design Studio (DIG33) unit.<br>
+                   All content is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 international licence.<br>
+                   All third party content has been attributed where sourced.</p>
+            </div>
+            <div class="creative-commons">
+                <img class="creative-commons-icon" src="/images/cc-icon-1.png" />
+                <img class="creative-commons-icon" src="/images/cc-icon-2.png" />
+                <img class="creative-commons-icon" src="/images/cc-icon-3.png" />
             </div>
         </footer>
       `;

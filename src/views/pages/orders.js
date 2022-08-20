@@ -31,11 +31,10 @@ class OrdersView {
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
     
+    <div class="orders">
       <div class="page-content calign">
-      <div class="orders">
         <h1>CUSTOMER ORDERS</h1>
 
-        <div class="orders-grid">
           <table class="orders-table calign">
               <tr>
                 <th>Order Number</th>
@@ -72,10 +71,10 @@ class OrdersView {
             `
             )}
           `}
-        </div>
+
       </div>
-      </div>
-      <cb-app-footer></cb-app-footer>         
+    </div>
+    <!-- <cb-app-footer></cb-app-footer>            -->
     `
     render(template, App.rootEl)
   }
