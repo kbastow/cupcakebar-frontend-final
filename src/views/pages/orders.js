@@ -41,8 +41,8 @@ class OrdersView {
                 <th>Date</th>
                 <th>Customer</th>
                 <th>Summary</th>
-                <th>Status</th>
                 <th>Total</th>
+                <th>Status</th>
               </tr>
           ${
             this.orders == null ? html`
@@ -64,8 +64,8 @@ class OrdersView {
                 <td class="order-date">${order.createdAt}</td>
                 <td class="order-customer">${order.user}</td>
                 <td class="order-summary">${order.products}</td>                             
-                <td class="order-status">${order.status}</td>
-                <td class="order-total">$${order.total}</td>   
+                <td class="order-total">$${order.total}</td>
+                <td class="order-status"><sl-radio></td>   
               </tr>
           </table>            
             `

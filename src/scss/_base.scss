@@ -580,7 +580,11 @@ input {
 
 .orders {
   min-height: 100vh;
+  margin-top: 5vh;
   margin-bottom: 50vh;
+  h1 {
+    margin-bottom: 5vh;
+  }
 }
 
 .orders-grid {
@@ -596,6 +600,8 @@ input {
 
   th, td {
     padding: 1vw;
+    padding-left: 2vw;
+    padding-right: 3vw;
   }
 
   tr {
