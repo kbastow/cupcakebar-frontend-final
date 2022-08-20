@@ -99,34 +99,44 @@ class ShopView {
         .filter-menu {
           display: flex;
           align-items: center;
-        }
+        }     
+        .filter-heading {
+            margin-right: 2vw;
+            margin-left: 1vw;
+          } 
+          
+          @media all and (max-width: 425px) { 
+            .filter-menu {
+              display: block;
+              text-align: left;
+            }
 
-        .filter-menu >div{
-          margin-right: 1em;
-        }
+            .filter-heading {
+            text-align: left;
+            margin-bottom: 5vw
+          } 
+          }
+
       </style>
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="page-content shop calign">  
       <div class="shop">      
          <div class="filter-menu">
-            <div>
-              Filters
-            </div>
-          <div>
-              <sl-button class="filter-btn" data-field="glutenFree" data-match="true" @click=${this.handleFilterBtn.bind(
+            <p class="filter-heading">Filters</p>
+          
+              <sl-button size="small" class="filter-btn" data-field="glutenFree" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>GLUTEN FREE</sl-button>
-              <sl-button class="filter-btn" data-field="nutFree" data-match="true" @click=${this.handleFilterBtn.bind(
+              <sl-button size="small" class="filter-btn" data-field="nutFree" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>NUT FREE</sl-button>
-              <sl-button class="filter-btn" data-field="dairyFree" data-match="true" @click=${this.handleFilterBtn.bind(
+              <sl-button size="small" class="filter-btn" data-field="dairyFree" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>DAIRY FREE</sl-button>
-              <sl-button class="filter-btn"5px; data-field="vegan" data-match="true" @click=${this.handleFilterBtn.bind(
+              <sl-button size="small" class="filter-btn"5px; data-field="vegan" data-match="true" @click=${this.handleFilterBtn.bind(
                 this
               )}>VEGAN</sl-button>
-          </div>
-             <sl-button class="clear-btn" @click=${this.clearFilters.bind(
+              <sl-button size="small" class="clear-btn" @click=${this.clearFilters.bind(
                this
              )}>CLEAR</sl-button>
         </div>

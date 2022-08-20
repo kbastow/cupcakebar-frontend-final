@@ -102,15 +102,15 @@ sl-button::part(base):hover {
 .filter-btn::part(base) {
   background-color: #fff;
   width: 100px;
-  margin-right: 1.1vw;
-  font-size: 12px;
+  margin-right: 1vw;
+  font-size: 10px;
 }
 
 .clear-btn::part(base) {
   border: none;
   width: 100px;
   margin-left: 2vw;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .new-prod-submit-btn {
@@ -182,7 +182,7 @@ padding-top: 2px;
 
 
 // RESPONSIVE - MOBILE --------------------
-@media all and (max-width: 375px) {
+@media all and (max-width: 425px) {
 
 // HOME ------------------------------
 .shop-now-btn::part(base) {
@@ -191,22 +191,25 @@ padding-top: 2px;
 
   font-size: 15px;
   text-align: center;
-  
-
 }
 
 // SHOP ------------------------------
+
 .filter-btn::part(base) {
-  width: 80px;
-  margin-right: 1.1vw;
+  width: 18vw;
+  margin-right: 2vw;
   margin-bottom: 1vw;
-  font-size: 10px;
+}
+
+.filter-btn::part(label) {
+  font-size: 2vw;
 }
 
 .clear-btn::part(base) {
-  width: 80px;
-  margin-left: 2vw;
-  font-size: 12px;
+  width: 16vw;
+  margin-top: 2vh;
+  margin-left: .5vw;
+  font-size: 2vw;
 }
 
 // PRODUCT PAGE ----------------------
