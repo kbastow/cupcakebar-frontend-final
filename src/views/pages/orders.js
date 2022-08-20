@@ -33,16 +33,16 @@ class OrdersView {
     
     <div class="orders">
       <div class="page-content calign">
-        <h1>CUSTOMER ORDERS</h1>
+        <h1>ORDERS</h1>
 
           <table class="orders-table calign">
               <tr>
-                <th>Order Number</th>
+                <th>Order No.</th>
+                <th>Date</th>
                 <th>Customer</th>
-                <th>Order Summary</th>
-                <th>Total</th>
-                <th>Date Ordered</th>
+                <th>Summary</th>
                 <th>Status</th>
+                <th>Total</th>
               </tr>
           ${
             this.orders == null ? html`
@@ -61,11 +61,11 @@ class OrdersView {
             
               <tr class="customer-order">
                 <td class="order-number">${order._id}</td>
-                <td class="order-customer">${order.user}</td>
-                <td class="order-summary">${order.products}</td>
-                <td class="order-total">${order.total}</td>
                 <td class="order-date">${order.createdAt}</td>
+                <td class="order-customer">${order.user}</td>
+                <td class="order-summary">${order.products}</td>                             
                 <td class="order-status">${order.status}</td>
+                <td class="order-total">$${order.total}</td>   
               </tr>
           </table>            
             `

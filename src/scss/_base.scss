@@ -605,6 +605,10 @@ input {
   th {
     height: 5vh;
     text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: var(--brand-color);
+    color: var(--body-bg);
   }
 
   td {
