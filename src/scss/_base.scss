@@ -490,6 +490,7 @@ input {
 }
 
 // product page ------------------------
+
 .about-product {
   float: right;
   width: 55vw;
@@ -1287,30 +1288,31 @@ tr.customer-order:hover {
   
  }
  // CART --------------------------
+
 .cart {
   position: relative;
   margin-top: 5vw;
   padding-bottom: 10vw;
 
   h1 {
-    padding-left: 3.5vw;
     font-size: 20px;
   }
-
  
 }
 
 .product-column {
+ margin: 0 auto;
  display: block;
  width: 70%;
  font-size: 10px;
+ text-align: center;
 }
 
 .order-summary-column {
-  position: absolute;
-  margin-top: 1vw;
-  right: 0px;
-  top: 0;
+  position: relative;
+  display: block;
+  margin-top: 10vw;
+  margin-left: 15vw;
   padding: 2vw 0;
 }
 
