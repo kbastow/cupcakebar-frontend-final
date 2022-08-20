@@ -52,8 +52,8 @@ customElements.define(
             width: 100%;
             height: max-content;
             background: var(--sl-color-primary-50);
-            margin-top: 20vh;
-            padding-top: 2vh;
+            margin-top: 1vh;
+            padding-top: 1vh;
           }
 
           .app-footer {
