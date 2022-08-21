@@ -44,9 +44,8 @@ class ProductView {
     const template = html`
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
 
-      <div class="page-content">
-        <div class="productInfo calign">
-
+      <div class="product-info calign">
+        <div class="page-content">
           ${this.product == null ? html` 
           <!-- Loading -->
           <div class="loading">
@@ -73,7 +72,7 @@ class ProductView {
               `}
         </div>
       </div>
-      <!-- <cb-app-footer></cb-app-footer> -->
+      <cb-app-footer></cb-app-footer>
     `;
     
     render(template, App.rootEl);
