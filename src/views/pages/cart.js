@@ -28,9 +28,8 @@ class CartView{
     try {
       const currentUser = await UserAPI.getUser(Auth.currentUser._id);
       this.cart = currentUser.userCart;
-      console.log(this.cart);
       // sum cart total here, and assign to this.total
-      // const total = cart.reduce((accumulator, object) => {
+      // this.total = cart.reduce((accumulator, object) => {
       //   return accumulator + object.price;
       // }, 0);
       this.render();
@@ -44,6 +43,7 @@ class CartView{
       Toast.show(err, "error");
     }
   }
+
 
   async newOrderHandler(e){
     e.preventDefault()
@@ -167,7 +167,7 @@ class CartView{
                           <div class="order-summary-column">
                             <h2>ORDER SUMMARY</h2>
                               <div class="summary-box">
-                                <p>Grand Total: $123.00${this.total}</p>
+                                <p>Grand Total: $${this.total}</p>
                                 
                                 <div class="orderSummary" id="summaryBox"></div>
                                 <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>

@@ -8,7 +8,6 @@ import UserAPI from '../../UserAPI'
 
 
 class FavouriteProductsView {
-
   constructor() {
     this.favProducts = null
   }

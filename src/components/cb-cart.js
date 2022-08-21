@@ -56,8 +56,8 @@ customElements.define(
       try {
         await UserAPI.deleteCartProduct(this.id);
         Toast.show("Product deleted from Cart");
-      let deleteItem = new Event('deleteItem');
-      this.dispatchEvent(deleteItem);
+        let deleteItem = new Event('deleteItem');
+        this.dispatchEvent(deleteItem);
       } catch (err) {
         Toast.show(err, "error");
       }
@@ -133,7 +133,7 @@ customElements.define(
         
           .delete {
             position: absolute;
-            top: 5%;
+            top: 8%;
             left: 5%;
             margin: 0 auto;
           }
@@ -161,7 +161,7 @@ customElements.define(
           <sl-button
             class="qty-btn"
             
-            > -   1   + </sl-button>
+            > 1 </sl-button>
           </div>
         </sl-card>
       `;
