@@ -102,6 +102,7 @@ a:hover{
 .slider {
   height: 100vh;
   overflow: hidden;
+  margin-bottom: 3vw;
 }
 
 /*#feature-box {
@@ -664,6 +665,8 @@ tr.customer-order:hover {
 
 
 
+
+
 // RESPONSIVE - TABLET ------------------------------------------------------------------------------
 @media all and (max-width:820px) {
 
@@ -675,9 +678,14 @@ tr.customer-order:hover {
 }
 
 // HOME -------------------------------
-.feature-box {
-  margin: 10px;
+
+
+.slider {
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 10vw;
 }
+
 .image-box {
   display: grid;
   grid-gap: 10px;
@@ -710,6 +718,8 @@ tr.customer-order:hover {
     font-size: 30px;
   }
 }
+
+
 
 
 // PRODUCT PAGE ----------------------
@@ -901,9 +911,12 @@ tr.customer-order:hover {
 
 
 // HOME ------------------------------
-.feature-box {
-  margin: 10px;
+.slider {
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 14vw;
 }
+
 .image-box {
   display: grid;
   grid-gap: 10px;
@@ -1137,6 +1150,12 @@ tr.customer-order:hover {
 }
 
 // HOME ------------------------------
+
+.slider {
+  height: 30vh;
+  overflow: hidden;
+  margin-bottom: 15vw;
+}
 
 .feature-box {
   display: flex;
