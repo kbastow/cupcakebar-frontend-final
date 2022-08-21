@@ -33,16 +33,17 @@ class OrdersView {
     
     <div class="orders">
       <div class="page-content calign">
-        <h1>ORDERS</h1>
 
+          <h1>ORDERS</h1>
+     
           <table class="orders-table calign">
               <tr>
                 <th>Order No.</th>
                 <th>Date</th>
                 <th>Customer</th>
                 <th>Summary</th>
-                <th>Total</th>
-                <th>Status</th>
+                <th>Total Paid</th>
+                <th>Fulfill Orders</th>
               </tr>
           ${
             this.orders == null ? html`
@@ -65,7 +66,7 @@ class OrdersView {
                 <td class="order-customer">${order.user}</td>
                 <td class="order-summary">${order.products}</td>                             
                 <td class="order-total">$${order.total}</td>
-                <td class="order-status"><p>FULFILL</p><sl-radio></td>   
+                <td class="order-status" style="text-align:center;"><sl-checkbox></sl-checkbox></td>   
               </tr>
           </table>            
             `

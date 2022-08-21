@@ -15,7 +15,8 @@ class CartView{
 
   init(){
     document.title = 'Cart'
-    this.cart = null    
+    this.cart = null
+    this.total = null    
     this.render()  
     this.getCart()  
     Utils.pageIntroAnim()
@@ -29,9 +30,18 @@ class CartView{
       const currentUser = await UserAPI.getUser(Auth.currentUser._id);
       this.cart = currentUser.userCart;
       // sum cart total here, and assign to this.total
-      // this.total = cart.reduce((accumulator, object) => {
-      //   return accumulator + object.price;
-      // }, 0);
+      const cart = currentUser.userCart;
+      const orderTotal = cart.reduce((accumulator, object) => {
+        return accumulator + object.price;
+      }, 0);
+      const formData = {
+        id: currentUser._id,
+        products: cart,
+        total: orderTotal,
+        status: false,
+      }
+      console.log(formData)
+
       this.render();
       const myElement = document.querySelector('cb-cart');
       if (myElement !== null ) {

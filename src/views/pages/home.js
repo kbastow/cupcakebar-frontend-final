@@ -6,7 +6,7 @@ import Utils from "../../Utils";
 
 class HomeView {
   init() {
-    document.title = "Home";
+    document.title = "Cupcake Bar - Home";
     this.render();
     Utils.pageIntroAnim();
 
