@@ -7,7 +7,12 @@ import OrderAPI from '../../OrderAPI'
 import UserAPI from '../../UserAPI'
 import Toast from './../../Toast'
 
-class CartView {
+class CartView{
+  constructor() {
+    this.cart = null
+    this.total = null
+  }
+
   init(){
     document.title = 'Cart'
     this.cart = null    
@@ -24,7 +29,17 @@ class CartView {
       const currentUser = await UserAPI.getUser(Auth.currentUser._id);
       this.cart = currentUser.userCart;
       console.log(this.cart);
+      // sum cart total here, and assign to this.total
+      // const total = cart.reduce((accumulator, object) => {
+      //   return accumulator + object.price;
+      // }, 0);
       this.render();
+      const myElement = document.querySelector('cb-cart');
+      if (myElement !== null ) {
+        myElement.addEventListener('deleteItem', (e) => {
+          this.getCart()
+        });
+      }
     } catch (err) {
       Toast.show(err, "error");
     }
@@ -49,9 +64,11 @@ class CartView {
 
     try{
       await OrderAPI.newOrder(formData)
+      for (const product in formData.products) {
+        await UserAPI.deleteCartProduct(formData.products[product]._id)
+      }
       Toast.show('Order completed')
       submitBtn.removeAttribute('loading')
-
     }catch(err){
       Toast.show(err, 'error')
       submitBtn.removeAttribute('loading')
@@ -100,7 +117,7 @@ class CartView {
 
     // show sl-dialog
     dialogEl.show()
-
+    this.getCart()
     // on close, delete dialogEl
     dialogEl.addEventListener('sl-after-hide', () => {
         dialogEl.remove()
@@ -113,7 +130,7 @@ class CartView {
 
   <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
   <div class="page-content">
-    <sl-form class="page-form" @sl-submit=${this.newOrderHandler}>
+    <sl-form class="page-form" @sl-submit=${this.newOrderHandler.bind(this)}>
       
       <div class="cart">   
 
@@ -150,7 +167,7 @@ class CartView {
                           <div class="order-summary-column">
                             <h2>ORDER SUMMARY</h2>
                               <div class="summary-box">
-                                <p>Grand Total: </p>
+                                <p>Grand Total: $123.00${this.total}</p>
                                 
                                 <div class="orderSummary" id="summaryBox"></div>
                                 <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>

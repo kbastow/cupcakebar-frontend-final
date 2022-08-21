@@ -8,6 +8,11 @@ import UserAPI from '../../UserAPI'
 
 
 class FavouriteProductsView {
+
+  constructor() {
+    this.favProducts = null
+  }
+  
   init() {
     document.title = 'Favourite Cupcakes'
     this.favProducts = null;
@@ -26,6 +31,12 @@ class FavouriteProductsView {
       this.favProducts = currentUser.savedProducts;
       console.log(this.favProducts);
       this.render();
+      const myElement = document.querySelector('cb-favourites');
+      if (myElement !== null ) {
+        myElement.addEventListener('deleteItem', (e) => {
+          this.getFavProducts()
+        });
+      }
     } catch (err) {
       Toast.show(err, "error");
     }

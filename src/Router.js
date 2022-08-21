@@ -102,7 +102,7 @@ export function gotoRoute(pathname){
 
 // allows anchor <a> links to load routes
 export function anchorRoute(e){
-	e.preventDefault()	
+	// e.preventDefault()	
 	const pathname = e.target.closest('a').pathname
 	AppRouter.gotoRoute(pathname)
 }

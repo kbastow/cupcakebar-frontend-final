@@ -114,6 +114,14 @@ class UserAPI {
       },
       body: JSON.stringify({ productId: productId }),
     });
+    // if response not ok
+    if (!response.ok) {
+      // console log error
+      const err = await response.json();
+      if (err) console.log(err);
+      // throw error (exit this function)
+      throw new Error("Problem removing product from favourites");
+    }
   }
 
   async addToCart(productId) {
@@ -155,6 +163,14 @@ class UserAPI {
       },
       body: JSON.stringify({ productId: productId }),
     });
+    // if response not ok
+    if (!response.ok) {
+      // console log error
+      const err = await response.json();
+      if (err) console.log(err);
+      // throw error (exit this function)
+      throw new Error("Problem removing product from cart");
+    }
   }
 }
 

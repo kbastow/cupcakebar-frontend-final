@@ -56,6 +56,8 @@ customElements.define(
       try {
         await UserAPI.deleteCartProduct(this.id);
         Toast.show("Product deleted from Cart");
+      let deleteItem = new Event('deleteItem');
+      this.dispatchEvent(deleteItem);
       } catch (err) {
         Toast.show(err, "error");
       }
