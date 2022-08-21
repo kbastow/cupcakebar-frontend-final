@@ -921,13 +921,9 @@ tr.customer-order:hover {
     }
   }
 
-
-
 }
 
 // END 820 STYLING ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 // RESPONSIVE - TABLET -------------------------
@@ -1172,11 +1168,9 @@ tr.customer-order:hover {
     }
   }
 
-
 }
 
 // END 768 STYLING ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 
 // RESPONSIVE - MOBILE ------------------------------------
@@ -1292,32 +1286,21 @@ tr.customer-order:hover {
     }
   }
 
- .product-btns {
-  margin-left: 17vw;
- }
-
-// FAVOURITES -------------------------
-.favourites{
- h1 {
-  text-align: center;
-  margin-bottom: -1vw;
- }
-
- .products-grid {
-  margin-bottom: -6vw;
-}
-}
-
-// CONTACT US -------------------------
-.about-us {
-
-  padding-bottom: 12vw;
-  p {
-  font-size: 15px;
-  padding-left: 5vw;
-  text-align: center;
+  .product-btns {
+    margin-left: 17vw;
   }
 
+  // FAVOURITES -------------------------
+  .favourites{
+  h1 {
+    text-align: center;
+    margin-bottom: -1vw;
+  }
+
+  .products-grid {
+    margin-bottom: -6vw;
+  }
+  }
 
   // FAVOURITES -------------------------------------------------------------------------------------------------------------------------------
   h1 {
@@ -1333,19 +1316,16 @@ tr.customer-order:hover {
   .about-us {
     padding-bottom: 12vw;
 
-  h1 {
-    font-size: 20px;
-    text-align: left;
-    margin-left: 15vw;
-  }
- 
-}
-
     h1 {
       text-align: center;
       font-size: 30px;
       margin-left: 1vw;
     }
+    p {
+      font-size: 15px;
+      padding-left: 5vw;
+      text-align: center;
+      }
   }
 
   .about-us-container {
@@ -1478,7 +1458,7 @@ tr.customer-order:hover {
     text-align: center;
     background-color: white;
     margin: 1vw 15vw;
-
+  }
     .text {
       margin-top: 50vw;
 
@@ -1499,7 +1479,5 @@ tr.customer-order:hover {
       margin-left: -24vw;
     }
   }
-
-}
 
 // END 425 STYLING ---------------------------------------------------------------------------------------------------------------------------------------------------------
