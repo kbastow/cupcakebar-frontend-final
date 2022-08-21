@@ -1288,10 +1288,16 @@ tr.customer-order:hover {
  }
 
 // FAVOURITES -------------------------
+.favourites{
  h1 {
   text-align: center;
   margin-bottom: -1vw;
  }
+
+ .products-grid {
+  margin-bottom: -6vw;
+}
+}
 
 // CONTACT US -------------------------
 .about-us {
@@ -1308,6 +1314,10 @@ tr.customer-order:hover {
   h1 {
     text-align: center;
     margin-bottom: -1vw;
+  }
+
+  .products-grid {
+    margin-bottom: -3vw;
   }
 
 
