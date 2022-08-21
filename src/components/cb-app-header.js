@@ -233,21 +233,21 @@ customElements.define(
           ></sl-icon-button>
 
           <div class="app-header-main">
-          <a href="/" @click=${gotoRoute}>
+          <a href="/" @click=${anchorRoute}>
             <img class="app-logo-mob" src="/images/brandmark.png"/>
           </div></a>
           <nav class="app-top-nav">
-            <a href="/" @click="${gotoRoute}">HOME</a>
-            <a href="/shop" @click="${gotoRoute}">SHOP</a>
+            <a href="/" @click="${anchorRoute}">HOME</a>
+            <a href="/shop" @click="${anchorRoute}">SHOP</a>
              ${this.user.accessLevel == 1
-              ? html` <a href="/newProduct" @click="${gotoRoute}">ADD PRODUCT</a> `
-              : html`<a href="/favouriteProducts" @click="${gotoRoute}">FAVOURITES</a>`}
-              <a href="/" @click=${gotoRoute}>
+              ? html` <a href="/newProduct" @click="${anchorRoute}">ADD PRODUCT</a> `
+              : html`<a href="/favouriteProducts" @click="${anchorRoute}">FAVOURITES</a>`}
+              <a href="/" @click=${anchorRoute}>
             <img class="app-logo" src="/images/brandmark.png"/></a>
             ${this.user.accessLevel == 1
-              ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
-              : html`<a href="/cart" @click="${gotoRoute}">CART</a>`}
-            <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
+              ? html` <a href="/orders" @click="${anchorRoute}">ORDERS</a> `
+              : html`<a href="/cart" @click="${anchorRoute}">CART</a>`}
+            <a href="/aboutUs" @click="${anchorRoute}">CONTACT</a>
             <sl-dropdown>
               <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">ACCOUNT</a>
               <sl-menu>
