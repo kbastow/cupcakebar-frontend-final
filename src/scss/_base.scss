@@ -789,6 +789,11 @@ tr.customer-order:hover {
     margin-bottom: 10vw;
   }
 
+  // FAVOURITES -------------------------------------------------------------------------------------------------------------
+  .products-grid {
+    margin-bottom: 2vw;
+  }
+
   // CONTACT US -------------------------------------------------------------------------------------------------------
   .about-us {
     padding-bottom: 12vw;
@@ -1030,6 +1035,10 @@ tr.customer-order:hover {
   .favourites {
     h1 {
       font-size: 25px;
+    }
+
+    .products-grid {
+      margin-bottom: 2vw;
     }
   }
 
@@ -1283,6 +1292,10 @@ tr.customer-order:hover {
   h1 {
     text-align: center;
     margin-bottom: -1vw;
+  }
+
+  .products-grid {
+    margin-bottom: 1vw;
   }
 
 
