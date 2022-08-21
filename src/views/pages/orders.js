@@ -4,7 +4,7 @@ import Auth from './../../Auth'
 import Utils from './../../Utils'
 import OrderAPI from './../../OrderAPI'
 import Toast from './../../Toast'
-
+import moment from 'moment'
 class OrdersView {
     init(){
     document.title = 'Orders'  
@@ -58,14 +58,14 @@ class OrdersView {
 
             : this.orders.map(
               (order) => html`
-            
+              
               <tr class="customer-order">
                 <td class="order-number">${order._id}</td>
-                <td class="order-date">${order.createdAt}</td>
+                <td class="order-date"><p>${moment(order.createdAt).format('MMMM D YYYY, @ h:mm a')}</p></td>
                 <td class="order-customer">${order.user}</td>
                 <td class="order-summary">${order.products}</td>                             
                 <td class="order-total">$${order.total}</td>
-                <td class="order-status"><sl-radio></td>   
+                <td class="order-status"><p>FULFILL</p><sl-radio></td>   
               </tr>
           </table>            
             `
