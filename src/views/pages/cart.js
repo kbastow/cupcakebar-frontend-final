@@ -180,7 +180,7 @@ class CartView{
                                 <p>Grand Total: $${this.total}</p>
                                 
                                 <div class="orderSummary" id="summaryBox"></div>
-                                <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">Confirm Order</sl-button>
+                                <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">CHECK OUT</sl-button>
                               </div>
                           </div>
               `}

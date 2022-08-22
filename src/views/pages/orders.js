@@ -34,7 +34,7 @@ class OrdersView {
     <div class="orders">
       <div class="page-content calign">
 
-          <h1>ORDERS</h1>
+          <h1>VIEW ORDERS</h1>
      
           <table class="orders-table calign">
               <tr>
