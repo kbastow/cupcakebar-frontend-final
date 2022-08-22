@@ -52,6 +52,25 @@ class OrderAPI {
     // return data
     return data
   }
+
+  async deleteOrder(orderId) {
+    const response = await fetch(`${App.apiBase}/order/deleteOrder`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${localStorage.accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ orderId: orderId }),
+    });
+    // if response not ok
+    if (!response.ok) {
+      // console log error
+      const err = await response.json();
+      if (err) console.log(err);
+      // throw error (exit this function)
+      throw new Error("Problem removing order");
+    }
+  }
 }
 
 export default new OrderAPI()

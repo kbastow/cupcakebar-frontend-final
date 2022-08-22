@@ -11,7 +11,7 @@ class OrdersView {
     this.orders = null  
     this.render()    
     Utils.pageIntroAnim()
-    this.getOrders() 
+    this.getOrders()
   }
 
   async getOrders(){
@@ -25,6 +25,27 @@ class OrdersView {
     }
   }
 
+  getOrderDescription(products) {
+    return products.map((e) => e.productName).join(', 1x Box ')
+  }
+
+  getCustomerName(customer) {
+    if (customer !== null) {
+        return `${customer.firstName} ${customer.lastName}`
+    }
+  }
+
+  async clearOrdersHandler() {
+    try {
+      await OrderAPI.deleteOrder(this.id);
+      Toast.show("Order fulfilled");
+      let deleteItem = new Event('deleteItem');
+      this.dispatchEvent(deleteItem);
+    } catch (err) {
+      Toast.show(err, "error");
+    }
+  }
+
   render(){
 
   const template = html`
@@ -35,15 +56,15 @@ class OrdersView {
       <div class="page-content calign">
 
           <h1>VIEW ORDERS</h1>
-     
+
           <table class="orders-table calign">
               <tr>
                 <th>Order No.</th>
-                <th>Date</th>
-                <th>Customer</th>
-                <th>Summary</th>
+                <th>Date Ordered</th>
+                <th>Customer Name</th>
+                <th>Order Summary</th>
                 <th>Total Paid</th>
-                <th>Fulfill Orders</th>
+                <th>Fulfill</th>
               </tr>
           ${
             this.orders == null ? html`
@@ -60,11 +81,12 @@ class OrdersView {
             : this.orders.map(
               (order) => html`
               
+              
               <tr class="customer-order">
                 <td class="order-number">${order._id}</td>
                 <td class="order-date"><p>${moment(order.createdAt).format('MMMM D YYYY, @ h:mm a')}</p></td>
-                <td class="order-customer">${order.user}</td>
-                <td class="order-summary">${order.products}</td>                             
+                <td class="order-customer">${this.getCustomerName(order.user)}</td>
+                <td class="order-summary">1x Box ${this.getOrderDescription(order.products)}</td>                           
                 <td class="order-total">$${order.total}</td>
                 <td class="order-status" style="text-align:center;"><sl-checkbox></sl-checkbox></td>   
               </tr>
