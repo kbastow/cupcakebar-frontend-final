@@ -545,7 +545,7 @@ input {
 // PRODUCT PAGE ------------------------------------------------------------------------------------------------
 
 .product-info {
-  height: 105vh;
+  min-height: 120vh;
 }
 
 a.back-to-shop {
@@ -553,7 +553,7 @@ a.back-to-shop {
 
   p {
     margin-left: 6vw;
-    margin-bottom: 3vw;
+    padding-bottom: 3vw;
   }
 }
 
