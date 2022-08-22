@@ -1,6 +1,6 @@
 import App from './../../App'
 import {html, render } from 'lit-html'
-import {gotoRoute, anchorRoute} from './../../Router'
+import {gotoRoute} from './../../Router'
 import Auth from './../../Auth'
 import Utils from './../../Utils'
 import OrderAPI from '../../OrderAPI'
@@ -31,17 +31,15 @@ class CartView{
       this.cart = currentUser.userCart;
       // sum cart total here, and assign to this.total
       const cart = currentUser.userCart;
-      const orderTotal = cart.reduce((accumulator, object) => {
+      this.total = cart.reduce((accumulator, object) => {
         return accumulator + object.price;
       }, 0);
       const formData = {
         id: currentUser._id,
         products: cart,
-        total: orderTotal,
+        total: this.total,
         status: false,
       }
-      console.log(formData)
-
       this.render();
       const myElement = document.querySelector('cb-cart');
       if (myElement !== null ) {
@@ -177,7 +175,7 @@ class CartView{
                           <div class="order-summary-column">
                             <h2>ORDER SUMMARY</h2>
                               <div class="summary-box">
-                                <p>Grand Total: $${this.total}</p>
+                                <p>Grand Total: ${this.total}</p>
                                 
                                 <div class="orderSummary" id="summaryBox"></div>
                                 <sl-button type="primary" class="new-order-submit-btn" submit style="width: 100%;">CHECK OUT</sl-button>
