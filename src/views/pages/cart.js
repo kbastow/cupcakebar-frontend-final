@@ -115,7 +115,7 @@ class CartView{
         <p> Feel free to browse more of our site while we pack your delicious cupcakes!</p>
         <p> We hope to see you again soon. </p>
         <br>
-        <sl-button type="primary" class="anim-in" @click=${() => gotoRoute('/')}>Return Home</sl-button>         
+        <sl-button slot="footer" type="primary" class="anim-in" @click=${() => gotoRoute('/')}>Return Home</sl-button>         
       </div>
       
     </div>
@@ -128,6 +128,8 @@ class CartView{
     // show sl-dialog
     dialogEl.show()
     this.getCart()
+    const closeButton = dialogEl.querySelector('sl-button[slot="footer"]');
+    closeButton.addEventListener('click', () => dialogEl.hide());
     // on close, delete dialogEl
     dialogEl.addEventListener('sl-after-hide', () => {
         dialogEl.remove()
