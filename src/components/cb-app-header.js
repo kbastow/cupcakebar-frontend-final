@@ -239,27 +239,38 @@ customElements.define(
           <nav class="app-top-nav">
             <a href="/" @click="${gotoRoute}">HOME</a>
             <a href="/shop" @click="${gotoRoute}">SHOP</a>
-             ${this.user.accessLevel == 1
-              ? html` <a href="/newProduct" @click="${gotoRoute}">ADD PRODUCT</a> `
-              : html`<a href="/favouriteProducts" @click="${gotoRoute}">FAVOURITES</a>`}
+              ${this.user.accessLevel === undefined ? html``
+                      : this.user.accessLevel === 1
+                              ? html` <a href="/newProduct" @click="${gotoRoute}">ADD PRODUCT</a> `
+                              : html`<a href="/favouriteProducts" @click="${gotoRoute}">FAVOURITES</a>`}
               <a href="/" @click=${gotoRoute}>
             <img class="app-logo" src="/images/brandmark.png"/></a>
-            ${this.user.accessLevel == 1
-              ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
-              : html`<a href="/cart" @click="${gotoRoute}">CART</a>`}
+              ${this.user.accessLevel === undefined ? html``
+                      : this.user.accessLevel === 1
+                              ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
+                              : html`<a href="/cart" @click="${gotoRoute}">CART</a>`}
             <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
             <sl-dropdown>
               <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">ACCOUNT</a>
               <sl-menu>
-                <sl-menu-item @click="${() => gotoRoute("/profile")}"
-                  >Profile</sl-menu-item
-                >
-                <sl-menu-item @click="${() => gotoRoute("/editProfile")}"
-                  >Edit Profile</sl-menu-item
-                >
-                <sl-menu-item @click="${() => Auth.signOut()}"
-                  >Sign Out</sl-menu-item
-                >
+                  ${this.user.accessLevel === undefined ? html`
+                              <sl-menu-item @click="${() => gotoRoute("/signin")}"
+                              >Sign In</sl-menu-item
+                              >
+                              <sl-menu-item @click="${() => gotoRoute("/signup")}"
+                              >Sign Up</sl-menu-item
+                              >
+                  `
+                          : html`
+                              <sl-menu-item @click="${() => gotoRoute("/profile")}"
+                              >Profile</sl-menu-item
+                              >
+                              <sl-menu-item @click="${() => gotoRoute("/editProfile")}"
+                              >Edit Profile</sl-menu-item
+                              >
+                              <sl-menu-item @click="${() => Auth.signOut()}"
+                              >Sign Out</sl-menu-item
+                              >`}
               </sl-menu>
              </sl-dropdown>
           </nav>
@@ -274,16 +285,23 @@ customElements.define(
           </div>
           <a href="/" @click="${gotoRoute}">HOME</a>
             <a href="/shop" @click="${gotoRoute}">SHOP</a>
-             ${this.user.accessLevel == 1
+             ${this.user.accessLevel === undefined ? html``
+              : this.user.accessLevel === 1
               ? html` <a href="/newProduct" @click="${gotoRoute}">ADD PRODUCT</a> `
               : html`<a href="/favouriteProducts" @click="${gotoRoute}">FAVOURITES</a>`}
-            ${this.user.accessLevel == 1
+            ${this.user.accessLevel === undefined ? html``
+              : this.user.accessLevel === 1
               ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
               : html`<a href="/cart" @click="${gotoRoute}">CART</a>`}
-            <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
-            <a href="/profile" @click="${gotoRoute}">MY PROFILE</a>
-            <a href="/editProfile" @click="${gotoRoute}">EDIT PROFILE</a>
-            <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>
+              ${this.user.accessLevel === undefined
+                      ? html`
+                          <a href="/signup" @click="${gotoRoute}">SIGN UP</a>
+                          <a href="/signin" @click="${gotoRoute}">SIGN IN</a>`
+                      : html`
+                          <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
+                          <a href="/profile" @click="${gotoRoute}">MY PROFILE</a>
+                          <a href="/editProfile" @click="${gotoRoute}">EDIT PROFILE</a>
+                          <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>`}
           </nav>
         </sl-drawer>
       `;
