@@ -31,13 +31,13 @@ class CartView{
       this.cart = currentUser.userCart;
       // sum cart total here, and assign to this.total
       const cart = currentUser.userCart;
-      const orderTotal = cart.reduce((accumulator, object) => {
+      this.total = cart.reduce((accumulator, object) => {
         return accumulator + object.price;
       }, 0);
       const formData = {
         id: currentUser._id,
         products: cart,
-        total: orderTotal,
+        total: this.total,
         status: false,
       }
       console.log(formData)
