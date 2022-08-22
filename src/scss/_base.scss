@@ -54,21 +54,17 @@ a:hover {
 // homepage ----------------------------------------------------------
 
 .slides {
-  position: absolute;
+  //position: absolute;
   //transform: scale(0.9);
   opacity: 0.8;
-  //transition: all 0.5s ease-in-out;
-  -webkit-animation: fadeinout 8s linear forwards;
-  animation: fadeinout 8s linear forwards;
+  transition: all 0.5s ease-in-out;
+  //transform: scale(0.9);
   display: none;
-  background: var(--body-bg);
-  margin: 20px;
-  margin-top: 2em;
-  padding: 0;
   //height: 80vh;
+  margin-bottom: 0;
 }
 
-@-webkit-keyframes fadeinout {
+/*@-webkit-keyframes fadeinout {
 
   0%,
   100% {
@@ -90,30 +86,31 @@ a:hover {
   50% {
     opacity: 1;
   }
-}
+}*/
 
 .showing {
   //z-index: 1;
-  //transform: none;
+ //transform: none;
   display: flex;
   //opacity: 1;
 
 }
 
 .slider {
-  height: 100vh;
+  height: 100%;
+  //position: fixed;
   overflow: hidden;
-  margin-bottom: 3vw;
+  margin-bottom: 2em;
+  padding: 0;
 }
 
-/*#feature-box {
-  display: flex;
+#feature-box {
   background: var(--body-bg);
-  margin: 20px;
-  margin-top: 2em;
-  padding: 0;
-  //width: 100%;
-}*/
+    //margin: 40px;
+    //margin-top: 2em;
+    padding: 0;
+    margin: 2em 5em 0 5em;
+}
 
 .feature-txt-box {
   margin-top: 15%;
@@ -134,15 +131,48 @@ a:hover {
   // margin-left: 0;
 }
 
+#feature-box-two {
+  background: var(--body-bg);
+  //margin: 40px;
+  //margin-top: 2em;
+  padding: 0;
+  margin: 2em 5em 0 5em;
+}
+
+.feature-txt-box-two {
+  margin-top: 15%;
+  //margin-left: 50px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.feature-txt-two {
+  max-width: 80%;
+  //height: 30%;
+  margin: 0 auto;
+}
+
+.feature-img-two {
+  width: 50%;
+    height: 50%;
+}
+
+.feature-txt-three {
+  max-width: 90%;
+  //height: 30%;
+  margin: 0 auto;
+}
+
 .image-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 30px;
   padding: 0;
-  margin: 20px;
-  margin-top: 3em;
+  //margin: 20px;
+  //margin-top: 3em;
   //align-items: center;
+  margin: 0 5em 2em 5em;
 
   img:hover {
     transform: scale(1.2);
@@ -200,6 +230,7 @@ a:hover {
   margin-top: 3em;
   padding: 20px;
   text-align: center;
+  margin: 2em 5em 2em 5em;
 }
 
 .blurb-txt-box {
@@ -207,7 +238,9 @@ a:hover {
   width: 100%;
   padding-left: 10em;
   padding-right: 10em;
+  padding-bottom: 3em;
   align-items: center;
+ 
 }
 
 .blurb-txt {

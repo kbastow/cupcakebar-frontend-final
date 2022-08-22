@@ -27,7 +27,7 @@ class HomeView {
     };
     slide();
 
-    setInterval(slide, 8000);
+    setInterval(slide, 4000);
   }
 
   render() {
@@ -48,27 +48,15 @@ class HomeView {
             </div>
           </div>
           <div class="slides" id="feature-box-two">
-            <img class="feature-img" src="/images/coral-two.png" />
-            <div class="feature-txt-box">
-              <img class="feature-txt" src="/images/feature-txt.png" />
-              <sl-button
-                class="shop-now-btn"
-                type="primary"
-                @click=${() => gotoRoute("/shop")}
-                >SHOP NOW!
-              </sl-button>
-            </div>
+            <div class="feature-txt-box-two">
+              <img class="feature-txt-two" src="/images/visit-us-txt.png" />
+              </div>
+            <img class="feature-img-two" src="/images/visit-us.png" />
           </div>
-          <div class="slides" id="feature-box-three">
-            <img class="feature-img" src="/images/yellow-two.png" />
+          <div class="slides" id="feature-box">
+            <img class="feature-img" src="/images/design-own-img.png" />
             <div class="feature-txt-box">
-              <img class="feature-txt" src="/images/feature-txt.png" />
-              <sl-button
-                class="shop-now-btn"
-                type="primary"
-                @click=${() => gotoRoute("/shop")}
-                >SHOP NOW!
-              </sl-button>
+              <img class="feature-txt-three" src="/images/design-own-txt.png" />
             </div>
           </div>
         </div>
