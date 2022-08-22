@@ -91,7 +91,7 @@ class HomeView {
         </div>
 
         <div class="social-media-box calign">
-          <h1>Follow us on Instagram</h1>
+          <h1 class="follow-us">Follow us on Instagram</h1>
           <div class="image-box">
             <img class="home-img5" src="/images/social-image-1.jpg" />
             <img class="home-img6" src="/images/social-image-2.jpg" />

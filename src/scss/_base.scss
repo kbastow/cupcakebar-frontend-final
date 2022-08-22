@@ -132,7 +132,9 @@ a:hover {
 }
 
 #feature-box-two {
+  //background: #e5e1fc;
   background: var(--body-bg);
+  
   //margin: 40px;
   //margin-top: 2em;
   padding: 0;
@@ -244,7 +246,7 @@ a:hover {
 }
 
 .blurb-txt {
-  font-size: x-large;
+  font-size: large;
 }
 
 .blurb-img {
@@ -483,8 +485,12 @@ a:hover {
 }
 
 .social-media-box {
-  margin-top: 10%;
+  margin-top: 2em;
   padding-bottom: 4vw;
+}
+
+.follow-us {
+  margin-bottom: 1em;
 }
 
 .link {
