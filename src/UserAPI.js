@@ -144,7 +144,7 @@ class UserAPI {
       const err = await response.json();
       if (err) console.log(err);
       // throw error (exit this function)
-      throw new Error("Problem adding product to cart");
+      throw new Error("Sign in to Shop");
     }
 
     // convert response payload into json - store as data
@@ -172,6 +172,8 @@ class UserAPI {
       throw new Error("Problem removing product from cart");
     }
   }
+
+  
 }
 
 export default new UserAPI();

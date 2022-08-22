@@ -512,7 +512,22 @@ input {
 // PRODUCT PAGE ------------------------------------------------------------------------------------------------
 
 .product-info {
-  height: 110vh;
+  height: 105vh;
+}
+
+a.back-to-shop {
+  text-align:left;
+
+  p {
+    margin-left: 6vw;
+    margin-bottom: 3vw;
+  }
+}
+
+a.back-to-shop:hover {
+  color: var(--brand-color);
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .about-product {
@@ -787,7 +802,7 @@ tr.customer-order:hover {
   }
 
   .product-btns {
-    margin-left: 12.5vw;
+    margin-left: none;
   }
 
 
@@ -1031,7 +1046,8 @@ tr.customer-order:hover {
   }
 
   .product-btns {
-    margin-left: 24vw;
+    text-align: center;
+    margin-left: none;
     margin-bottom: 10vh;
   }
 
@@ -1287,7 +1303,8 @@ tr.customer-order:hover {
   }
 
   .product-btns {
-    margin-left: 17vw;
+    margin-left: none;
+    text-align: center;
   }
 
   // FAVOURITES -------------------------
