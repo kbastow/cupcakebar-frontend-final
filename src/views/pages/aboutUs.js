@@ -20,8 +20,8 @@ class AboutUsView {
       <div class="about-us">
         <div class="page-content">
           <div class="brandmark-container">
-            <img class="about-img" src="/images/feature-img.png">
-            <img class="about-logo" src="/images/blurb-img.png">
+            <img class="about-img" src="/images/feature-img-2.png">
+            
           </div>
           <div class="about-us-container">
               <h1>The Cupcake Bar</h1>
