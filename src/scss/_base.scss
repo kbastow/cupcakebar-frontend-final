@@ -510,6 +510,7 @@ input {
 // ABOUT US --------------------------------------------------------------------------------------------------
 .about-us {
   min-height: 100vh;
+  margin-bottom: 3vw;
 }
 
 .about-us-container {
@@ -528,17 +529,8 @@ input {
 }
 
 .about-img {
-  opacity: 40%;
-  width: 45vw;
-}
-
-.about-logo {
-  position: absolute;
-  left: 15vw;
-  top: 12vw;
-  width: 20vw;
-  margin: 1vw;
-
+  width: 38vw;
+  margin-left: 5vw;
 }
 
 
@@ -869,7 +861,7 @@ tr.customer-order:hover {
 
   // CONTACT US -------------------------------------------------------------------------------------------------------
   .about-us {
-    padding-bottom: 12vw;
+    padding-bottom: 3vw;
 
     p {
       font-size: 20px;
@@ -899,18 +891,8 @@ tr.customer-order:hover {
   }
 
   .about-img {
-    opacity: 40%;
     width: 60%;
     margin-left: 16vw;
-
-  }
-
-  .about-logo {
-    position: absolute;
-    left: 31vw;
-    top: 11vw;
-    width: 32vw;
-    margin: 1vw;
 
   }
 
@@ -1119,7 +1101,7 @@ tr.customer-order:hover {
 
   // CONTACT US ----------------------------------------------------------------------------------------------------------------
   .about-us {
-    padding-bottom: 12vw;
+    padding-bottom: 3vw;
 
     p {
       font-size: 20px;
@@ -1149,20 +1131,10 @@ tr.customer-order:hover {
   }
 
   .about-img {
-    opacity: 40%;
     width: 55%;
     margin-left: 19vw;
-
   }
 
-  .about-logo {
-    position: absolute;
-    left: 33vw;
-    top: 10vw;
-    width: 30vw;
-    margin: 1vw;
-
-  }
 
   // CART ---------------------------------------------------------------------------------------------------------------------------
   .cart {
@@ -1388,7 +1360,7 @@ tr.customer-order:hover {
 
   // CONTACT US --------------------------------------------------------------------------------------------------------------------------------
   .about-us {
-    padding-bottom: 12vw;
+    padding-bottom: 3vw;
 
     h1 {
       text-align: center;
@@ -1417,17 +1389,8 @@ tr.customer-order:hover {
   }
 
   .about-img {
-    opacity: 40%;
     width: 70%;
     margin-left: 12vw;
-  }
-
-  .about-logo {
-    position: absolute;
-    left: 28vw;
-    top: 12vw;
-    width: 40vw;
-    margin: 1vw;
   }
 
 
