@@ -552,6 +552,7 @@ input {
 
 .product-info {
   min-height: 120vh;
+  margin-bottom: -9vw;
 }
 
 a.back-to-shop {
@@ -559,6 +560,7 @@ a.back-to-shop {
 
   p {
     margin-left: 6vw;
+    margin-top: 0.5vw;
   }
 }
 
@@ -592,9 +594,8 @@ a.back-to-shop:hover {
 
 .product-image {
   float: left;
-  margin-top: 2vw;
+  margin-top: -0.5vw;
   margin-left: 5vw;
-  margin-bottom: 4vw;
 }
 
 .product-img {
@@ -815,11 +816,21 @@ tr.customer-order:hover {
   .product-info {
     height: 100%;
     margin: 0 auto;
+    margin-bottom: -35vw;
   }
   
   .about-product {
-    margin: 0 auto;
+    margin-right: 11vw;
     width: 80%;
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
 
     p {
       font-size: 20px;
@@ -842,7 +853,7 @@ tr.customer-order:hover {
   }
 
   .product-btns {
-    margin-left: none;
+    text-align: center;
   }
 
 
