@@ -46,7 +46,7 @@ class ProductView {
 
       <div class="product-info calign">
         <div class="page-content">
-        <a class="back-to-shop" type="primary" @click=${() => gotoRoute('/shop')}><p>BACK TO SHOP</p></a>
+        <a class="back-to-shop" type="primary" @click=${() => gotoRoute('/shop')}><p>← BACK TO SHOP</p></a>
           ${this.product == null ? html` 
           <!-- Loading -->
           <div class="loading">
