@@ -176,14 +176,16 @@ a:hover {
   //align-items: center;
   margin: 0 5em 2em 5em;
 
-  img:hover {
-    transform: scale(1.2);
+  img:hover {    
+    transform: scale(1.1);
     -ms-transform: scale(0.5);
     /* IE 9 */
     -moz-transform: scale(0.5);
     /* Firefox */
-    -webkit-transform: scale(1.2);
+    -webkit-transform: scale(1.1);
     /* Safari and Chrome */
+    transition-duration: 500ms, 1s;
+    transition-timing-function: ease-in-out;
   }
 }
 
