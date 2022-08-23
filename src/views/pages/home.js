@@ -39,12 +39,11 @@ class HomeView {
             <img class="feature-img" src="/images/feature-img.png" />
             <div class="feature-txt-box">
               <img class="feature-txt" src="/images/feature-txt.png" />
-              <sl-button
+              <a
                 class="shop-now-btn"
-                type="primary"
                 @click=${() => gotoRoute("/shop")}
                 >SHOP NOW!
-              </sl-button>
+              </a>
             </div>
           </div>
           <div class="slides" id="feature-box-two">

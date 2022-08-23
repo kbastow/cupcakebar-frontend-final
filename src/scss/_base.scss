@@ -113,6 +113,7 @@ a:hover {
 }
 
 .feature-txt-box {
+  display: block;
   margin-top: 15%;
   // margin-right: 50px;
   margin-bottom: 0;
@@ -120,9 +121,28 @@ a:hover {
 }
 
 .feature-txt {
-  max-width: 80%;
+  max-width: 100%;
+  padding: 1vw;
   margin: 0 auto;
 }
+
+.shop-now-btn {
+  background: var(--brand-color);
+  color: var(--page-body-bg);
+  margin-top: 1vw;
+  width: 8vw;
+  height: 2vh;
+  border-radius: 50px;
+  padding: .5vw 2vw;
+  margin-top: 0px;
+  font-size: 1.2vw;
+}
+
+.shop-now-btn:hover {
+  background-color: white;
+  color: #e16a2f;
+}
+
 
 .feature-img {
   width: 50%;

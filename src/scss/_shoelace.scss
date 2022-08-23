@@ -43,20 +43,20 @@ sl-button::part(base):hover {
   color: white;
 }
 
-.shop-now-btn::part(base) {
-  background: var(--brand-color);
-  color: var(--page-body-bg);
-  width: 12em;
-  height: 4em;
-  border-radius: 50px;
-  padding: 5px;
-  margin-top: 0px;
-}
+// .shop-now-btn::part(base) {
+//   background: var(--brand-color);
+//   color: var(--page-body-bg);
+//   width: 12em;
+//   height: 4em;
+//   border-radius: 50px;
+//   padding: 5px;
+//   margin-top: 0px;
+// }
 
-.shop-now-btn::part(base):hover {
-  background-color: white;
-  color: #e16a2f;
-}
+// .shop-now-btn::part(base):hover {
+//   background-color: white;
+//   color: #e16a2f;
+// }
 
 .product-btn::part(base) {
   background: var(--brand-color);
@@ -185,12 +185,12 @@ padding-top: 2px;
 @media all and (max-width: 425px) {
 
 // HOME ------------------------------
-.shop-now-btn::part(base) {
-  font-size: 0.6em;
-  width: 4em;
-  height: 1.5em;
-  margin-bottom: 5em;
-}
+// .shop-now-btn::part(base) {
+//   font-size: 0.6em;
+//   width: 4em;
+//   height: 1.5em;
+//   margin-bottom: 5em;
+// }
 
 // SHOP ------------------------------
 
