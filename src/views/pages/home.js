@@ -49,13 +49,23 @@ class HomeView {
           <div class="slides" id="feature-box-two">
             <div class="feature-txt-box-two">
               <img class="feature-txt-two" src="/images/visit-us-txt.png" />
-              </div>
+              <a
+                class="shop-now-btn"
+                @click=${() => gotoRoute("/aboutUs")}
+                >VISIT INSTORE
+              </a>
+            </div>
             <img class="feature-img-two" src="/images/visit-us.png" />
           </div>
           <div class="slides" id="feature-box">
             <img class="feature-img" src="/images/design-own-img.png" />
             <div class="feature-txt-box">
               <img class="feature-txt-three" src="/images/design-own-txt.png" />
+              <a
+                class="shop-now-btn"
+                @click=${() => gotoRoute("/aboutUs")}
+                >VISIT INSTORE
+              </a>
             </div>
           </div>
         </div>
