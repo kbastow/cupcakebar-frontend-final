@@ -768,9 +768,11 @@ tr.customer-order:hover {
 
   // HOME -------------------------------------------------------------------------------------------------------
   .slider {
-    height: 40vh;
+    height: 34vh;
+    width: 112.5vw;
     overflow: hidden;
-    margin-bottom: 10vw;
+    margin-bottom: 2vw;
+    margin-left: -8vw;
   }
 
   .image-box {
@@ -997,9 +999,11 @@ tr.customer-order:hover {
 
   // HOME ---------------------------------------------------------------------------------------------------------------
   .slider {
-    height: 40vh;
+    height: 38vh;
+    width: 113.5vw;
     overflow: hidden;
-    margin-bottom: 14vw;
+    margin-bottom: 2vw;
+    margin-left: -9vw;
   }
 
   .image-box {
@@ -1240,8 +1244,11 @@ tr.customer-order:hover {
   // HOME -------------------------------------------------------------------------------------------------------------------------
   .slider {
     height: 30vh;
+    width: 128vw;
     overflow: hidden;
-    margin-bottom: 15vw;
+    margin-bottom: -1vw;
+    margin-left: -18.5vw;
+    margin-top: -5vw;
   }
 
   .feature-box {
@@ -1252,8 +1259,8 @@ tr.customer-order:hover {
   }
 
   .feature-txt-box {
-    margin-top: 15%;
-    margin-right: 50px;
+    margin-top: 18%;
+    margin-left: -40px;
     margin-bottom: 0;
     text-align: center;
   }
