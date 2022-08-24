@@ -9,8 +9,8 @@ Marisa Russo, Matthew Antonio, Tessa Stirling, Mikaela Pozzebon-Masters & Kate B
 ### Third Party Image and Content Sources:
 The Scran Line<br>
 Cupcake product photos and content<br>
-Reproduced from: https://thescranline.com/​
+Reproduced from: https://thescranline.com/category/desserts/cupcakes/
 
 Vintage Cupcake Action<br>
-Vintage cupcake imagery.<br>
+Vintage cupcake imagery<br>
 Reproduced from: https://flic.kr/p/RjGY7
