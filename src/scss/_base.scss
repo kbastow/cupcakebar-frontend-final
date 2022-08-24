@@ -756,6 +756,12 @@ tr.customer-order:hover {
   }
 
   // HOME -------------------------------------------------------------------------------------------------------
+  .content-box{
+    width: 112.9vw;
+    margin-bottom: 10vw;
+    margin-top: -1vw;
+    margin-left: -8.5vw;
+  
   .slider {
     height: 26em;
     width: 140vw;
@@ -763,6 +769,7 @@ tr.customer-order:hover {
     margin-bottom: -6vw;
     
   }
+}
 
   .image-box {
     display: grid;
@@ -987,13 +994,18 @@ tr.customer-order:hover {
 
 
   // HOME ---------------------------------------------------------------------------------------------------------------
+  .content-box{
+    width: 112.9vw;
+    margin-bottom: 7vw;
+    margin-top: -1vw;
+  
   .slider {
     height: 38vh;
-    width: 120.5vw;
     overflow: hidden;
     margin-bottom: -3vw;
-    margin-left: -9vw;
+    
   }
+}
 
   .image-box {
     display: grid;
@@ -1222,14 +1234,19 @@ tr.customer-order:hover {
   }
 
   // HOME -------------------------------------------------------------------------------------------------------------------------
+  .content-box{
+    width: 128.8vw;
+    margin-bottom: 13vw;
+    margin-left: -18.9vw;
+
   .slider {
     height: 30vh;
-    width: 140vw;
     overflow: hidden;
     margin-bottom: -10vw;
-    margin-left: -18.5vw;
     margin-top: -7vw;
+    
   }
+}
 
   .feature-box {
     display: flex;
