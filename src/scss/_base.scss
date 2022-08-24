@@ -53,6 +53,12 @@ a:hover {
 
 // homepage ----------------------------------------------------------
 
+.slider {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
 .slides {
   position: absolute;
   transform: scale(0.9);
@@ -64,7 +70,7 @@ a:hover {
 
 .content-box {
   position: relative;
-  margin-bottom: 0vw;
+  margin-bottom: 48vw;
 }
 
 .showing {
@@ -74,12 +80,7 @@ a:hover {
 
 }
 
-.slider {
-  height: 44em;
-  overflow: hidden;
-  margin-bottom: 4em;
-  padding: 0;
-}
+
 
 #feature-box {
   background: var(--body-bg);
