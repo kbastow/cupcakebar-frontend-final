@@ -34,6 +34,7 @@ class HomeView {
     const template = html`
       <cb-app-header user="${JSON.stringify(Auth.currentUser)}"></cb-app-header>
       <div class="page-content">
+        <div class="content-box">
         <div class="slider">
           <div class="slides" id="feature-box">
             <img class="feature-img" src="/images/feature-img.png" />
@@ -67,6 +68,7 @@ class HomeView {
                 >VISIT INSTORE
               </a>
             </div>
+          </div>
           </div>
         </div>
 

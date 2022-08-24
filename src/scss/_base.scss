@@ -54,51 +54,27 @@ a:hover {
 // homepage ----------------------------------------------------------
 
 .slides {
-  //position: absolute;
-  //transform: scale(0.9);
+  position: absolute;
+  transform: scale(0.9);
   opacity: 0.8;
   transition: all 0.5s ease-in-out;
-  //transform: scale(0.9);
-  display: none;
-  //height: 80vh;
+  display: flex;
   margin-bottom: 0;
 }
 
-/*@-webkit-keyframes fadeinout {
-
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
+.content-box {
+  position: relative;
 }
 
-@keyframes fadeinout {
-
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}*/
-
 .showing {
-  //z-index: 1;
- //transform: none;
-  display: flex;
-  //opacity: 1;
+  z-index: 1;
+ transform: none;
+  opacity: 1;
 
 }
 
 .slider {
-  height: 100%;
-  //position: fixed;
+  height: 44em;
   overflow: hidden;
   margin-bottom: 2em;
   padding: 0;
@@ -106,8 +82,6 @@ a:hover {
 
 #feature-box {
   background: var(--body-bg);
-    //margin: 40px;
-    //margin-top: 2em;
     padding: 0;
     margin: 2em 5em 0 5em;
 }
@@ -115,7 +89,6 @@ a:hover {
 .feature-txt-box {
   display: block;
   margin-top: 15%;
-  // margin-right: 50px;
   margin-bottom: 0;
   text-align: center;
 }
