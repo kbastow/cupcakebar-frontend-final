@@ -1,4 +1,4 @@
-# Cupcake Bar
+# Cupcake Bar: Frontend
 
 ### Curtin University: Dig Ex Studio (DIG33)
 
