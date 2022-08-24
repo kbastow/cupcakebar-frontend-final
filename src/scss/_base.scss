@@ -1422,11 +1422,12 @@ tr.customer-order:hover {
   // CART -----------------------------------------------------------------------------------------------------------------------------------------
   .cart {
     position: relative;
-    margin-top: 5vw;
+    margin: 5vw 0;
     padding-bottom: 10vw;
 
     h1 {
       font-size: 20px;
+      text-align: left;
     }
   }
 
@@ -1435,14 +1436,14 @@ tr.customer-order:hover {
     display: block;
     width: 70%;
     font-size: 10px;
-    text-align: center;
+    text-align: left;
   }
 
   .order-summary-column {
     position: relative;
     display: block;
-    margin-top: 10vw;
-    margin-left: 15vw;
+    margin-top: 15vw;
+    margin-left: 3vw;
     padding: 2vw 0;
   }
 
