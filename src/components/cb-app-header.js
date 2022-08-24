@@ -237,13 +237,17 @@ customElements.define(
             <img class="app-logo-mob" src="/images/brandmark.png"/>
           </div></a>
           <nav class="app-top-nav">
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestHome" @click="${gotoRoute}">HOME</a></a>`
-            :html `<a href="/" @click="${gotoRoute}">HOME</a>`}
+            ${
+              this.user.accessLevel === undefined
+                ? html`<a href="/guestHome" @click="${gotoRoute}">HOME</a></a>`
+                : html`<a href="/" @click="${gotoRoute}">HOME</a>`
+            }
             
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestShop" @click="${gotoRoute}">SHOP</a>`
-            :html `<a href="/shop" @click="${gotoRoute}">SHOP</a>`}
+            ${
+              this.user.accessLevel === undefined
+                ? html`<a href="/guestShop" @click="${gotoRoute}">SHOP</a>`
+                : html`<a href="/shop" @click="${gotoRoute}">SHOP</a>`
+            }
               ${
                 this.user.accessLevel === undefined
                   ? html``
@@ -266,9 +270,13 @@ customElements.define(
                ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
                : html`<a href="/cart" @click="${gotoRoute}">CART</a>`
            }
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestAboutUs" @click="${gotoRoute}">CONTACT</a>`
-            :html `<a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>`}
+            ${
+              this.user.accessLevel === undefined
+                ? html`<a href="/guestAboutUs" @click="${gotoRoute}"
+                    >CONTACT</a
+                  >`
+                : html`<a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>`
+            }
             <sl-dropdown>
               <a slot="trigger" href="#" @click="${(e) =>
                 e.preventDefault()}">ACCOUNT</a>
@@ -308,41 +316,50 @@ customElements.define(
           <div class="app-side-menu-logo">
           <img class="app-logo-mob-2" src="/images/brandmark.png" />
           </div>
-           ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestHome" @click="${gotoRoute}">HOME</a></a>`
-            :html `<a href="/" @click="${gotoRoute}">HOME</a>`}
-            
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestShop" @click="${gotoRoute}">SHOP</a>`
-        : html`<a href="/shop" @click="${gotoRoute}">SHOP</a>`}
-             ${
-                this.user.accessLevel === undefined
-                  ? html``
-                  : this.user.accessLevel === 1
-                  ? html`
-                      <a href="/newProduct" @click="${gotoRoute}"
-                        >ADD PRODUCT</a
-                      >
-                    `
-                  : html`<a href="/favouriteProducts" @click="${gotoRoute}"
-                      >FAVOURITES</a
-                    >`
-              }
-            ${
+           ${
              this.user.accessLevel === undefined
-               ? html``
-               : this.user.accessLevel === 1
-               ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
-               : html`<a href="/cart" @click="${gotoRoute}">CART</a>`
+               ? html`<a href="/guestHome" @click="${gotoRoute}">HOME</a></a>`
+               : html`<a href="/" @click="${gotoRoute}">HOME</a>`
            }
-           ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestAboutUs" @click="${gotoRoute}">CONTACT</a>`
-        : html`<a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>`}
-            ${this.user.accessLevel === undefined
-          ? html ` <a href="/signin" @click="${gotoRoute}">SIGNIN</a>` : html`
-            <a href="/profile" @click="${gotoRoute}">MY PROFILE</a>
-            <a href="/editProfile" @click="${gotoRoute}">EDIT PROFILE</a>
-            <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>`}
+            
+            ${
+              this.user.accessLevel === undefined
+                ? html`<a href="/guestShop" @click="${gotoRoute}">SHOP</a>`
+                : html`<a href="/shop" @click="${gotoRoute}">SHOP</a>`
+            }
+             ${
+               this.user.accessLevel === undefined
+                 ? html``
+                 : this.user.accessLevel === 1
+                 ? html`
+                     <a href="/newProduct" @click="${gotoRoute}">ADD PRODUCT</a>
+                   `
+                 : html`<a href="/favouriteProducts" @click="${gotoRoute}"
+                     >FAVOURITES</a
+                   >`
+             }
+            ${
+              this.user.accessLevel === undefined
+                ? html``
+                : this.user.accessLevel === 1
+                ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
+                : html`<a href="/cart" @click="${gotoRoute}">CART</a>`
+            }
+           ${
+             this.user.accessLevel === undefined
+               ? html`<a href="/guestAboutUs" @click="${gotoRoute}">CONTACT</a>`
+               : html`<a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>`
+           }
+            ${
+              this.user.accessLevel === undefined
+                ? html` <a href="/signin" @click="${gotoRoute}">SIGN IN</a>`
+                : 
+                html` <a href="/profile" @click="${gotoRoute}">MY PROFILE</a>
+                    <a href="/editProfile" @click="${gotoRoute}"
+                      >EDIT PROFILE</a
+                    >
+                    <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>`
+            }
           </nav>
         </sl-drawer>
       `;
