@@ -13,16 +13,12 @@ import newProductView from './views/pages/newProduct'
 import cartView from './views/pages/cart'
 import productView from './views/pages/product'
 import ordersView from './views/pages/orders'
-import guestShopView from './views/pages/guestShop'
-import guestAboutUsView from './views/pages/guestAboutUs'	
-import guestHomeView from './views/pages/guestHome'
 
 // define routes
 const routes = {
 	'/': homeView,	
 	'/aboutUs': aboutUsView,
 	'/shop': shopView,
-	'guestShop': guestShopView,
 	'/product': productView,
 	'/favouriteProducts': favouriteProductsView,
 	'/newProduct': newProductView,
@@ -33,14 +29,12 @@ const routes = {
 	'/profile': profileView,
 	'/editProfile': editProfileView,
 	'/orders': ordersView,
-	'/guestHome': guestHomeView,
-	'guestAboutUs': guestAboutUsView,
 }
 
 const publicRoutes = {
-	'/guestHome': guestHomeView,
-	'/guestAboutUs': guestAboutUsView,
-	'/guestShop': guestShopView,
+	'/': homeView,	
+	'/aboutUs': aboutUsView,
+	'/shop': shopView,
 	'/product': productView,
 	'/404': fourOFourView,
 	'/signin': signinView,
@@ -48,15 +42,12 @@ const publicRoutes = {
 }
 
 const privateRoutes = {
-	'/': homeView,
 	'/favouriteProducts': favouriteProductsView,
 	'/newProduct': newProductView,
-	'/shop': shopView,
 	'/cart': cartView,
 	'/profile': profileView,
 	'/editProfile': editProfileView,
 	'/orders': ordersView,
-	'/aboutUs': aboutUsView,
 }
 
 class Router {
@@ -78,7 +69,6 @@ class Router {
 	
 	route(fullPathname){
 		// extract path without params
-		
 		const pathname = fullPathname.split('?')[0]
 		if (this.privateRoutes[pathname] != null) {
 			// Authentication check    

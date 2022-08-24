@@ -237,13 +237,8 @@ customElements.define(
             <img class="app-logo-mob" src="/images/brandmark.png"/>
           </div></a>
           <nav class="app-top-nav">
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestHome" @click="${gotoRoute}">HOME</a></a>`
-            :html `<a href="/" @click="${gotoRoute}">HOME</a>`}
-            
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestShop" @click="${gotoRoute}">SHOP</a>`
-            :html `<a href="/shop" @click="${gotoRoute}">SHOP</a>`}
+            <a href="/" @click="${gotoRoute}">HOME</a>
+            <a href="/shop" @click="${gotoRoute}">SHOP</a>
               ${
                 this.user.accessLevel === undefined
                   ? html``
@@ -266,9 +261,7 @@ customElements.define(
                ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
                : html`<a href="/cart" @click="${gotoRoute}">CART</a>`
            }
-            ${this.user.accessLevel === undefined
-                  ? html`<a href="/guestAboutUs" @click="${gotoRoute}">CONTACT</a>`
-            :html `<a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>`}
+            <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
             <sl-dropdown>
               <a slot="trigger" href="#" @click="${(e) =>
                 e.preventDefault()}">ACCOUNT</a>
