@@ -75,7 +75,7 @@ a:hover {
 }
 
 .slider {
-  height: 44em;
+  height: 39em;
   overflow: hidden;
   margin-bottom: 4em;
   padding: 0;
@@ -763,11 +763,10 @@ tr.customer-order:hover {
     margin-left: -8.5vw;
   
   .slider {
-    height: 26em;
+    height: 60em;
     width: 140vw;
     overflow: hidden;
     margin-bottom: -6vw;
-    
   }
 }
 
@@ -1000,7 +999,7 @@ tr.customer-order:hover {
     margin-top: -1vw;
   
   .slider {
-    height: 38vh;
+    height: 60vh;
     overflow: hidden;
     margin-bottom: -3vw;
     
@@ -1240,11 +1239,11 @@ tr.customer-order:hover {
     margin-left: -18.9vw;
 
   .slider {
-    height: 30vh;
+    height: 36vh;
     overflow: hidden;
     margin-bottom: -10vw;
     margin-top: -7vw;
-    
+    padding: 1vw;
   }
 }
 
@@ -1423,6 +1422,7 @@ tr.customer-order:hover {
 
   .product-column {
     margin: 0 auto;
+    margin-left: 0;
     display: block;
     width: 70%;
     font-size: 10px;

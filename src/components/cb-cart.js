@@ -137,6 +137,12 @@ customElements.define(
             left: 5%;
             margin: 0 auto;
           }
+          @media all and (max-width: 425px) {
+            .delete {
+              top: 8%;
+              left: 8%;
+            }
+          }
         </style>
         <sl-card class="product-card">
           <div class="img-container">
@@ -161,7 +167,7 @@ customElements.define(
           <sl-button
             class="qty-btn"
             
-            > 1 </sl-button>
+            > 1 x Box </sl-button>
           </div>
         </sl-card>
       `;
