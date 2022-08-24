@@ -308,8 +308,13 @@ customElements.define(
           <div class="app-side-menu-logo">
           <img class="app-logo-mob-2" src="/images/brandmark.png" />
           </div>
-          <a href="/" @click="${gotoRoute}">HOME</a>
-            <a href="/shop" @click="${gotoRoute}">SHOP</a>
+           ${this.user.accessLevel === undefined
+                  ? html`<a href="/guestHome" @click="${gotoRoute}">HOME</a></a>`
+            :html `<a href="/" @click="${gotoRoute}">HOME</a>`}
+            
+            ${this.user.accessLevel === undefined
+                  ? html`<a href="/guestShop" @click="${gotoRoute}">SHOP</a>`
+            :html `<a href="/shop" @click="${gotoRoute}">SHOP</a>`}
              ${
                this.user.accessLevel == 1
                  ? html`
@@ -324,7 +329,9 @@ customElements.define(
                 ? html` <a href="/orders" @click="${gotoRoute}">ORDERS</a> `
                 : html`<a href="/cart" @click="${gotoRoute}">CART</a>`
             }
-            <a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>
+           ${this.user.accessLevel === undefined
+                  ? html`<a href="/guestAboutUs" @click="${gotoRoute}">CONTACT</a>`
+            :html `<a href="/aboutUs" @click="${gotoRoute}">CONTACT</a>`}
             <a href="/profile" @click="${gotoRoute}">MY PROFILE</a>
             <a href="/editProfile" @click="${gotoRoute}">EDIT PROFILE</a>
             <a href="#" @click="${() => Auth.signOut()}">SIGN OUT</a>
