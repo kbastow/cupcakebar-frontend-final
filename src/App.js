@@ -7,7 +7,7 @@ class App {
   constructor(){
     this.name = "Cupcake Bar"
     this.version = "1.0.0"
-    this.apiBase = 'https://wild-jay-waders.cyclic.app/'
+    this.apiBase = 'https://wild-jay-waders.cyclic.app'
     this.rootEl = document.getElementById("root")
     this.version = "1.0.0"
   }
